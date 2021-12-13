@@ -92,11 +92,7 @@
                 <!-- </div> -->
                   
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <!-- <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
-                        </li>
-                    </ul> -->
+                   
 
                     <!-- <div class="dropdown">
                         <button class="btn dropdown-toggle text-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -146,6 +142,13 @@
                             <a class="dropdown-item text-white" href="#">All deals</a>
                         </div>
                     </div> -->
+
+                     <!-- Toggler/collapsibe Button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/mobile-top-header.html' %}
+                    {% include 'includes/main-nav.html' %}
 
                     <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                         <form method="GET" action="#"> 
@@ -204,13 +207,11 @@
                     </div>
                 </div>
 
-                <!-- Toggler/collapsibe Button -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
+               
             </nav>
+
+
+
             <div id="delivery-banner" class="row text-center">
                 <div class="col bg-grey text-white">
                     <h4 class="logo-font">Free Delivery on orders over €{{ free_shipping_threshold }}!</h4>
