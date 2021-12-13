@@ -45,14 +45,17 @@ body {
     color: #000 !important;
 }
 
-
-.bg-dark {
+.bg-dark, .bg-color {
     background-color: #e75480 !important;
 }
 
-/* .text-blue {
-    color: #000080 !important;
-} */
+.bg-grey {
+    background-color: #2F4F4F;
+}
+
+#delivery-banner {
+    margin-left: 35em;
+}
 
 .shop-now-button:hover,
 .shop-now-button:active,

@@ -79,8 +79,8 @@
             </div>
             </header> -->
 
-        <header class="container-fluid fixed-top">  
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <header class="row container-fluid fixed-top">  
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
                 <!-- <div id="topnav" class="row"> -->
                 <!-- <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 d-none d-lg-flex text-center text-lg-left">  -->
                 <a class="navbar-brand main-logo-link" href="{% url 'home' %}">
@@ -92,105 +92,130 @@
                 <!-- </div> -->
                   
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mr-auto">
+                    <!-- <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
                         </li>
-                    </ul>
+                    </ul> -->
 
-                    <div class="dropdown">
+                    <!-- <div class="dropdown">
                         <button class="btn dropdown-toggle text-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             All Products
                         </button>
-                        <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-menu border-0 bg-dark" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item text-white" href="#">By Price</a>
                             <a class="dropdown-item text-white" href="#">By Rating</a>
                             <a class="dropdown-item text-white" href="#">By Category</a>
                             <a class="dropdown-item text-white" href="#">All Products</a>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="dropdown">
+                    <!-- <div class="dropdown">
                         <button class="btn dropdown-toggle text-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Wigs 
                         </button>
                         <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item text-white" href="#">Human Hair</a>
-                            <a class="dropdown-item text-white" href="#">Synthetic Hair</a>
-                            <a class="dropdown-item text-white" href="#">Cosplay Wigs</a>
+                            <a class="dropdown-item text-white" href="#">360 Human Hair Lace Wigs</a>
+                            <a class="dropdown-item text-white" href="#">Human Hair Lace Frontal Wigs</a>
+                            <a class="dropdown-item text-white" href="#">Synthetic Wigs</a>
                             <a class="dropdown-item text-white" href="#">All Wigs</a>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle text-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Hair Care Products
+                    <!-- <div class="dropdown">
+                        <button class="btn dropdown-toggle text-white" type="button" id="hair-care-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Hair Care Products
                         </button>
-                        <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item text-white" href="#">Shampoo</a>
-                            <a class="dropdown-item text-white" href="#">Conditioner</a>
-                            <a class="dropdown-item text-white" href="#">Oils</a>
+                        <div class="dropdown-menu bg-dark" aria-labelledby="hair-care-products-link">
+                            <a class="dropdown-item text-white" href="#">Hair Shampoo</a>
+                            <a class="dropdown-item text-white" href="#">Hair Conditioner</a>
+                            <a class="dropdown-item text-white" href="#">Hair Oils & Cream</a>
                             <a class="dropdown-item text-white" href="#">All Hair Care Products</a>
                         </div>
+                    </div> -->
+                <!-- </div> -->
+
+                    <!-- <div class="dropdown">
+                        <button class="btn dropdown-toggle text-white" type="button" id="deals-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Deals
+                        </button>
+                        <div class="dropdown-menu border-0 bg-dark" aria-labelledby="deals-link">
+                            <a class="dropdown-item text-white" href="#">Under €10</a>
+                            <a class="dropdown-item text-white" href="#">Under €20</a>
+                            <a class="dropdown-item text-white" href="#">Under €30</a>
+                            <a class="dropdown-item text-white" href="#">All deals</a>
+                        </div>
+                    </div> -->
+
+                    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                        <form method="GET" action="#"> 
+                            <div class="input-group w-100">
+                                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                                <div class="input-group-append">
+                                    <button class="form-control btn border border-black rounded-0" type="submit">
+                                        <span class="icon">
+                                            <i class="fas fa-search"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                        
+                    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                            <li class="nav-item list-inline-item dropdown">
+                                <a class="nav-link text-white" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-user fa-lg"></i></div>
+                                        <p class="my-0">My Account</p>
+                                    </div> 
+                                </a>
+                                <div class="dropdown-menu border-0" aria-labelledby="navbarDropdown">
+                                    {% if request.user.is_authenticated %}
+                                        <p class="greeting">Welcome {{ user.username }}!</p> 
+                                        {% if request.user.is_superuser %}
+                                            <a href="#" class="dropdown-item bg-color text-white">Store Management</a>
+                                        {% endif %}
+                                        <a href="#" class="dropdown-item bg-color text-white">My Profile</a>
+                                        <a href="{% url 'account_logout' %}" class="dropdown-item bg-color text-white">Logout</a>
+                                    {% else %}
+                                        <a href="{% url 'account_signup' %}" class="dropdown-item bg-color text-white">Register</a>
+                                        <a href="{% url 'account_login' %}" class="dropdown-item bg-color text-white">Login</a>
+                                    {% endif %}
+                                </div>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-white{% endif %} nav-link" href="#">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                                        <p class="my-0">
+                                            {% if grand_total %}
+                                                €{{ grand_total|floatformat:2 }}
+                                            {% else %}
+                                                €0.00
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                    <form method="GET" action="#"> 
-                        <div class="input-group w-100">
-                            <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
-                            <div class="input-group-append">
-                                <button class="form-control btn border border-black rounded-0" type="submit">
-                                    <span class="icon">
-                                        <i class="fas fa-search"></i>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                        
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                        <li class="nav-item list-inline-item dropdown">
-                            <a class="nav-link text-white" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <div class="text-center">
-                                    <div><i class="fas fa-user fa-lg"></i></div>
-                                    <p class="my-0">My Account</p>
-                                </div> 
-                            </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="navbarDropdown">
-                                {% if request.user.is_authenticated %}
-                                    <p class="greeting">Welcome {{ user.username }}!</p> 
-                                    {% if request.user.is_superuser %}
-                                        <a href="#" class="dropdown-item">Store Management</a>
-                                    {% endif %}
-                                    <a href="#" class="dropdown-item" >My Profile</a>
-                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                {% else %}
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                                {% endif %}
-                            </div>
-                        </li>
-
-                        <li class="list-inline-item">
-                            <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-white{% endif %} nav-link" href="#">
-                                <div class="text-center">
-                                    <div><i class="fas fa-shopping-cart fa-lg"></i></div>
-                                    <p class="my-0">
-                                        {% if grand_total %}
-                                            €{{ grand_total|floatformat:2 }}
-                                        {% else %}
-                                            €0.00
-                                        {% endif %}
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% include 'includes/mobile-top-header.html' %}
+                {% include 'includes/main-nav.html' %}
             </nav>
+            <div id="delivery-banner" class="row text-center">
+                <div class="col bg-grey text-white">
+                    <h4 class="logo-font">Free Delivery on orders over €{{ free_shipping_threshold }}!</h4>
+                </div>
+            </div>
         </header>
 
       {% if messgaes %}
