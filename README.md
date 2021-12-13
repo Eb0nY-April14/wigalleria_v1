@@ -61,25 +61,25 @@ d) As a Registered User who is logged in, I want to be able to log out of my acc
 
 Registered & Guest User Goals
 
-a) As a Registered, First time or Returning anonymous User, I want to be able to easily see the image, name, price, rating & category of the product I want to buy in order to know that I'm buying the right product at the price I can afford.
+a) As a Registered, First time or Returning Guest User, I want to be able to easily see the image, name, price, rating & category of the product I want to buy in order to know that I'm buying the right product at the price I can afford.
 
-b) As a Registered, First time or Returning anonymous User, I want to be able to quickly identify deals, clearance items and special offers in order to take advantage of special savings on products I'd like to purchase.
+b) As a Registered, First time or Returning Guest User, I want to be able to quickly identify deals, clearance items and special offers in order to take advantage of special savings on products I'd like to purchase.
 
-c) As a Registered, First time or Returning anonymous User, I want to be able to easily view the total of my purchase at any time so that I can avoid spending too much.
+c) As a Registered, First time or Returning Guest User, I want to be able to easily view the total of my purchase at any time so that I can avoid spending too much.
 
-d) As a Registered, First time or Returning anonymous User, I want to be able to view all available products in order to select some for purchase.
+d) As a Registered, First time or Returning Guest User, I want to be able to view all available products in order to select some for purchase.
 
-e) As a Registered, First time or Returning anonymous User, I want to be able to easily check out in order to purchase products without logging in or setting up an account.
+e) As a Registered, First time or Returning Guest User, I want to be able to easily check out in order to purchase products without logging in or setting up an account.
 
-f) As a Registered, First time or Returning anonymous User, I want to be able to easily delete product(s) in the cart in order to have the choice to remove it if not needed anymore.
+f) As a Registered, First time or Returning Guest User, I want to be able to easily delete product(s) in the cart in order to have the choice to remove it if not needed anymore.
 
-g) As a Registered, First time or Returning anonymous User, I want to be able to edit products in the cart in order to adjust it any time if I change my mind.
+g) As a Registered, First time or Returning Guest User, I want to be able to edit products in the cart in order to adjust it any time if I change my mind.
 
-h) As a Registered, First time or Returning anonymous User, I want to be able to view products in the cart in order to know what I'm purchasing.
+h) As a Registered, First time or Returning Guest User, I want to be able to view products in the cart in order to know what I'm purchasing.
 
-i) As a Registered, First time or Returning anonymous User, I want to be able to add product/products to the cart in order to purchase a single one or check out multiple items in one click.
+i) As a Registered, First time or Returning Guest User, I want to be able to add product/products to the cart in order to purchase a single one or check out multiple items in one click.
 
-j) As a Registered, First time or Returning anonymous User, I want to be able to access information through their social media links to see their followings on social media to determine how trusted and known the app is.
+j) As a Registered, First time or Returning Guest User, I want to be able to access information through their social media links to see their followings on social media to determine how trusted and known the app is.
 
 ---
 
