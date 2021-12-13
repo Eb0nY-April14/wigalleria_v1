@@ -12,7 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 
-from pathlib import Path
+from pathlib import Path  # noqa
+if os.path.exists("env.py"):
+    import env  # noqa
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,10 +26,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-03jl5)!0-#a^rl76edj8st)rdt2!k%-_dpwn)#v#!=ip=$a-i9'
-
+SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Here, debug will be set to true only if there's a variable called
+# 'development' in the environment.
+DEBUG = os.environ.get('DEVELOPMENT')
 
 ALLOWED_HOSTS = []
 
