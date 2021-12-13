@@ -122,11 +122,11 @@ All Products Page for Small Screen sizes:
 ![All Products Page](wigalleria_wireframes/all_prod_page_sm_screen.jpg)
 
 All Products Page for Medium & Large Screen sizes: 
-![All Products Page](wigalleria_wireframes/all_prod_page_md_lg_screen.jpg)
+![All Products Page](wigalleria_wireframes/all_products_page_md_lg_screen.jpg)
 
 All Products Page for Extra Small Screen sizes,
 Product Description Page for Small & Medium Screen sizes: 
-![All Products & Product Description Pages](wigalleria_wireframes/all_prod_pg_xs_n_prod_desc_pg_sm_md_screen.jpg)
+![All Products & Product Description Pages](wigalleria_wireframes/all_prod_pg_xs_n_prod_desc_pg_sm_md_screens.jpg)
 
 Shopping Cart Page for Small Screen sizes: 
 ![Shopping Cart Page](wigalleria_wireframes/shopping_cart_page_sm_screen.jpg)
@@ -150,7 +150,7 @@ Order Confirmation Page for Medium & Large Screen sizes:
 
 Agile Approach Used
 
-* I used a [kanban board on GitHub](https://github.com/Eb0nY-April14/DjangoShoppingList/projects/1) as the agile planning tool for my Django app. A project was created in GitHub with issues and milestones set. I also used the MoSCoW labelling technique to prioritise my user stories into Must-Have, Should-Have, Could-Have and Won't-Have. At the start, I put all my user stories in the "To do" section of the board, then I moved the 3 Must-Haves into the "In progress" section and once I finished working on a functionality and everything responds as I want, I then move it to the "Done" section.
+* I used a [kanban board on GitHub](https://github.com/Eb0nY-April14/wigalleria_v1/projects/1) as the agile planning tool for my Django app. A project was created in GitHub with issues and milestones set. I also used the MoSCoW labelling technique to prioritise my user stories into Must-Have, Should-Have, Could-Have and Won't-Have. At the start, I put all my user stories in the "To do" section of the board, then I moved the Must-Haves into the "In progress" section and once I finished working on a functionality and everything responds as I want, I then move it to the "Done" section.
 
 ---
 
