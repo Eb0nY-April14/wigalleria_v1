@@ -1,4 +1,4 @@
-![Wig Image](static/images/wig_store_readme_logo.jpg)
+![Wig Image](documentation/wig_store_readme_logo.jpg)
 
 # wiGalleria E-commerce Wig Store
 
@@ -113,38 +113,38 @@ Imagery is important. There is a background image used in this app for the home 
 For prototyping, the wireframes were designed manually by hand without using any automated tool in order to bring this idea to life. See screenshots below:
 
 Home/Landing Page for Mobile Screen sizes:
-![Home/Landing Page](static/images/wigalleria_wireframes/home_page_mobile_screen.jpg)
+![Home/Landing Page](documentation/wireframes/home_page_mobile_screen.jpg)
 
 Home/Landing Page for Medium & Large Screen sizes:
-![Home/Landing Page](static/images/wigalleria_wireframes/home_page_md_lg_screen.jpg)
+![Home/Landing Page](documentation/wireframes/home_page_md_lg_screen.jpg)
 
 All Products Page for Small Screen sizes: 
-![All Products Page](static/images/wigalleria_wireframes/all_prod_page_sm_screen.jpg)
+![All Products Page](documentation/wireframes/all_prod_page_sm_screen.jpg)
 
 All Products Page for Medium & Large Screen sizes: 
-![All Products Page](static/images/wigalleria_wireframes/all_products_page_md_lg_screen.jpg)
+![All Products Page](documentation/wireframes/all_products_page_md_lg_screen.jpg)
 
 All Products Page for Extra Small Screen sizes,
 Product Description Page for Small & Medium Screen sizes: 
-![All Products & Product Description Pages](static/images/wigalleria_wireframes/all_prod_pg_xs_n_prod_desc_pg_sm_md_screens.jpg)
+![All Products & Product Description Pages](documentation/wireframes/all_prod_pg_xs_n_prod_desc_pg_sm_md_screens.jpg)
 
 Shopping Cart Page for Small Screen sizes: 
-![Shopping Cart Page](static/images/wigalleria_wireframes/shopping_cart_page_sm_screen.jpg)
+![Shopping Cart Page](documentation/wireframes/shopping_cart_page_sm_screen.jpg)
 
 Shopping Cart Page for Medium & Large Screen sizes: 
-![Shopping Cart Page](static/images/wigalleria_wireframes/shopping_cart_page_md_lg_screen.jpg)
+![Shopping Cart Page](documentation/wireframes/shopping_cart_page_md_lg_screen.jpg)
 
 Checkout Page for Small & Medium Screen sizes: 
-![Checkout Page](static/images/wigalleria_wireframes/checkout_page_sm_md_screen.jpg)
+![Checkout Page](documentation/wireframes/checkout_page_sm_md_screen.jpg)
 
 Checkout Page for Large Screen sizes: 
-![Checkout Page](static/images/wigalleria_wireframes/checkout_page_lg_screen.jpg)
+![Checkout Page](documentation/wireframes/checkout_page_lg_screen.jpg)
 
 Order Confirmation Page for Small Screen sizes: 
-![Order Confirmation Page](static/images/wigalleria_wireframes/order_confirm_page_sm_screen.jpg)
+![Order Confirmation Page](documentation/wireframes/order_confirm_page_sm_screen.jpg)
 
 Order Confirmation Page for Medium & Large Screen sizes: 
-![Order Confirmation Page](static/images/wigalleria_wireframes/order_confirm_page_md_lg_screen.jpg)
+![Order Confirmation Page](documentation/wireframes/order_confirm_page_md_lg_screen.jpg)
 
 ---
 
@@ -160,6 +160,6 @@ This e-commerce store is made up of different apps each with its own model and t
 
 * View the database Schema below: 
 
-![Database Schema](static/images/database_schema_wigalleria.jpg)
+![Database Schema](documentation/database_schema_wigalleria.jpg)
 
 ---
