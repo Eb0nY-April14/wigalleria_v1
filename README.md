@@ -21,16 +21,145 @@ Overall, though the app is a prototype at the moment, yet it is a full fledge e-
 
 The wiGalleria app will provide the following features to its users: 
 
-* Create: A registered or guest user can add product(s) into the shopping cart 
-* Read: A registered or guest user can view the items in their list
-* Update: A registered or guest user can edit items in their list 
-* Delete: A registered or guest user can either remove an item from their list or delete an entire list.
-* Sign Up: A guest user can register if he doesn't have an account yet before he can access some features of the app
-* Login: A user must be authenticated i.e logged in if he already has an account in 
-order to be able to perform any action on his shoppinglist.
-* Logout: A user can log out of his account to secure his shopping list
-* Check out as a registered user if logged in
-* Checkout as a guest user if not registered or logged in
-* A user's delivery info can be saved in his profile for a faster checkout any time he visits the store again. 
+* Create: It will allow a registered or guest user to add product(s) into the shopping cart 
+* Read: It will allow a registered or guest user to view the items in their shopping cart
+* Update: It will allow a registered or guest user to edit items in their shopping cart 
+* Delete: It will allow a registered or guest user to either remove one or all products from their shopping cart
+* Sign Up: It will allow a guest user to register for an account if he doesn't have one yet before he can access some features of the app
+* Login: It will allow a user to authenticate i.e log in if he already has an account in 
+order to be able to access some features of the app.
+* Logout: It will allow a user to log out of his account in order to secure his profile/personal information from unauthorised users
+* It has a feature that saves a user's delivery info in his profile if he opts in using the check box provided for a faster checkout any time he visits the store again. 
+* If a user is logged in while purchasing product(s) and his delivery details has been saved the first time he made an order, during checkout, the delivery details which has been saved already in the user's profile info will be pre-filled in the delivery details section in order to check out faster 
+* It will allow a non-registered or not logged in user to purchase products and checkout as a guest user
+
+---
+
+User Experience (UX)
+
+* User stories
+
+First Time User Goals
+
+a) As a First Time User, I want to easily understand the main purpose of the site and the app to be intuitive so I can navigate through the site easily without any ambiguity. 
+
+b) As a First Time User, I want to be able to register/sign up for an account in order to have a personal account that will allow me view my profile.  
+
+c) As a First Time User, I want to be able to access information through their social media links to see their followings on social media to determine how trusted and known the app is.
+
+Registered User Goals
+
+a) As a Registered User who is logged in, I want to be able to save my shipping details so that I can check out faster anytime I shop again.
+
+b) As a Registered User who is logged in, I want to be able to have a personalised user profile so that I can view my personalised order history, order confirmation and save my payment information. 
+
+c) As a Registered User, I want to be able to log in to my account so that I can access my personal account information.
+
+d) As a Registered User who is logged in, I want to be able to log out of my account so that my account can be safe from unauthorised access.
+
+---
+
+Registered & Guest User Goals
+
+a) As a Registered, First time or Returning anonymous User, I want to be able to easily see the image, name, price, rating & category of the product I want to buy in order to know that I'm buying the right product at the price I can afford.
+
+b) As a Registered, First time or Returning anonymous User, I want to be able to quickly identify deals, clearance items and special offers in order to take advantage of special savings on products I'd like to purchase.
+
+c) As a Registered, First time or Returning anonymous User, I want to be able to easily view the total of my purchase at any time so that I can avoid spending too much.
+
+d) As a Registered, First time or Returning anonymous User, I want to be able to view all available products in order to select some for purchase.
+
+e) As a Registered, First time or Returning anonymous User, I want to be able to easily check out in order to purchase products without logging in or setting up an account.
+
+f) As a Registered, First time or Returning anonymous User, I want to be able to easily delete product(s) in the cart in order to have the choice to remove it if not needed anymore.
+
+g) As a Registered, First time or Returning anonymous User, I want to be able to edit products in the cart in order to adjust it any time if I change my mind.
+
+h) As a Registered, First time or Returning anonymous User, I want to be able to view products in the cart in order to know what I'm purchasing.
+
+i) As a Registered, First time or Returning anonymous User, I want to be able to add product/products to the cart in order to purchase a single one or check out multiple items in one click.
+
+j) As a Registered, First time or Returning anonymous User, I want to be able to access information through their social media links to see their followings on social media to determine how trusted and known the app is.
+
+---
+
+Admin User Goals
+
+a) As an Admin User, I want to be able to log into my account in order to have the authorised access to manage products in the database.
+
+b) As an Admin User, I want to be able to log out of my account in order to protect it from unauthorised access.
+
+c) As an Admin User, I want to be able to manage products within the store i.e create, read, update & delete products into/from the database so that users of the website can enjoy a good user experience when interacting with the site.
+
+---
+
+# Design
+
+* Colour Scheme
+
+
+
+* Typography
+
+The Roboto font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Roboto is  
+
+* Imagery
+Imagery is important. There is a background image used in this app for the home page.
+
+---
+
+# Wireframes
+
+For prototyping, the wireframes were designed manually by hand without using any automated tool in order to bring this idea to life. See screenshots below:
+
+Home/Landing Page for Mobile Screen sizes:
+![Home/Landing Page](wigalleria_wireframes/home_page_mobile_screen.jpg)
+
+Home/Landing Page for Medium & Large Screen sizes:
+![Home/Landing Page](wigalleria_wireframes/home_page_md_lg_screen.jpg)
+
+All Products Page for Small Screen sizes: 
+![All Products Page](wigalleria_wireframes/all_prod_page_sm_screen.jpg)
+
+All Products Page for Medium & Large Screen sizes: 
+![All Products Page](wigalleria_wireframes/all_prod_page_md_lg_screen.jpg)
+
+All Products Page for Extra Small Screen sizes,
+Product Description Page for Small & Medium Screen sizes: 
+![All Products & Product Description Pages](wigalleria_wireframes/all_prod_pg_xs_n_prod_desc_pg_sm_md_screen.jpg)
+
+Shopping Cart Page for Small Screen sizes: 
+![Shopping Cart Page](wigalleria_wireframes/shopping_cart_page_sm_screen.jpg)
+
+Shopping Cart Page for Medium & Large Screen sizes: 
+![Shopping Cart Page](wigalleria_wireframes/shopping_cart_page_md_lg_screen.jpg)
+
+Checkout Page for Small & Medium Screen sizes: 
+![Checkout Page](wigalleria_wireframes/checkout_page_sm_md_screen.jpg)
+
+Checkout Page for Large Screen sizes: 
+![Checkout Page](wigalleria_wireframes/checkout_page_lg_screen.jpg)
+
+Order Confirmation Page for Small Screen sizes: 
+![Order Confirmation Page](wigalleria_wireframes/order_confirm_page_sm_screen.jpg)
+
+Order Confirmation Page for Medium & Large Screen sizes: 
+![Order Confirmation Page](wigalleria_wireframes/order_confirm_page_md_lg_screen.jpg)
+
+---
+
+Agile Approach Used
+
+* I used a [kanban board on GitHub](https://github.com/Eb0nY-April14/DjangoShoppingList/projects/1) as the agile planning tool for my Django app. A project was created in GitHub with issues and milestones set. I also used the MoSCoW labelling technique to prioritise my user stories into Must-Have, Should-Have, Could-Have and Won't-Have. At the start, I put all my user stories in the "To do" section of the board, then I moved the 3 Must-Haves into the "In progress" section and once I finished working on a functionality and everything responds as I want, I then move it to the "Done" section.
+
+---
+
+# Database Schema
+
+This e-commerce store is made up of different apps each with its own model and the database schema below is used to show/describe how these models interact with each other i.e the relationship that exists between objects within the said models. This relationship can either be one to one, one to many or many to many relationship but in this project, they are all one to many.
+
+* View the database Schema below: 
+
+![Database Schema](database_schema_wigalleria.jpg)
 
 ---
