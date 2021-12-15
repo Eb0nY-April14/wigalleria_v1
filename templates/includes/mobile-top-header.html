@@ -1,7 +1,7 @@
 <!--  THE CONTENT OF THIS PAGE IS THE MOBILE VERSION OF THE TOP PORTION OF THE HEADER. -->
 
 <li class="list-inline-item">
-    <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="text-white nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-search fa-lg"></i></div>
             <p class="my-0">Search</p>
@@ -9,7 +9,7 @@
     </a>
 
     <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
-        <form class="form" method="GET" action="">
+        <form class="form" method="GET" action="#">
             <div class="input-group w-100">
                 <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
                 <div class="input-group-append">
@@ -26,7 +26,7 @@
 
 <!-- The 2nd list item will give us a button to open the 'My Account' drop-down menu. -->
 <li class="list-inline-item dropdown">
-    <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="text-white nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-lg"></i></div>
             <p class="my-0">My Account</p>
@@ -34,21 +34,22 @@
     </a>
     <div class="dropdown-menu border-0" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
+            <p class="greeting">Welcome {{ user.username }}!</p>
             {% if request.user.is_superuser %}
-                <a href="" class="dropdown-item">Product Management</a>
+                <a href="" class="dropdown-item bg-color text-white">Store Management</a> 
             {% endif %}
-            <a href="" class="dropdown-item bg-color">My Profile</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            <a href="" class="dropdown-item bg-color text-white">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item bg-color text-white">Logout</a>
         {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            <a href="{% url 'account_signup' %}" class="dropdown-item bg-color text-white">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item bg-color text-white">Login</a>
         {% endif %}
     </div>
 </li>
 
 <!-- The 3rd list item will give us a button to access the shopping cart. -->
 <li class="list-inline-item">
-    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="#">
+    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-white{% endif %} nav-link d-block d-lg-none" href="#">
         <div class="text-center">
             <div><i class="fas fa-shopping-cart fa-lg"></i></div>
             <p class="my-0">
@@ -60,4 +61,4 @@
             </p>
         </div>
     </a>
-    </li>
+</li>

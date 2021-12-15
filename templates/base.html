@@ -40,16 +40,15 @@
     </head>
     <body>
 
-        <!-- <header class="container-fluid fixed-top">
-            <div class="row">
-                1st div below contains the wiGalleria logo 
+        <header class="container-fluid fixed-top">
+            <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex">
+                <!-- 1st col div below contains the wiGalleria logo  -->
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <h2 class="logo-font text-black my-0"><strong>wiGalleria</strong></h2>
+                        <h2 class="logo-font text-white my-0">wi<em><strong>G</strong></em>alleria</h2>
                     </a>
                 </div>
-
-                2nd div below contains the search form.  
+                <!-- 2nd col div below contains the search form.   -->
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 ">
                     <form class="form-inline my-2 my-lg-0" method="GET" action="">
                         <div class="input-group w-100">
@@ -63,37 +62,77 @@
                             </div>
                         </div>
                     </form>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
                 </div>
-
-                3rd div below contains the account & shopping cart links.
+                <!-- 3rd col div below contains the account & shopping cart links. -->
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 ">
-                    <ul class="list-inline list-unstyled text-left text-lg-right my-0">
-                        <li class="list-inline-item dropdown"></li>
-                        <li class="list-inline-item"></li>
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                        <p class="greeting">Welcome {{ user.username }}!</p> 
+                                        {% if request.user.is_superuser %}
+                                            <a href="#" class="dropdown-item bg-color text-white">Store Management</a>
+                                        {% endif %}
+                                        <a href="#" class="dropdown-item bg-color text-white">My Profile</a>
+                                        <a href="{% url 'account_logout' %}" class="dropdown-item bg-color text-white">Logout</a>
+                                    {% else %}
+                                        <a href="{% url 'account_signup' %}" class="dropdown-item bg-color text-white">Register</a>
+                                        <a href="{% url 'account_login' %}" class="dropdown-item bg-color text-white">Login</a>
+                                    {% endif %}
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-white{% endif %} nav-link" href="#">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                            €{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                            €0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            </header> -->
+            <div class="row bg-dark">
+                <nav class="navbar navbar-expand-lg navbar-dark w-100">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/mobile-top-header.html' %}
+                    {% include 'includes/main-nav.html' %}
+                </nav>
+            </div>
+            <div id="delivery-banner" class="row text-center">
+                <div class="col bg-grey text-white">
+                    <h4 class="my-1 font-weight-bold">Free Delivery on orders over €{{ free_shipping_threshold }}!</h4>
+                </div>
+            </div>
+        </header> 
 
-        <header class="row container-fluid fixed-top">  
+        <!-- <header class="row container-fluid fixed-top">  
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
-                <!-- <div id="topnav" class="row"> -->
-                <!-- <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 d-none d-lg-flex text-center text-lg-left">  -->
                 <a class="navbar-brand main-logo-link" href="{% url 'home' %}">
                     wi<em><strong>G</strong></em>alleria
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- </div> -->
+                </button> 
+                
                   
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav"> -->
                      <!-- Toggler/collapsibe Button -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     {% include 'includes/mobile-top-header.html' %}
@@ -136,9 +175,9 @@
                                         <a href="{% url 'account_login' %}" class="dropdown-item bg-color text-white">Login</a>
                                     {% endif %}
                                 </div>
-                            </li>
+                            </li> -->
 
-                            <li class="list-inline-item">
+                            <!-- <li class="list-inline-item">
                                 <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-white{% endif %} nav-link" href="#">
                                     <div class="text-center">
                                         <div><i class="fas fa-shopping-cart fa-lg"></i></div>
@@ -154,32 +193,27 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div>  
+            </nav> -->
 
-               
-            </nav>
-
-
-
-            <div id="delivery-banner" class="row text-center">
+            <!-- <div id="delivery-banner" class="row text-center">
                 <div class="col bg-grey text-white">
                     <h4 class="logo-font">Free Delivery on orders over €{{ free_shipping_threshold }}!</h4>
                 </div>
-            </div>
-        </header>
+            </div> -->
 
-      {% if messgaes %}
-          <div class="message-container"></div>
-      {% endif %}
+        {% if messgaes %}
+            <div class="message-container"></div>
+        {% endif %}
 
-      {% block page_header %}
-      {% endblock %}
+        {% block page_header %}
+        {% endblock %}
 
-      {% block content %}
-      {% endblock %}
+        {% block content %}
+        {% endblock %}
 
-      {% block postloadjs %}
-      {% endblock %}
+        {% block postloadjs %}
+        {% endblock %}
 
     
   </body>
