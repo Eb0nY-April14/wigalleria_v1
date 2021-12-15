@@ -26,13 +26,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY', 'pfb6r1bkbv_b48#r%r(eu^%k!es_jn1wbvr2w-p7srw%ly-va)')
 # SECURITY WARNING: don't run with debug turned on in production!
 # Here, debug will be set to true only if there's a variable called
 # 'development' in the environment.
-DEBUG = os.environ.get('DEVELOPMENT')
+DEBUG = True  # change DEBUG equals to this later: os.environ.get('DEVELOPMENT')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
+    'products',
 ]
 
 MIDDLEWARE = [

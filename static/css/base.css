@@ -67,6 +67,18 @@ body {
     color: white !important;
 }
 
+/* ALL PRODUCTS PAGE STYLING */
+.box-element {
+    box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+}
+
+.product {
+    border-radius: 0 0 4px 4px;
+}
+
 /*          MEDIA QUERIES           */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
