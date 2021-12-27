@@ -18,6 +18,10 @@ body {
     width: 1.5rem;
 }
 
+.logo-font {
+    text-transform: uppercase;
+}
+
 .main-logo-link {
     width: fit-content;
 }
@@ -44,6 +48,18 @@ body {
 .text-black {
     color: #000 !important;
 }
+
+/* This overlay class styling will hide the background image on all  
+   products page & all other pages we don't want it to appear. */
+    .overlay {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background: #fff;
+        z-index: -1;
+    }
 
 .bg-dark, .bg-color {
     background-color: #e75480 !important;
@@ -78,6 +94,7 @@ body {
 }
 
 /* ALL PRODUCTS PAGE STYLING */
+
 /* .box-element {
     box-shadow:hsl(0, 0%, 80%) 0 0 16px;
 	background-color: #fff;
