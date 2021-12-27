@@ -131,8 +131,19 @@ body {
     }
 
     .header-container {
-        padding-top: 264px;  /* 164px; */
+        padding-top: 164px; /* 264px; */
     }
 }
+
+/* pad the top a bit when navbar is collapsed on mobile */
+/* @media (min-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+} */
 
 
