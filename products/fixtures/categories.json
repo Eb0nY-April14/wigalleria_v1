@@ -1,0 +1,74 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "360_lace_wig",
+            "friendly_name": "360 Lace Wig"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "frontal_lace_wig",
+            "friendly_name": "Frontal Lace Wig"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "synthetic_wig",
+            "friendly_name": "Synthetic Wig"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "hair_shampoo",
+            "friendly_name": "Hair Shampoo"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "hair_conditioner",
+            "friendly_name": "Hair_Conditioner"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "hair_oils",
+            "friendly_name": "Hair Oils"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.category",
+        "fields": {
+            "name": "price_under_€10",
+            "friendly_name": "Price Under €10"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.category",
+        "fields": {
+            "name": "price_under_€20",
+            "friendly_name": "Price Under €20"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.category",
+        "fields": {
+            "name": "price_under_€30",
+            "friendly_name": "Price Under €30"
+        }
+    }
+]
