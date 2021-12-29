@@ -115,8 +115,8 @@
         "pk": 9,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
-            "name": "360 Burgundy Deep-wave curls glueless HD  Lace Wig - 14inches",
+            "sku": "pp5002690715",
+            "name": "360 Burgundy Deep-wave curls glueless HD Lace Wig - 14inches",
             "description": "Pre-plucked, transparent lace, natural baby hair. Glueless with adjustable band & combs. Cuticles intact, 100% human hair with no shedding or tangling. Available in Colour 99J.",
             "price": 59.99,
             "category": 1,
@@ -129,13 +129,13 @@
         "pk": 10,
         "model": "products.product",
         "fields": {
-            "sku": "pp5002690715",
+            "sku": "pp5002701115",
             "name": "360 Full HD Lace-frontal Brazilian Body wave Human hair Wig - 32inches",
             "description": "This is a full HD lace frontal Brazillian body wave human hair with beautiful big tight curls & 2-tone colour of black with a blonde highlight that creates a bold, wavy & bouncy effect that makes heads turn wherever you go. Available in colour T1/27",
             "price": 129.99,
             "category": 1,
             "rating": 4.7,
-            "image_url": "https://lh3.googleusercontent.com/proxy/3KEMtkKateuB8X9_fqXQEVGtggJR0E_PfjvKadC18ilinfzxxZYEXHVEAqR9OCGrylhIfHzDeW8n2NUhcGdXrGBUZq8Z5UdPYvkMZJxbWlOaLbQYBxGw3ggo6kQKm9pgw2UTmLcFkJ6BlNtRxbZ5NMFbKURNRgk9GH5X77gK9Yiw1rIXow",
+            "image_url": "https://www.dhresource.com/0x0s/f2-albu-g10-M01-8A-C0-rBVaVl2quruACLljAAKsf71HFpQ884.jpg/paff-honey-blonde-full-lace-wigs-ombre-lace.jpg",
             "image": "360_full_hd_lace_frontal_brazilian_body_wave_human_hair_wig_32inches.jpg"
         }
     },
@@ -143,7 +143,7 @@
         "pk": 11,
         "model": "products.product",
         "fields": {
-            "sku": "pp5002701115",
+            "sku": "pp5002761055",
             "name": "360 Italian Yaki Lace-frontal Human hair Wig with baby hair - 24 inches",
             "description": "A complete & versatile look that lets you play around with styling your hair in different ways. It's a 360 Italian Yaki human hair with baby hair for realistic look and is designed to go all around the head perimeter & can be put in a ponytail updo or any style you wish. Available in colour Natural 1B.",
             "price": 103.99,
@@ -157,7 +157,7 @@
         "pk": 12,
         "model": "products.product",
         "fields": {
-            "sku": "pp5002761055",
+            "sku": "pp5002820069",
             "name": "360 Lace-front European Human hair Wig - 20 inches",
             "description": "This brown lace front wig comes with an elastic strap for additional comfort as well as confidence your wig won't fall out or get blown away by winds. You can brush it back or part it anywhere as you want without worrying about revealing your your wig to add a feminine charm to your looks. The wig is 100% human hair so you can straighten, curl or dye it as you like. Available in colour Natural 1B.",
             "price": 129.99,
@@ -171,7 +171,7 @@
         "pk": 13,
         "model": "products.product",
         "fields": {
-            "sku": "pp5002820069",
+            "sku": "pp5002820147",
             "name": "360 Lace-frontal Brazilian Body wave Human hair Wig - 26inches",
             "description": "This lace frontal body wave wig has soft, tight natural curls which adds the feminine charm. It's 100% human hair with a mix of natural color and a honey blonde highlight. It can be curled or dyed as you wish and is available in colour T1/30.",
             "price": 109.99,
@@ -185,7 +185,7 @@
         "pk": 14,
         "model": "products.product",
         "fields": {
-            "sku": "pp5002820147",
+            "sku": "pp5002910572",
             "name": "360 Kinky curly Full Lace Human hair Wig - 16inches",
             "description": "Finest quality human hair, exceptionally strong yet soft, shiny and less likely to tangle as the cuticleis still intact & aligned. Its 180% density is intended for clients who desire a full and voluminous hair look & with baby hairs all around the edgaes of hair to make it look more natural and realistic & can be styled just like you would your own hair. Available in Colour black.",
             "price": 119.99,
@@ -199,7 +199,7 @@
         "pk": 15,
         "model": "products.product",
         "fields": {
-            "sku": "pp5002910572",
+            "sku": "pp5002990740",
             "name": "360 Pre-plucked Brazillian Virgin Lace-frontal Wig - 28inches",
             "description": "This 100% human hair has pre-plucked hairline to give you a more natural, flawless looking hairline with lots of baby hair. Its natural hairline outlines the edges of your hair and makes the wearer look younger while its bleached knots makes it look like it's growing out of the scalp. Available in Colour Natural 1B.",
             "price": 89.99,
@@ -213,10 +213,10 @@
         "pk": 16,
         "model": "products.product",
         "fields": {
-            "sku": "pp5002990740",
+            "sku": "pp5003050248",
             "name": "African Essence Control Wig Shampoo - 355ml",
             "description": "This is a gentle shampoo made for both natural & synthetic wigs, weaves and hairpieces. It removes excess oils & dirt as it delivers superb softness, beautiful sheen and revitalises the natural look of all wigs.",
-            "price": 48.99,
+            "price": 8.99,
             "category": 5,
             "rating": 4.8,
             "image_url": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1611768073-controlwig-1611768003.png?crop=1xw:1xh;center,top&resize=480:*",
@@ -227,7 +227,7 @@
         "pk": 17,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003050248",
+            "sku": "pp5003070787",
             "name": "Afro full bang fluffy Synthetic Wig - 16inches",
             "description": "This is a short, machine-made wig with a net cap that is breathable and comfortable to wear. It is made adjustable to suit your head circumference hence there are two adjustment straps inside the wig which can be intertwined to a fixed position to suit different head sizes.",
             "price": 44.99,
@@ -241,13 +241,13 @@
         "pk": 18,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003070787",
-            "name": "Blonde n Wavy Lace-frontal Human hair Wig - 20 inches",
-            "description": "Golden blonde with dark root. Extremely striking & glamorous side part lace wig with natural underlay. Lightweight, hand tied knots with natural hairline. Available in Colour: Ginger.",
+            "sku": "pp5003090182",
+            "name": "Blonde 'n' Wavy Lace-frontal Human hair Wig - 20 inches",
+            "description": "Golden blonde with dark root. Extremely striking & glamorous side part lace wig with natural underlay. Lightweight, hand tied knots with natural hairline. Available in Colour Ginger.",
             "price": 134.99,
-            "category": 5,
-            "rating": 4.8,
-            "image_url": "https://i.pinimg.com/736x/1e/fd/91/1efd912ff2968c3ae02df7b0721e9068.jpg",
+            "category": 2,
+            "rating": 4.6,
+            "image_url": "https://p.globalsources.com/IMAGES/PDT/SMALL/731/S1187078731.jpg",
             "image": "blonde_n_wavy_lace_frontal_human_hair_wig.jpg"
         }
     },
@@ -255,12 +255,12 @@
         "pk": 19,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003090186",
             "name": "Blue Synthetic bob Wig - 12inches",
-            "description": "This wig is made up of 100% breathable rose net which makes you feel comfortable when you wear it. It has two adjustment straps at both sides of the wig which can be intertwined to a fixed position to suit different head sizes. It's so lightweight & super soft and can be restyled below 130 Degrees Centigrade (266 Degrees Fahrenheit)",
+            "description": "This wig is made up of 100% breathable rose net which makes you feel comfortable when you wear it. It has two adjustment straps at both sides of the wig which can be intertwined to a fixed position to suit different head sizes. It's so lightweight & super soft and can be restyled below 130 Degrees Centigrade (266 Degrees Fahrenheit).",
             "price": 59.99,
-            "category": 2,
-            "rating": 4.8,
+            "category": 3,
+            "rating": 3.9,
             "image_url": "https://media.allure.com/photos/5a0495915031216f3b213b4e/1:1/w_320%2Cc_limit/blue-wig.jpg",
             "image": "blue_synthetic_bob_wig_12inches.jpg"
         }
@@ -269,10 +269,10 @@
         "pk": 20,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003161326",
             "name": "Cantu Shea butter Leave-in Conditioner - 16oz",
             "description": "A Shea butter infused deep penetrating conditioning treatment made with pure shea butter and other natural oils to help protect against breakage and add manageability and shine. It helps promote stronger, healthier hair.",
-            "price": 59.99,
+            "price": 9.99,
             "category": 5,
             "rating": 4.8,
             "image_url": "https://cdn.shopify.com/s/files/1/0562/3198/5316/products/Cantu_Shea_Butter_Leave_In_Conditioning_Repair_Cream_16oz__72981.1414455072.400.559__63442_400x400.jpg?v=1619457400",
@@ -283,12 +283,12 @@
         "pk": 21,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003230723",
             "name": "Creme of Nature Argan oil smooth 'n' shine Polisher - 125ml",
             "description": "This oil protects your hair from heat when styling and from UV damage. It is effective in eliminating frizz and creates a smooth silky softness while giving you the protection from the heat of a blow dryer and curling iron.",
-            "price": 59.99,
+            "price": 5.49,
             "category": 6,
-            "rating": 4.8,
+            "rating": 4.6,
             "image_url": "https://www.ubuy.co.it/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNjFlRHFpK295S0wuX1NMMTUwMF8uanBn.jpg",
             "image": "creme_of_nature_argan_oil_smooth_n_shine_polisher_125ml.jpg"
         }
@@ -297,12 +297,12 @@
         "pk": 22,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003270936",
             "name": "Curly fringe Synthetic hair_wig - 12inches",
             "description": "This is a lace-front, afro curly wig made of synthetic material. Available in Colour Black.",
             "price": 59.99,
             "category": 3,
-            "rating": 4.8,
+            "rating": 4.9,
             "image_url": "https://miro.medium.com/max/525/1*P-tExSOdVpBWsItEzZQ2YA.jpeg",
             "image": "curly_fringe_synthetic_hair_wig_12inches.jpeg"
         }
@@ -311,12 +311,12 @@
         "pk": 23,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003360384",
             "name": "Dark 'n' Lovely Total Repair5 Oil Moisturiser - 250ml",
             "description": "This Dark 'n' Lovely Total Repair 5 Oil Moisturiser is infused with African Shea Butter to moisturise and nourish your hair. It's lightweight, does not weigh your hair down and will leave your hair visibly moisturised, softer, stronger, silkier and shinier.",
             "price": 7.99,
             "category": 6,
-            "rating": 4.8,
+            "rating": 4.5,
             "image_url": "https://clicks.co.za/medias/?context=bWFzdGVyfHByb2R1Y3QtaW1hZ2VzfDIzOTM3fGltYWdlL2pwZWd8cHJvZHVjdC1pbWFnZXMvaGFmL2hhZi85NjEzMDg1MTQ3MTY2LmpwZ3xjMWUzNjNlOGFjYmQxYmJlMGZmMzY2MWM5MGFiMzE4NTlmNDYwMzcwYTUxZWQ0ODlmMmIxNGZjZGJlMDJmMmU5",
             "image": "dark_n_lovely_total_repair5_oil_moisturizer.jpg"
         }
@@ -325,12 +325,12 @@
         "pk": 24,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003440111",
             "name": "Demert Wig 'n' Weave Conditioner - 191g",
             "description": "Professionally formulated for superior conditioning and protection. Its easy to use formular makes hair pieces shine naturally with a seamlessly soft texture.",
             "price": 4.99,
             "category": 5,
-            "rating": 4.8,
+            "rating": 3.9,
             "image_url": "https://i5.walmartimages.com/asr/ff7d4a3a-0bac-49fe-9d97-43fc274a5520_1.d3f3115d2dd839f1ff8ebe7adaa2fe45.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
             "image": "demert_wig_n_weave_conditioner_191g.png"
         }
@@ -339,12 +339,12 @@
         "pk": 25,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003540313",
             "name": "Demert Wig 'n' Weave Dry Shampoo - 236ml",
             "description": "It absorbs unneccessary oils, dirt and sweat and refreshes hair back to its natural state with no water needed. It does not weigh hair down but revitalises flat, overworked hair pieces with volume and texture in minutes.",
             "price": 5.99,
-            "category": 2,
-            "rating": 4.8,
+            "category": 4,
+            "rating": 4.0,
             "image_url": "https://i5.walmartimages.com/asr/ce7a2368-dae0-46c0-a97b-236e1bc3af69_1.496bd455008dcdfe3b49ae79d321dfa3.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
             "image": "demert_wig_n_weave_dry_shampoo_236ml.jpeg"
         }
@@ -353,7 +353,7 @@
         "pk": 26,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003560513",
             "name": "Eternal Beauty Wig Control Conditioner - 250ml",
             "description": "This wig control conditioner conditions both synthetic and human hair for longer use. Pair it with the Eternal Beauty Wig Control Shampoo to enjoy its full benefits.",
             "price": 9.99,
@@ -367,7 +367,7 @@
         "pk": 27,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003560948",
             "name": "Eternal Beauty Wig Control Shampoo - 250ml",
             "description": "This wig control shampoo moisturises where hair needs it and is perfect for daily use and for all wig types both human & synthetic. It conditions and moisturises leaving hair healthy and manageable.",
             "price": 8.99,
@@ -381,11 +381,11 @@
         "pk": 28,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003570628",
             "name": "Glueless Straight 360 Lace-frontal Brazillian Hair Wig - 18inches",
             "description": "100% real human hair wigs with knots that are slightly bleached with natural hairline, easy to wear and you can change the free part to middle part, three part or side part. You can do whatever style you want for your wig ponytail, hair bun etc. It has 4 combs attached and adjustable straps to secure. Available in Colour Black.",
             "price": 99.99,
-            "category": 2,
+            "category": 1,
             "rating": 4.5,
             "image_url": "https://i.ebayimg.com/images/g/nDIAAOSwATpdr~s3/s-l300.jpg",
             "image": "glueless_straight_360_lace_frontal_brazillian_hair_wig_18inches_black.jpg"
@@ -395,7 +395,7 @@
         "pk": 29,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003620308",
             "name": "Handmade Center-part Lace closure Hair Wig - 20inches",
             "description": "Finest quality human hair that is strong, healthy and less likely to tangle than the ordinary human hair because the cuticle is still intact. It gives you the option to cut, curl straighten or dye just like your own hair. Available in colour Black.",
             "price": 259.99,
@@ -409,7 +409,7 @@
         "pk": 30,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003690115",
             "name": "Kerastase Elixir Ultime l'huile hair oil - 50ml",
             "description": "This is an iconic shine-enhancing hair oil for normal to thick dull hair. It nourishes and protects the hair for long lasting radiance and durable anti-frizz protection.",
             "price": 33.95,
@@ -423,12 +423,12 @@
         "pk": 31,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003690116",
             "name": "Kinky Straight Synthetic Lace-front Wig - 16inches",
             "description": "Unique and stylish synthetic hair lace wig that looks like your real hair. Available in colour Natural 1B.",
-            "price": 59.99,
+            "price": 39.99,
             "category": 3,
-            "rating": 4.8,
+            "rating": 3.9,
             "image_url": "https://www.favohair.com/media/catalog/product/cache/1/small_image/400x530/9df78eab33525d08d6e5fb8d27136e95/a/b/absl710006.jpg",
             "image": "kinky_straight_synthetic_lace_front_wig_16inches.jpg"
         }
@@ -437,7 +437,7 @@
         "pk": 32,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003780391",
             "name": "Lace frontal side-part burgundy colour_wig - 24inches",
             "description": "100% high quality human hair that can be curled, straightened, bleached and dyed. It has baby hair around perimeter, lightly bleached knots looks more natural after installing. It can make middle and side part, high ponytail and buns and half up half down styles. Available in 99J - Burgundy colour.",
             "price": 94.99,
@@ -451,12 +451,12 @@
         "pk": 33,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003790542",
             "name": "Loreal Hair Serum oil - 150ml",
             "description": "This lightweight formula is a must have in every hair care routine to achieve silky hair. It boosts shine, reduce frizz and add moisture to your dull & dry hair.",
             "price": 16.48,
-            "category": 2,
-            "rating": 4.8,
+            "category": 6,
+            "rating": 4.5,
             "image_url": "https://marketstro.com/storage/products/SSvcSP9N3gGrMqWk2wcPvjUnkLDdeIb2mNYApkc0.jpeg",
             "image": "loreal_hair_serum_oil_150ml.jpeg"
         }
@@ -465,7 +465,7 @@
         "pk": 34,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003831225",
             "name": "Moroccan oil Clarifying Shampoo - 250ml",
             "description": "Moroccan oil Clarifying Shampoo is a deep-cleansing formula that removes everyday build up, restoring hair to a weightless, healthy balance. It contains argan and avocado oils, keratin, lavender, chamomile and jojoba extracts that nourishes your hair while gently cleansing impurities away.",
             "price": 24.55,
@@ -479,7 +479,7 @@
         "pk": 35,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003861402",
             "name": "OGX Argan oil Shampoo - 365ml",
             "description": "This is a unique, precious blend that helps to penetrate the hair shaft, moisturising hair and creating softness and strength.",
             "price": 9.99,
@@ -493,7 +493,7 @@
         "pk": 36,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003910638",
             "name": "OGX Biotin 'n' Collagen Hair Conditioner - 385ml",
             "description": "This high-performance infusion with biotin and collagen will help give your hair a beautiful boost afetr just one use.",
             "price": 6.66,
@@ -507,13 +507,13 @@
         "pk": 37,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003950574",
             "name": "OGX Brazillian Keratin Therapy Shampoo - 385ml",
             "description": "This shampoo contains a blend of coconut oil, keratin proteins, avocado oil and cocoa butter which helps to smooth and strengthen your hair.",
             "price": 9.99,
             "category": 4,
             "rating": 4.6,
-            "image_url": "",
+            "image_url": "https://cdn11.bigcommerce.com/s-0xh7j/images/stencil/500x659/products/11062/9519/001__69421.1422481485.jpg?c=2",
             "image": "ogx_brazillian_keratin_therapy_shampoo_385ml.jpg"
         }
     },
@@ -521,7 +521,7 @@
         "pk": 38,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003950576",
             "name": "OGX Renewing Argan oil - 100ml",  
             "description": "This oil quickly absorbs into the hair shaft, delivering replenishing nutrients to promote healthy hair while sealing in shine. The hair oil is designed to be used before styling to add the perfect glossy shine to any hair look, improving manageability to promote easier brush glide.",
             "price": 10.45,
@@ -535,7 +535,7 @@
         "pk": 39,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003960062",
             "name": "Olaplex Bond Maintenance Conditioner - 250ml",
             "description": "Olaplex Bond Maintenance Conditioner protects & repairs damaged hair, split ends & frizz by re-linking broken bonds. A highly-moisturising & reparative conditioner for all hair types including human hair & synthetic wigs leaving hair easy to manage, shiny & healthier with each use. ",
             "price": 27.99,
@@ -549,8 +549,8 @@
         "pk": 40,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
-            "name": "olaplex no7 bonding oil - 30ml",
+            "sku": "pp5003960682",
+            "name": "Olaplex no7 bonding oil - 30ml",
             "description": "olaplex no7 bonding oil is a highly concentrated, weightless reparative styling oil that dramatically increases shine, softness and colour vibrancy. It minimises flyaways and frizz while providing UV/heat protection of up to 450 degrees Fahrenheit (232 degrees Centigrade).",
             "price": 29.45,
             "category": 6,
@@ -563,12 +563,12 @@
         "pk": 41,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003960775",
             "name": "ORS Olive oil glossing Hair Polisher - 177ml",
             "description": "This hair polisher is lightweight and combines the power of nourishing olive oil with smoothing brazillian peque oil to enhance the hair with incredible shine while creating a humidity-protecting barrier that helps prevent frizz. It's formulated to withstand humidity, control frizz, add a brilliant shine and smoothen hair.",
             "price": 7.99,
             "category": 6,
-            "rating": 4.8,
+            "rating": 4.2,
             "image_url": "https://www.pinterest.ca/pin/536491374365480618/",
             "image": "ors_olive_oil_glossing_hair_polisher_177ml.jpg"
         }
@@ -577,7 +577,7 @@
         "pk": 42,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003990736",
             "name": "Palmers Olive oil Leave-in Conditioner - 250ml",
             "description": "Nourishes and repairs dry, frizzy hair. Enriched with an intensive blend of Extra Virgin olive oil, Vitamin E, Keratin and Silk Proteins, this lightweight conditioner helps control frizz, adds shine, reduces split ends, detangles & acts as a heat protectant from styling damage.",
             "price": 5.99,
@@ -591,12 +591,12 @@
         "pk": 43,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5003990746",
             "name": "Red Ombre 360 Human hair Lace Wig - 20 inches",
             "description": "100% Peruvian human hair, Water-wave Lace-front Wig. It's soft, wet & wavy and can be dyed, permed, straightened and curled. Easy to make a ponytail, braids or bun. Available in Colour Red-Ombre.",
             "price": 324.99,
             "category": 1,
-            "rating": 4.8,
+            "rating": 4.9,
             "image_url": "https://i.pinimg.com/originals/f8/40/d3/f840d3ec4a5a35ea950f214038561b23.jpg",
             "image": "red_ombre_360_human_hair_lace_wig_20inches.jpg"
         }
@@ -605,7 +605,7 @@
         "pk": 44,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5004111503",
             "name": "Shea Moisture Hair Conditioner - 379ml",
             "description": "An hair care product that detangles, moisturises and restores lifeless damaged hair. It can be used either as a leave-in or rinse-out hair conditioner. A silicone free conditioner that turns dry and damaged hair to beautifully moisturised hair.",
             "price": 9.33,
@@ -619,7 +619,7 @@
         "pk": 45,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5004230059",
             "name": "Shea Moisture Strengthen 'n' Restore Shampoo - 384ml",
             "description": "This shampoo gently cleanses hair and skin of impurities while infusing hair with ultra-nourishing moisture. It's designed for those who regularly colour, straighten, perm or heat-style their hair as well as do kinky, curly or wavy natural styles.",
             "price": 11.33,
@@ -633,11 +633,11 @@
         "pk": 46,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5004310089",
             "name": "Side part Lace-front Long Straight Synthetic Wig - 18inches",
             "description": "Super soft, high quality synthetic wig. Has lace hairline & baby hair for youthful look. It can be flat ironed, straightened, cut, or made into ponytail.",
             "price": 49.99,
-            "category": 2,
+            "category": 3,
             "rating": 3.8,
             "image_url": "https://img.withchic.com/catalog/product/5/7/572002201761769.jpg",
             "image": "side_part_lace_front_long_straight_synthetic_wig_18inches.jpg"
@@ -647,7 +647,7 @@
         "pk": 47,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5004610254",
             "name": "Women's 360 Lace-front Deep wave 100% Virgin Human hair Wig - 20inches",
             "description": "This 360 lace front deep wave wig is 100% virgin human hair, silky, soft, no tangle or shedding. It's a tight & neat, bouncy & soft, tangle free hair that can be dyed, highlighted, curled, straightened & styled as you like. Easy to wear, glueless lace wig with adjustable strap & combs. It has a 250% density for those who prefer thick voluminous hair. Available in Colour Black.",
             "price": 148.99,
@@ -661,12 +661,12 @@
         "pk": 48,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5004650050",
             "name": "Women's Afro Short Synthetic Wig - 8inches",
             "description": "It's made of high temperature silk. The size is adjustable so no pins or tape is required. One size fits all so all you have to do is adjust the hooks inside the cap to the correct size to suit your head. High-temperature silk wigs so customers can use the perm sticks to make micro-rolls. Available in Colour Black.",
             "price": 24.99,
             "category": 3,
-            "rating": 4.8,
+            "rating": 4.7,
             "image_url": "https://m.media-amazon.com/images/I/71F-PGBHyoL._AC_UL320_.jpg",
             "image": "women's_afro_short_synthetic_wig_8inches.jpg"
         }
@@ -675,7 +675,7 @@
         "pk": 49,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5004821375",
             "name": "Women's Layered Synthetic Wig with fringe - 24inches",
             "description": "This smooth silky wig with sweeping side fringe & lots of long layers makes it a suitable choice for mose ladies. Made from 100% premium quality high resistant fibre that will withstand temperatures up to 160 degrees. This wig looks, feels and reacts like natural growing hair and are made to the highest of standards. Available in Colour Black.",
             "price": 69.50,
@@ -689,14 +689,350 @@
         "pk": 50,
         "model": "products.product",
         "fields": {
-            "sku": "pp5003090182",
+            "sku": "pp5004900522",
             "name": "Women's Medium short hair bob Synthetic Wig - 14inches",
-            "description": "A high quality heat-resistant fibre. The cap is breathable & adjustable to wear in the sense that it has two adjustment straps inside the wig which can be intertwined to a fixed position to suit different head sizes",
+            "description": "A high quality heat-resistant fibre. The cap is breathable & adjustable to wear in the sense that it has two adjustment straps inside the wig which can be intertwined to a fixed position to suit different head sizes. Available in colour black.",
             "price": 21.59,
             "category": 3,
             "rating": 3.2,
             "image_url": "https://rukminim1.flixcart.com/image/416/416/k5bcscw0/hair-wig/h/f/s/medium-short-hair-bob-wig-for-women-and-girls-pack-of-1-fully-original-imafnzxfgpz8sgkf.jpeg?q=70",
             "image": "women's_medium_short_hair_bob_synthetic_wig_14inches.jpeg"
+        }
+    },
+    {
+        "pk": 51,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5004910158",
+            "name": "13x2 Lace-frontal Layered Side-part Human hair Wig - 8inches",
+            "description": "A side-part lace front wig that blends well, breathable, transparent and showing a more realistic hairline. It fits more naturally and you can make baby hair on the lace front wig. Available in colour black.",
+            "price": 68.99,
+            "category": 7,
+            "rating": 3.8,
+            "image_url": "https://i.pinimg.com/originals/4d/16/df/4d16dfc7f193ba85ae22734472c40456.png",
+            "image": "13x2_lace_frontal_layered_side_part_short_human_hair_wig_8inches.png"
+        }
+    },
+    {
+        "pk": 52,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5004910477",
+            "name": "13x4 Body-wave Lace-frontal Wig with Undetectable Realistic Hairline - 20inches",
+            "description": "This wig cap is made of swiss lace that is soft and comfortable. It's medium brown colour which is a perfect match to human scalp and there are baby hair around to make natural hairline. Available in colour Natural 1B.",
+            "price": 84.95,
+            "category": 7,
+            "rating": 4.2,
+            "image_url": "https://xcdn.unice.com/media/catalog/product/cache/6/small_image/270x270/9df78eab33525d08d6e5fb8d27136e95/u/n/unice_hair_180_density_short_bobo_body_wave_13x4_lace_frontal_wig_with_undetectable_realistic_hairline_0928-4.jpg",
+            "image": "13x4_body_wave_lace_frontal_wig_with_undetectable_realistic_hairline_20inches.jpg"
+        }
+    },
+    {
+        "pk": 53,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5004940703",
+            "name": "13x4 Honey-blonde Body-wave Lace-frontal Pre-plucked Human hair Wig - 26inches",
+            "description": "A high quality heat-resistant fibre. The cap is breathable & adjustable to wear in the sense that it has two adjustment straps inside the wig which can be intertwined to a fixed position to suit different head sizes.",
+            "price": 100.15,
+            "category": 7,
+            "rating": 4.8,
+            "image_url": "https://www.premiumlacewig.com/images/202105/goods_img/honey-blonde-body-wave-lace-front-wigs-pre-plucked-13x4-lace-frontal-wigs-highlight-wigs-human-hair-wigs-for-women-9168.jpg",
+            "image": "13x4_honey_blonde_body_wave_lace_frontal_human_hair_wigs_pre_plucked_26inches.jpg"
+        }
+    },
+    {
+        "pk": 54,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5004991006",
+            "name": "13x4_lace_frontal_side_part_short_human_hair_wig_8inches",
+            "description": "This is an 8 inches wig made from swiss lace material. It has a natural hairline with 4 combs inside and an adjustable strap to fit all head sizes. It is 100% human hair so it can be styled according to your preference i.e washed, dyed or curled. Available in colour Black.",
+            "price": 89.95,
+            "category": 7,
+            "rating": 3.5,
+            "image_url": "https://i.pinimg.com/originals/6a/c2/0e/6ac20e3051ff3bfc50995bac78f1e3b2.jpg",
+            "image": "13x4_lace_frontal_side_part_short_human_hair_wig_8inches"
+        }
+    },
+    {
+        "pk": 55,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5004991162",
+            "name": "13x4 Loose-wave Ombre highlight honey-blonde Lace frontal Human hair Wig - 28inches",
+            "description": "A high quality, center-part human hair wig that has a natural pattern to create a soft and natural looking wave. Its loose curls comes in a wavy pattern which makes it easy to style and so frees you from daily hair styling. Available in colour honey-blonde with ombre highlight.",
+            "price": 149.99,
+            "category": 7,
+            "rating": 4.7,
+            "image_url": "https://www.premiumlacewig.com/images/202106/source_img/ombre-highlight-honey-blonde-wig-180-long-loose-wave-wig-13x4-lace-front-human-hair-wigs--9236.jpg",
+            "image": "13x4_loose_wave_ombre_highlight_honey_blonde_lace_frontal_human_hair_wig_28inches.jpg"
+        }
+    },
+    {
+        "pk": 56,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005000046",
+            "name": "13x4 Side-part Body-wave Human hair Lace-frontal Wig - 28inches",
+            "description": "This side part body wave wig makes you look youthful. It boasts of a natural 'S' shape wavy pattern which makes women look good and that makes it the best choice for women who want to pull off an elegant look for parties or important occassions. It's also easy & effortless when it comes to styling as it does not need any combing or brushing. It is thick, voluminous and resistant to shedding. Available in colour Black.",
+            "price": 99.95,
+            "category": 7,
+            "rating": 3.8,
+            "image_url": "https://i.pinimg.com/236x/11/1c/ef/111cef6cb8c5f26ca5226bbbe8833756.jpg",
+            "image": "13x4_side_part_body_wave_human_hair_lace_frontal_wig_28inches.jpg"
+        }
+    },
+    {
+        "pk": 57,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005070254",
+            "name": "360 Full Lace Short Curly Human hair Wig - 10inches",
+            "description": "Made from Brazillian remy hair, it's a short curly full lace wig with baby hair round the edges for a youthful lookA high quality heat-resistant fibre. The cap is breathable & adjustable to wear in the sense that it has two adjustment straps inside the wig which can be intertwined to a fixed position to suit different head sizes.",
+            "price": 219.99,
+            "category": 7,
+            "rating": 4.0,
+            "image_url": "https://i.etsystatic.com/27364637/r/il/712009/3451515426/il_340x270.3451515426_52u5.jpg",
+            "image": "360_full_lace_short_curly_human_hair_wig_10inches.jpg"
+        }
+    },
+    {
+        "pk": 58,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005071145",
+            "name": "360 Pre-plucked Full-lace Human hair Wig - 24inches",
+            "description": "A straight human hair wig that can be styled to your taste. It's designed with a sheer lace around the whole hairline and also has lace all over the whole head which makes it versatile in allowing you to part your hair anywhere you want. It can be washed, curled, dyed or straightened without any hassle. Available in colour Black.",
+            "price": 79.99,
+            "category": 7,
+            "rating": 4.5,
+            "image_url": "https://m.media-amazon.com/images/I/81+x7UbGZVL._SY355_.jpg",
+            "image": "360_pre_plucked_full_lace_human_hair_wig_24inches.jpg"
+        }
+    },
+    {
+        "pk": 59,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005140282",
+            "name": "African Essence Control Wig Spray - 355ml",
+            "description": "This control hair spray for wigs is made of transparent solution and formulated to maintain the smoothness, natural look and stunning sheen in wigs. It's 3 in 1 thereby making it suitable for human, synthetic and braided hair wigs. Was €10.49 but now reduced to €4.49.",
+            "price": 4.49,
+            "category": 8,
+            "rating": 3.9,
+            "image_url": "https://www.anunustores.com/ekmps/shops/5b6d2c/images/african-essence-control-wig-shampoo-3in1-spray-syn-human-hair-4295-p.jpg",
+            "image": "african_essence_control_wig_spray_355ml.jpg"
+        }
+    },
+    {
+        "pk": 60,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005200166",
+            "name": "Eco Styler Hair Gel - 473ml",
+            "description": "Made with 100% pure olive oil which helps the scalp naturally regulate its moisturising system. It attracts moisture to the scalp and holds it in while also taming frizz. It's weightless and will leave your hair with a healthy shine and superior hold. Was €9.99 but now reduced to €2.99.",
+            "price": 2.99,
+            "category": 8,
+            "rating": 4.8,
+            "image_url": "https://purewows3.imgix.net/images/articles/2020_10/best-edge-control-eco-styler.jpg?auto=format,compress&cs=strip",
+            "image": "eco_styler_gel_473ml.jpg"
+        }
+    },
+    {
+        "pk": 61,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005210241",
+            "name": "Esha absolute Lace wig Adhesive Glue - 30ml",
+            "description": "Lay it, Slay it with Esha Super strong & super safe glue. Great for WigEnthusiasts and provides a strong yet comfortable hold. It can withstand heat, humidity and sport activities. You won't have any cause to worry about your lace front again as this glue will secure your wig in seconds. Was €27.98 but now reduced to €7.49.",
+            "price": 7.49,
+            "category": 8,
+            "rating": 3.7,
+            "image_url": "https://stylecaster.com/wp-content/uploads/2020/05/esha-absolute-lace-wig-adhesive-glue.jpg?w=477",
+            "image": "esha_absolute_lace_wig_adhesive_glue_30ml.jpg"
+        }
+    },
+    {
+        "pk": 62,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005280104",
+            "name": "Got2b glued Blasting Freeze Spray - 12oz",
+            "description": "This is a stronghold hair spray that will help you create and style your hair to your desired look. The look of your hair will be on point throughout the day, leaving you feeling confident with your hair. Was €16.69 but now reduced to €8.35.",
+            "price": 8.35,
+            "category": 8,
+            "rating": 4.0,
+            "image_url": "https://stylecaster.com/wp-content/uploads/2020/05/got2b-glued-blasting-freeze-spray.jpg?w=477",
+            "image": "got2b_glued_blasting_freeze_spray_12oz.jpg"
+        }
+    },
+    {
+        "pk": 63,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005310360",
+            "name": "Hair Vite Wig Shampoo - 236ml",
+            "description": "Cleans, freshens, softens and restores damaged hair. It naturally removes build up and the oil conditioners preserve the life of your hair pieces and wigs. It's the super cleaner for both human and synthetic hair wigs and will make your wigs look new and natural again with better manageability and control. Was €7.92 but now reduced to €2.90.",
+            "price": 2.90,
+            "category": 8,
+            "rating": 3.5,
+            "image_url": "https://m.media-amazon.com/images/I/417fJGRhS8L.jpg",
+            "image": "hair_vite_wig_shampoo_236ml.jpg"
+        }
+    },
+    {
+        "pk": 64,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005330595",
+            "name": "ORS Olive-oil Edge Control - 64g",
+            "description": "It slicks and holds down edges while adding shine and moisture to your hair. This non-sticky, non-greasy formula provides excellent hold without hardening the hair. It's unique alcohol-free formula gives the hair superior hold without flaking and contains wheat protein to add strength to your hair and reduce breakage. Was €5.80 but now reduced to €2.45.",
+            "price": 2.45,
+            "category": 8,
+            "rating": 3.5,
+            "image_url": "https://m.media-amazon.com/images/I/71d0p66qv3L._AC_SX425_.jpg",
+            "image": "ors_olive_oil_edge_control_64g.jpg"
+        }
+    },
+    {
+        "pk": 65,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005430914",
+            "name": "Style Factor Edge Booster - 150ml",
+            "description": "This edge booster is made with natural argan oil which absorbs quickly with no oily residue. It nourishes and hydrates while providing a strong and pliable hold. The unique fresh and clean scent will invigorate your senses and freshen up your hair even in between washes so whether you want to texturise with a natural finish, hold style without build up, define curls, controls frizz or tame edges, this edge booster is your favourite styling solution. Was €9.98 but now reduced to €3.98.",
+            "price": 3.98,
+            "category": 8,
+            "rating": 3.5,
+            "image_url": "https://pyxis.nymag.com/v1/imgs/9e4/8d3/8046b5432849d3af934b887cdfa67d33e0-4----.2x.rsquare.w600.jpg",
+            "image": "style_factor_edge_booster_150ml.jpg"
+        }
+    },
+    {
+        "pk": 66,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005430944",
+            "name": "Large Wig Stand - Black",
+            "description": "This wig stand is strong and sturdy and it's suitable for placing your wig upon after wearing or shampooing. It allows air to flow freely through the base thereby providing natural drying of your wig and its base material without stretching. When your wig is not in use, it's best to place it on the stand to keep it in shape. Ideal for travelling as it can be collapsed and flat packed into your suitcases. Was €6.49 but now reduced to €1.49. Available in Colour Black.",
+            "price": 1.49,
+            "category": 8,
+            "rating": 3.5,
+            "image_url": " https://cdn.shopify.com/s/files/1/0026/0531/8259/products/Wig-Stand-Black_large.jpg?v=1534839133",
+            "image": "wig_stand_black_large.jpg"
+        }
+    },
+    {
+        "pk": 67,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005510265",
+            "name": "4x4 Ombre-Red Short Bob Straight Human hair Wig - 12inches",
+            "description": "It's a 4x4, 150% density, center-part bob wig made from 100% virgin hair. It's cap is made from swiss brown lace and is tangle-free, no shedding, soft and bouncy. Was €109.44 but clearance price is now €29.99. Available in colour 99J.",
+            "price": 29.99,
+            "category": 9,
+            "rating": 4.7,
+            "image_url": "https://cdn.shopify.com/s/files/1/0575/2773/0376/products/41Je858_uIS.jpg?v=1623905919",
+            "image": "4x4_ombre_red_short_bob_straight_human_hair_wig_12inches.jpg"
+        }
+    },
+    {
+        "pk": 68,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005520201",
+            "name": "13x2 Lace-frontal Shoulder-length Human-hair braided Wig - 12inches",
+            "description": "It's a feed in style cornrow 12 inch wig with a middle-part. Made from 100% human hair and its cap made to fit all head sizes and an added band in the back for extra security to ensure that wig does not fall off. Was €170.05 but clearance price is now €39.99. Available in Colour Black.",
+            "price": 39.99,
+            "category": 9,
+            "rating": 4.5,
+            "image_url": "https://i.pinimg.com/236x/f9/27/c6/f927c6caa9fcaf9c503a7f368ad74e88--to-ship-ships.jpg",
+            "image": "13x2_lace_frontal_shoulder_length_braided_wig_12inches.jpg"
+        }
+    },
+    {
+        "pk": 69,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005520205",
+            "name": "13x2 two-colour Lace-frontal center-part European Long Curly Synthetic Wig - 28inches",
+            "description": "This lace front wig offer the most natural appearance at every angle. It blends seamlessly with your hair and the synthetic fibers can be heat styled to create any look. It adds to your existing hairline and creates an impression of the hair growing from your scalp thereby making it difficult to discern whether the hair on your head is artificial or natural. Was €97.99 but clearance is now €37.99. Available in two tone color of Pink & Purple.",
+            "price": 37.99,
+            "category": 9,
+            "rating": 4.5,
+            "image_url": "https://m.media-amazon.com/images/I/71O0mxx8HRL._AC_SX425_.jpg",
+            "image": "13x2_two_colour_center_part_european_long_curly_synthetic_wig_28inches"
+        }
+    },
+    {
+        "pk": 70,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005630545",
+            "name": "13x4 Brazillian Pre-plucked Straight Bob Lace-frontal Wig - 14inches",
+            "description": "It's a high quality wig made from 100% Brazillian human hair which makes it durable and lasts longer. Its versatility makes it easy to work with as it can be styled whichever way you like. It can be curled, flat-ironed, dyed to a different colour without damaging the hair because of its durability. Was €130.49 but clerance price is now €30.49. Available in Colour Burgundy.",
+            "price": 30.49,
+            "category": 9,
+            "rating": 4.3,
+            "image_url": "https://bigstarhairextension.com.au/wp-content/uploads/2020/11/d278b1012a87bc598f94019c2cfb0f83-1.jpg",
+            "image": "13x4_brazillian_pre_plucked_straight_burgundy_bob_lace_frontal_wig_14inches"
+        }
+    },
+    {
+        "pk": 71,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005700140",
+            "name": "13x4 Pink 'n' Blue Lace-frontal Human hair Wig - 32inches",
+            "description": "A beautiful rainbow-coloured human hair lace front wig. It's a body-wave, pre-plucked, lace-frontal wig for women made from transparent swiss lace with an average cap size to fit most head sizes. Was €199.99 but clerance price is now €44.95. Available in two tone color of Pink & Blue.",
+            "price": 44.95,
+            "category": 9,
+            "rating": 3.5,
+            "image_url": "https://i.pinimg.com/736x/ce/7b/7f/ce7b7f539923cca0b275bbfb014a9765.jpg",
+            "image": "13x4_pink_n_blue_lace_frontal_human_hair_wig_32inches"
+        }
+    },
+    {
+        "pk": 72,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005630605",
+            "name": "13x4 Side-way Bob braided Wig - 16inches",
+            "description": "This side-way braided wig unit is done on a 13x4 lace closure. It gives its wearer a natural look which makes it difficult to detect it's a wig. It saves you time and money as you don't have to sit for hours in the salon in order to get your hair braided. It's a one cap that fits all head sizes and no glue is needed as the wig comes with elastic band needed to secure it to your head. Was €163.25 but clerance price is now €42.99. Available in Colour Black.",
+            "price": 42.99,
+            "category": 9,
+            "rating": 4.6,
+            "image_url": "https://m.media-amazon.com/images/I/812ywJXiEaL._SL1500_.jpg",
+            "image": "13x4_side_way_bob_braided_wig_16inches.jpg"
+        }
+    },
+    {
+        "pk": 73,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005630638",
+            "name": "Headband Synthetic Wig - 22inches",
+            "description": "This headband wig looks more natural by making the hairline more realistic than ordinary full machine-made wig. You can re-design your hairstyle according to your personal preference and its high density means you can tie it up into ponytail, half-up, bun etc. It's also easy to wear with 3 combs inside and size adjustable velcro at the back so you can install it in seconds. Was €85.49 but clearance price is now €25.49. Available in Colour Natural 1B.",
+            "price": 25.49,
+            "category": 9,
+            "rating": 4.4,
+            "image_url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F14%2F2021%2F02%2F16%2F021621-kryssma-headband-glueless-wig-embed.jpg",
+            "image": "headband_synthetic_wig_22inches.jpg"
+        }
+    },
+    {
+        "pk": 74,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5005650677",
+            "name": "Large Spiral Curls Synthetic Wig - 14inches",
+            "description": "This synthetic wig is made of high quality material. It's soft & natural and the cap is breathable and comfortable to wear. There are two adjustment straps inside the wig which can be intertwined to a fixed position to suit different head sizes. Was €51.75 but clearance price is now €25.75. Available in two tone colour of Natural 1B/honey-blonde.",
+            "price": 25.75,
+            "category": 9,
+            "rating": 4.9,
+            "image_url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F14%2F2021%2F02%2F16%2F021621-annivia-short-curly-bangs-wig-embed.jpg",
+            "image": "large_spiral_curls_synthetic_wig_14inches.jpg"
         }
     }
 ]

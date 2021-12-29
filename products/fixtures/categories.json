@@ -51,24 +51,24 @@
         "pk": 7,
         "model": "products.category",
         "fields": {
-            "name": "price_under_€10",
-            "friendly_name": "Price Under €10"
+            "name": "just_in",
+            "friendly_name": "Just In"
         }
     },
     {
         "pk": 8,
         "model": "products.category",
         "fields": {
-            "name": "price_under_€20",
-            "friendly_name": "Price Under €20"
+            "name": "reductions",
+            "friendly_name": "Reductions"
         }
     },
     {
         "pk": 9,
         "model": "products.category",
         "fields": {
-            "name": "price_under_€30",
-            "friendly_name": "Price Under €30"
+            "name": "clearance",
+            "friendly_name": "Clearance"
         }
     }
 ]

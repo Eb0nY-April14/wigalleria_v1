@@ -29,10 +29,10 @@
                 Wigs
             </a>
             <div class="dropdown-menu border-0 bg-dark" aria-labelledby="wigs-link">
-                <a href="" class="dropdown-item bg-dark text-white">360 Lace Wigs</a>
-                <a href="" class="dropdown-item bg-dark text-white">Frontal Lace Wigs</a>
-                <a href="" class="dropdown-item bg-dark text-white">Synthetic Wigs</a>
-                <a href="" class="dropdown-item bg-dark text-white">All Wigs</a>
+                <a href="{% url 'products' %}?category=360_lace_wig" class="dropdown-item bg-dark text-white">360 Lace Wigs</a>
+                <a href="{% url 'products' %}?category=frontal_lace_wig" class="dropdown-item bg-dark text-white">Frontal Lace Wigs</a>
+                <a href="{% url 'products' %}?category=synthetic_wig" class="dropdown-item bg-dark text-white">Synthetic Wigs</a>
+                <a href="{% url 'products' %}?category=360_lace_wig,frontal_lace_wig,synthetic_wig" class="dropdown-item bg-dark text-white">All Wigs</a>
             </div>
         </li>
 
@@ -44,10 +44,10 @@
                 Hair Care Products
             </a>
             <div class="dropdown-menu border-0 bg-dark" aria-labelledby="hair-care-products-link">
-                <a href="" class="dropdown-item bg-dark text-white">Hair Shampoo</a>
-                <a href="" class="dropdown-item bg-dark text-white">Hair Conditioner</a>
-                <a href="" class="dropdown-item bg-dark text-white">Hair Oils</a>
-                <a href="" class="dropdown-item bg-dark text-white">All Hair Care Products</a>
+                <a href="{% url 'products' %}?category=hair_shampoo" class="dropdown-item bg-dark text-white">Shampoo</a>
+                <a href="{% url 'products' %}?category=hair_conditioner" class="dropdown-item bg-dark text-white">Conditioner</a>
+                <a href="{% url 'products' %}?category=hair_oils" class="dropdown-item bg-dark text-white">Oils</a>
+                <a href="{% url 'products' %}?category=hair_shampoo,hair_conditioner,hair_oils" class="dropdown-item bg-dark text-white">All Hair Care Products</a>
             </div>
         </li>
 
@@ -59,10 +59,10 @@
                 Deals
             </a>
             <div class="dropdown-menu border-0 bg-dark" aria-labelledby="deals-link">
-                <a href="" class="dropdown-item bg-dark text-white" >Under €10</a>
-                <a href="" class="dropdown-item bg-dark text-white" >Under €20</a>
-                <a href="" class="dropdown-item bg-dark text-white">Under €30</a>
-                <a href="" class="dropdown-item bg-dark text-white">All deals</a>
+                <a href="{% url 'products' %}?category=just_in" class="dropdown-item bg-dark text-white">Just In</a>
+                <a href="{% url 'products' %}?category=reductions" class="dropdown-item bg-dark text-white">Reductions</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item bg-dark text-white">Clearance</a>
+                <a href="{% url 'products' %}?category=just_in,reductions,clearance" class="dropdown-item bg-dark text-white">All Deals</a>
             </div>
         </li>
     </ul>
