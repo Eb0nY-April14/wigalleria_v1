@@ -3,48 +3,48 @@
         "pk": 1,
         "model": "products.category",
         "fields": {
-            "name": "360_lace_wig",
-            "friendly_name": "360 Lace Wig"
+            "name": "360_lace",
+            "friendly_name": "360 Lace"
         }
     },
     {
         "pk": 2,
         "model": "products.category",
         "fields": {
-            "name": "frontal_lace_wig",
-            "friendly_name": "Frontal Lace Wig"
+            "name": "frontal_lace",
+            "friendly_name": "Frontal Lace"
         }
     },
     {
         "pk": 3,
         "model": "products.category",
         "fields": {
-            "name": "synthetic_wig",
-            "friendly_name": "Synthetic Wig"
+            "name": "synthetic",
+            "friendly_name": "Synthetic"
         }
     },
     {
         "pk": 4,
         "model": "products.category",
         "fields": {
-            "name": "hair_shampoo",
-            "friendly_name": "Hair Shampoo"
+            "name": "shampoo",
+            "friendly_name": "Shampoo"
         }
     },
     {
         "pk": 5,
         "model": "products.category",
         "fields": {
-            "name": "hair_conditioner",
-            "friendly_name": "Hair Conditioner"
+            "name": "conditioner",
+            "friendly_name": "Conditioner"
         }
     },
     {
         "pk": 6,
         "model": "products.category",
         "fields": {
-            "name": "hair_oils",
-            "friendly_name": "Hair Oils"
+            "name": "oils",
+            "friendly_name": "Oils"
         }
     },
     {

@@ -95,6 +95,22 @@ body {
 
 /* ALL PRODUCTS PAGE STYLING */
 
+.cart-btn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+a.view-expand {
+    padding-right: 35px;
+    padding-left: 35px;
+    display: inline-block;
+}
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color:#fff !important; 
+}
+
 /* .box-element {
     box-shadow:hsl(0, 0%, 80%) 0 0 16px;
 	background-color: #fff;
