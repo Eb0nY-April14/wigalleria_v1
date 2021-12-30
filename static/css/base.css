@@ -80,7 +80,7 @@ body {
 }
 
 /* #delivery-banner {
-    margin-left: 35em;
+    margin-bottom: 5em;
 } */
 
 .shop-now-button:hover,
@@ -129,14 +129,77 @@ a.category-badge > span.badge:hover {
     background: transparent;
 }
 
-.login {
-    margin-top: 150px;
-    margin-left: 100px;
+.btn-like:hover,
+.btn-like:active {
+    color: #E84610;
+    background: transparent;
+    border: none;
 }
+
+/* form.login {
+    margin-left: 200px;
+}
+
+h1.sign {
+    margin-left: 250px;
+} */
 
 .logout {
     margin-top: 250px;
-    margin-left: 100px;
+    /* margin-left: 100px; */
+}
+
+h1.sign-in, h1.sign-out {
+    margin-top: 80px;
+    font-weight: bold;
+    color: #fff;
+}
+
+p.signout-quest {
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#id_login, #id_password {
+    color: #fff;
+}
+
+a.passForget {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.signIn-btn {
+    padding: 5px 20px;
+}
+
+.signIn-btn:hover {
+    color:#fff;
+    background: #000;
+}
+
+p.reg {
+    font-weight: bold;
+    color: #fff;
+}
+
+form.login, h1.sign-in, .logout, p.reg, h1.sign-out, .signout-quest {
+    text-align: center;
+}
+
+/* button#signout-btt {
+    margin-left: 715px;
+} */
+
+.signOut-btn {
+    margin-left: 715px;
+    padding: 5px 25px;
+}
+
+.signOut-btn:hover {
+    color:#fff;
+    background: #000;
 }
 
 /* .btn-like:hover,
