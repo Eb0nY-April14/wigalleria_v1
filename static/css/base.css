@@ -123,6 +123,29 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+.btn-like {
+    color: #E84610;
+    border: none;
+    background: transparent;
+}
+
+.login {
+    margin-top: 150px;
+    margin-left: 100px;
+}
+
+.logout {
+    margin-top: 250px;
+    margin-left: 100px;
+}
+
+/* .btn-like:hover,
+.btn-like:active {
+    color: #E84610;
+    background: transparent;
+    border: none;
+} */
+
 /* .box-element {
     box-shadow:hsl(0, 0%, 80%) 0 0 16px;
 	background-color: #fff;

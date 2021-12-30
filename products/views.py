@@ -1,10 +1,24 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
 
 # Create your views here.
+
+def LikeView(request, pk):
+    """ A view to create the like button for each product on the product detail page """
+
+    product = get_object_or_404(Product, id=request.POST.get('prod_id'))
+    if product.likes.filter(id=request.user.id).exists():
+        product.likes.remove(request.user)
+    else:
+        product.likes.add(request.user)
+
+    return HttpResponseRedirect(reverse('product_detail', args=[str(pk)]))
+
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
