@@ -144,6 +144,8 @@ h1.sign {
     margin-left: 250px;
 } */
 
+/* AUTHENTICATION PAGES BUTTONS STYLING */
+
 .logout {
     margin-top: 250px;
     /* margin-left: 100px; */
@@ -201,6 +203,71 @@ form.login, h1.sign-in, .logout, p.reg, h1.sign-out, .signout-quest {
     color:#fff;
     background: #000;
 }
+
+/* PRODUCT-DETAIL PAGE STYLING */
+h2.subtitle {
+    text-align: center;
+    font-weight: bold;
+}
+
+.notification {
+    /* margin-left: 45px; */
+    font-weight: bold;
+}
+
+.reviews-wrapper {
+    padding: 50px 20px;
+    /* text-align: center; */
+    background: #f1f1f1;  
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.no-reviews-wrapper {
+    padding: 50px 20px;
+    /* text-align: center; */
+    background: #f1f1f1;  
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/* .field {
+    display: table;
+    width: 100%;
+} */
+
+/* .content-rev {
+    width: 20%;
+    display: table-cell;
+} */
+
+.control {
+    width: 100%;
+    /* height: 100%; */
+    display: inline;
+}
+
+.control > textarea {
+    width: inherit;
+    /* height: inherit; */
+}
+
+.textarea {
+    border-radius : 5px;
+}
+
+/* .select {
+    margin-bottom: 5px;
+} */
+
+.submit-bttn {
+    border-radius: 8px;
+    padding-right: 12px;
+    padding-left: 12px;
+    color: #fff;
+}
+
 
 /* .btn-like:hover,
 .btn-like:active {

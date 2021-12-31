@@ -37,7 +37,7 @@ class Product(models.Model):
 
 class Comment(models.Model):
     product = models.ForeignKey(
-        Product, on_delete=models.CASCADE, related_name='comments')
+        Product, related_name='comments', on_delete=models.CASCADE)
     name = models.CharField(max_length=80)
     email = models.EmailField()
     comment_body = models.TextField()
@@ -48,3 +48,15 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+
+class ProductReview(models.Model):
+    product = models.ForeignKey(
+        Product, related_name='reviews', on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        User, related_name='reviews', on_delete=models.CASCADE)
+
+    content = models.TextField(blank=True, null=True)
+    stars = models.IntegerField()
+
+    created_on = models.DateTimeField(auto_now_add=True)
