@@ -77,13 +77,7 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    context = {
-        'product': product,
-    }
-
-    return render(request, 'products/product_detail.html', context)
-
-     # Add review
+    # Add reviews in the product detail page.
 
     if request.method == 'POST' and request.user.is_authenticated:
         stars = request.POST.get('stars', 3)
@@ -91,4 +85,10 @@ def product_detail(request, product_id):
 
         review = ProductReview.objects.create(product=product, user=request.user, stars=stars, content=content)
 
-        return redirect('products/product_detail.html', product_id=product_id)
+        return redirect('product_detail', product_id=product_id)
+
+    context = {
+        'product': product
+    }
+
+    return render(request, 'products/product_detail.html', context)

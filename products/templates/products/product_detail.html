@@ -71,7 +71,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>  <!-- container-fluid class ends-->
 
     <!-- GENERAL COMMENTS CODE GOES HERE -->
     <div class="row">
@@ -107,7 +107,7 @@
 
     <div class="notification space-below">
         {% if request.user.is_authenticated %}
-            <form class="no-reviews-wrapper" method="POST" action=".">
+            <form class="no-reviews-wrapper" method="POST" action="{% url 'product_detail' product.id %}">
                 {% csrf_token %}
 
                 <div class="field">

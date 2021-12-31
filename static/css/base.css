@@ -206,8 +206,9 @@ form.login, h1.sign-in, .logout, p.reg, h1.sign-out, .signout-quest {
 
 /* PRODUCT-DETAIL PAGE STYLING */
 h2.subtitle {
-    text-align: center;
+    /* text-align: center; */
     font-weight: bold;
+    margin-left: 20px;
 }
 
 .notification {
@@ -243,7 +244,7 @@ h2.subtitle {
 } */
 
 .control {
-    width: 100%;
+    width: 30%;
     /* height: 100%; */
     display: inline;
 }

@@ -40,7 +40,7 @@ class Comment(models.Model):
         Product, related_name='comments', on_delete=models.CASCADE)
     name = models.CharField(max_length=80)
     email = models.EmailField()
-    comment_body = models.TextField()
+    body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
