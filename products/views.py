@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+# from django.views import generic, View
+from django.views.generic.edit import CreateView
+from .forms import CommentForm
 from django.http import HttpResponseRedirect
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category, ProductReview
+from .models import Product, Category, ProductReview, Comment # Profile
 
 # Create your views here.
 
@@ -92,3 +95,18 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+# Add Comment
+class AddCommentView(CreateView):
+    model = Comment
+    form_class = CommentForm
+    template_name = 'products/add_comment.html'
+    # fields = '__all__'
+
+    def form_valid(self, form):
+        form.instance.product_id = self.kwargs['pk']
+        return super().form_valid(form)
+
+    success_url = reverse_lazy('products')
+    

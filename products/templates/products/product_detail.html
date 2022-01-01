@@ -136,13 +136,53 @@
 
                 <div class="field">
                     <div class="control">
-                        <button class="button bg-success submit-bttn">Submit</button>
+                        <button class="button btn-success submit-bttn">Submit</button>
                     </div>
                 </div>
             </form>
             {% else %}
-                <p class="no-reviews-wrapper">Please sign in to add review!</p>
+                <p class="no-reviews-wrapper">Please <a href="{% url 'account_login' %}"><strong>Sign In</strong></a> to add review!</p>
         {% endif %}
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+
+    <!-- GENERAL COMMENTS CODE GOES HERE -->
+
+    <h2 class="subtitle">Comments...</h2>
+
+    {% if request.user.is_authenticated %}
+        {% if not product.comments.all %}
+        <div class="no-reviews-wrapper">
+            No Comments Yet...
+            <a href="{% url 'add_comment' product.pk %}">
+                Add One
+            </a>
+        </div>
+        {% else %}
+        <a class="subtitle" href="{% url 'add_comment' product.pk %}">Add Comment</a>
+            {% for comment in product.comments.all %}
+                <div class="no-reviews-wrapper">
+                    <strong>
+                        {{ comment.name }} -
+                        {{ comment.created_on }}
+                    </strong>
+                    <br/>
+                        {{ comment.body }}
+                </div>
+            {% endfor %}
+
+            <!-- <a class="subtitle" href="{% url 'add_comment' product.pk %}">Add Comment</a> -->
+
+        {% endif %}
+        <br/>
+    {% else %}
+        <p class="no-reviews-wrapper notification">Please <a href="{% url 'account_login' %}"><strong>Sign In</strong></a> to add comment!</p>
+    {% endif %}
     </div>
    
     <!-- BACK TO TOP BUTTON -->

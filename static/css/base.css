@@ -209,7 +209,34 @@ h2.subtitle {
     /* text-align: center; */
     font-weight: bold;
     margin-left: 20px;
+    color: #000;
 }
+
+h1.comment-heading {
+    text-align: center;
+}
+
+form.comment-heading {
+    width: 50%;
+    /* margin-left: 230px; */
+    margin: auto;
+}
+
+h1.comment-heading {
+    margin-top: 40px;
+    font-weight: bold;
+    color: #000;
+}
+
+button.bottom-space {
+    margin-bottom: 20px;
+}
+
+a.subtitle {
+    font-weight: bold;
+    margin-left: 20px;
+}
+
 
 .notification {
     /* margin-left: 45px; */

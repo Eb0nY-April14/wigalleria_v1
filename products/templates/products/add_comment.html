@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    Comment on Product
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div> 
+            <h1 class="comment-heading">Add Comment...</h1>
+            <br/><br/>
+
+        <div class="form-group">
+            <form class="comment-heading" method="POST"> 
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-success bottom-space">
+                        Add Comment
+                    </button>
+            </form>
+        </div>
+{% endblock %}
