@@ -68,6 +68,8 @@
                         <span class="text-secondary">{{ product.number_of_likes }}</span>
                     </strong>
 
+                    <a href="{% url 'add_to_wishlist' product.pk %}" class="btn btn-light" role="button" aria-disabled="true">Add to Wish List</a>
+                    
                 </div>
             </div>
         </div>
@@ -79,10 +81,6 @@
             <hr>
         </div>
     </div>
-    <!-- <div class="row">
-        <div class="col-md-8 card mb-4 mt-3 ">
-            <h3>Comments:</h3>
-            <div class="card-body"   -->
 
     <!-- PRODUCT REVIEW CODE GOES HERE -->
     <h2 class="subtitle">Reviews</h2>
@@ -159,7 +157,7 @@
         {% if not product.comments.all %}
         <div class="no-reviews-wrapper">
             No Comments Yet...
-            <a href="{% url 'add_comment' product.pk %}">
+            <a href="{% url 'add_comment' product.pk %}">   
                 Add One
             </a>
         </div>

@@ -1,18 +1,20 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
-# from django.views import generic, View
-from django.views.generic.edit import CreateView
-from .forms import CommentForm
-from django.http import HttpResponseRedirect
-from django.urls import reverse, reverse_lazy
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import get_object_or_404, redirect, render
+from django.urls import reverse, reverse_lazy
+from django.views.generic.edit import CreateView
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category, ProductReview, Comment # Profile
+
+from .models import Product, Category, ProductReview, Comment
+# from products.models import Product 
+from .forms import CommentForm
 
 # Create your views here.
 
 def LikeView(request, pk):
-    """ A view to create the like button for each product on the product detail page """
+    """ A view to add like button to each product on the product detail page """
 
     product = get_object_or_404(Product, id=request.POST.get('prod_id'))
     if product.likes.filter(id=request.user.id).exists():
@@ -99,6 +101,7 @@ def product_detail(request, product_id):
 
 # Add Comment
 class AddCommentView(CreateView):
+    """ A view to add comments to a product """
     model = Comment
     form_class = CommentForm
     template_name = 'products/add_comment.html'
@@ -109,4 +112,26 @@ class AddCommentView(CreateView):
         return super().form_valid(form)
 
     success_url = reverse_lazy('products')
-    
+
+
+# View Wishlist
+@login_required
+def wishlist(request):
+    """ A view to view all products in user's wishlist """
+
+    products = Product.objects.filter(user_wishlist=request.user)
+    return render(request, 'products/user_wish_list.html', {'wishlist': products})
+
+
+# Add to Wishlist
+@login_required
+def add_to_wishlist(request, pk):
+    """ A view to add products to wishlist """
+
+    product = get_object_or_404(Product, id=request.POST.get('prod_id'))
+    if product.user_wishlist.filter(id=request.user.id).exists():
+        product.user_wishlist.remove(request.user)
+    else:
+        product.user_wishlist.add(request.user)
+
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])

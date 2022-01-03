@@ -87,6 +87,20 @@
                                     {% endif %}
                             </div>
                         </li>
+
+                        <li class="list-inline-item">
+                            <a class="text-white nav-link" href="{% url 'wishlist' %}">
+                                <div class="text-center">
+                                    {% if user.is_authenticated %}
+                                        <div><i class="fas fa-heart fa-lg"></i></div>  
+                                    {% else %}
+                                        <div><i class="far fa-heart fa-lg"></i></div>  
+                                    {% endif %}
+                                    <p class="my-0">My Wish List</p>
+                                </div>
+                            </a>
+                        </li>
+
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-white{% endif %} nav-link" href="#">
                                 <div class="text-center">
