@@ -237,7 +237,6 @@ a.subtitle {
     margin-left: 20px;
 }
 
-
 .notification {
     /* margin-left: 45px; */
     font-weight: bold;
@@ -294,6 +293,31 @@ a.subtitle {
     padding-right: 12px;
     padding-left: 12px;
     color: #fff;
+}
+
+/* Checkout Page styling */
+a.checkout {
+    float: right;
+    margin: 5px;
+}
+
+a.shopping-btn {
+    margin-left: 150px;
+    margin-bottom: 10px;
+}
+
+h5.no-of-items {
+    margin-left: 150px;
+}
+
+p.cart-empty {
+    margin-top: 150px;
+}
+
+.checkout:hover {
+    background-color:#fff;
+    color: green;
+    border: solid 2px black;
 }
 
 
