@@ -29,7 +29,7 @@ body {
 .shop-now-button {
     background: black;
     color: white;
-    min-width: 240px;
+    /* min-width: 240px; */
 }
 
 .border-black {
@@ -259,6 +259,11 @@ a.subtitle {
     margin-left: 20px;
 }
 
+.cart-margin {
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
 /* .field {
     display: table;
     width: 100%;
@@ -301,10 +306,10 @@ a.checkout {
     margin: 5px;
 }
 
-a.shopping-btn {
+/* a.shopping-btn {
     margin-left: 150px;
     margin-bottom: 10px;
-}
+} */
 
 h5.no-of-items {
     margin-left: 150px;
