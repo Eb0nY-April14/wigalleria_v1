@@ -61,6 +61,18 @@ body {
         z-index: -1;
     }
 
+    ul li a span.cart-item-count {
+        font-size: .6rem;
+        position: absolute;
+        top: -6px;
+        right: -5px;
+        width: 15px;
+        height: 15px;
+        color: #000;
+        background-color: #418deb;
+        border-radius: 50%;
+    }
+
 .bg-dark, .bg-color {
     background-color: #e75480 !important;
 }
@@ -335,6 +347,8 @@ p.cart-empty {
 .text-size {
     font-size: 25px;
 }
+
+
 
 
 

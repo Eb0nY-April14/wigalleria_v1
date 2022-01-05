@@ -106,6 +106,9 @@
                             <a class="{% if grand_total %}text-white font-weight-bold{% else %}text-white{% endif %} nav-link" href="{% url 'view_cart' %}">
                                 <div class="text-center">
                                     <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                                    <span class="cart-item-count d-flex align-items-center justify-content-center">
+                                        {{ product_count }}
+                                    </span>
                                     <p class="my-0">
                                         {% if grand_total %}
                                             €{{ grand_total|floatformat:2 }}
