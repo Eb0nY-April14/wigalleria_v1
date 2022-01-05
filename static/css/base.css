@@ -325,6 +325,18 @@ p.cart-empty {
     border: solid 2px black;
 }
 
+/* Verification Sent Page styling */
+.text-colour-change {
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.text-size {
+    font-size: 25px;
+}
+
+
 
 /* .btn-like:hover,
 .btn-like:active {
