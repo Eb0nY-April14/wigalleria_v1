@@ -9,5 +9,5 @@ urlpatterns = [
     path('<int:pk>/comment/', AddCommentView.as_view(), name='add_comment'),
     # Wish List
     path('wishlist/', views.wishlist, name='wishlist'),
-    path('add_to_wishlist/<int:pk>', views.add_to_wishlist, name='add_to_wishlist'),
+    path('add_to_wishlist/<int:pk>/', views.add_to_wishlist, name='add_to_wishlist'),
 ]

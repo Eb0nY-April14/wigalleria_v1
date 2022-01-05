@@ -9,9 +9,10 @@ def view_cart(request):
 
 
 def add_to_cart(request, item_id):
-    """ A view that adds the quantity of the specified product to the shopping cart """
+    """ Adds the quantity of the specified product to the shopping cart """
 
     quantity = int(request.POST.get('quantity'))
+    print(quantity)
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
@@ -21,5 +22,4 @@ def add_to_cart(request, item_id):
         cart[item_id] = quantity
 
     request.session['cart'] = cart
-    print(request.session['cart'])
     return redirect(redirect_url)
