@@ -150,13 +150,22 @@ a.category-badge > span.badge:hover {
     border: none;
 }
 
-/* form.login {
-    margin-left: 200px;
+/* bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
 }
 
-h1.sign {
-    margin-left: 250px;
-} */
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
 
 /* AUTHENTICATION PAGES BUTTONS STYLING */
 
@@ -203,10 +212,6 @@ p.reg {
 form.login, h1.sign-in, .logout, p.reg, h1.sign-out, .signout-quest {
     text-align: center;
 }
-
-/* button#signout-btt {
-    margin-left: 715px;
-} */
 
 .signOut-btn {
     margin-left: 715px;
