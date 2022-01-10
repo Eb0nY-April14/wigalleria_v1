@@ -53,17 +53,17 @@
 
         <div class="row">  <!-- row div starts -->
             <div class="col-12 col-lg-6 order-lg-last mb-5">  <!-- col 12 div starts -->
-                <p class="text-muted">Order Summary 
+                <p class="text-black">Order Summary 
                     <span class="cart-item-count">
                         {{ product_count }}
                     </span>
                 </p>
                 <div class="row"> <!-- row div starts -->
                     <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 small text-muted">Item</p>
+                        <p class="mb-1 mt-0 small text-muted text-black">Item</p>
                     </div>
                     <div class="col-3 text-right">
-                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>
+                        <p class="mb-1 mt-0 small text-muted text-black">Subtotal</p>
                     </div>
                 </div>  <!-- row div ends -->
                 {% for item in cart_items %}
@@ -104,7 +104,7 @@
             <!-- Checkout form Section -->
             <!-- This column will contain a table to show the cart contents. -->
             <div class="col-12 col-lg-6">
-                <p class="text-muted font-weight-bold">To complete your order, please fill out the form below:</p>
+                <p class="text-black font-weight-bold">To complete your order, please fill out the form below:</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
@@ -142,7 +142,7 @@
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                     </fieldset>
 
-                    <div class="submit-button text-right">
+                    <div class="submit-button text-right">  <!-- submit button div starts -->
                     <!-- <div class="submit-button text-right mt-5 mb-2"> -->
                         <a class="btn btn-md rounded-0 py-3 mt-2 mb-2 btn-dark shop-now-button font-weight-bold" href="{% url 'view_cart' %}">
                             <span class="icon">
@@ -161,9 +161,9 @@
                             <span class="icon">
                                 <i class="fas fa-exclamation-circle"></i>
                             </span>
-                            <span>Your Card will be charged<strong>€{{ grand_total|floatformat:2 }}</strong></span>
+                            <span>Your Card will be charged<strong> €{{ grand_total|floatformat:2 }}</strong></span>
                         </p>
-                    </div>
+                    </div>  <!-- submit button div ends -->
                 </form>
             </div> <!-- col 12 div ends -->
         </div>  <!-- row div ends -->
@@ -180,11 +180,16 @@
 <!-- JS FOR BACK TO TOP BUTTON -->
 {% block postloadjs %}
     {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+
     <script type="text/javascript">
         $('.btt-link').click(function(e) {
             window.scrollTo(0,0)
         })
     </script>
+
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
 
 
