@@ -16,43 +16,52 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Shopping Cart</h2>
-                <hr>
+                <h2 class="logo-font mb-4"><em>Shopping Cart</em></h2>
+                <!-- <hr> -->
             </div>
         </div>
     <!-- </div> -->
 
         <div class="row">
             <div class="col-lg-12">
-                <div class="box-element">
-                    <a class="shop-now-button btn btn-lg rounded-0 py-3 shopping-btn" href="{% url 'products' %}">
+                <div class="box-element">  <!-- box element div starts -->
+                    <!-- <a class="shop-now-button btn btn-lg rounded-0 py-3 shopping-btn" href="{% url 'products' %}">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>Continue Shopping    
-                    </a>
+                    </a> -->
                     <table class="table">
                         <tr>
-                            <th><h5 class="no-of-items">Items:
+                            <th><h5 class="no-of-items font-weight-bold">Items:
                                 {% if cart_items %} 
                                     <strong>
                                         {{ product_count }}
-                                    </strong></h5></th>
+                                    </strong>
                                 {% else %}
                                     0
                                     <!-- <div>
                                         <p class="lead mb-5 cart-empty text-center">Your Cart is empty.</p>
                                     </div> -->
                                 {% endif %}
-                            <th><h5>Total: 
+                            </h5></th>
+                            <th><h5 class="font-weight-bold">Total: 
                                 {% if grand_total %}
                                     <strong>
                                         €{{ grand_total|floatformat:2 }}   
-                                    </strong></h5></th>
+                                    </strong>
                                 {% else %}
                                     €0.00
                                 {% endif %}
+                            </h5></th>
                             <th>
-                                <a class="btn btn-md btn-success rounded-0 py-3 checkout font-weight-bold" href="#">
+                                <a class="btn btn-md btn-dark rounded-0 py-3 shop-now-button font-weight-bold" href="{% url 'products' %}">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>Continue Shopping    
+                                </a>
+                            </th>
+                            <th>
+                                <a class="btn btn-md btn-success rounded-0 py-3 checkout font-weight-bold" href="{% url 'checkout' %}">
                                     Secure Checkout<span class="icon">
                                         <i class="fas fa-lock"></i>
                                     </span>
@@ -60,7 +69,7 @@
                             </th>                        
                         </tr>
                     </table>
-                </div>
+                </div>  <!-- box element div ends -->
             
                 <div class="row">
                     <!-- This column will contain a table to show the cart contents. -->

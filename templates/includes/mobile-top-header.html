@@ -61,7 +61,7 @@
 
 <!-- The 3rd list item will give us a button to access the shopping cart. -->
 <li class="list-inline-item">
-    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-white{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
+    <a class="{% if grand_total %}text-white font-weight-bold{% else %}text-white{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
         <div class="text-center">
             <div><i class="fas fa-shopping-cart fa-lg"></i></div>
             <p class="my-0">
