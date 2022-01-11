@@ -33,7 +33,7 @@ def cart_contents(request):
 
     grand_total = delivery + total
 
-    # We'll add all these items to the context below so they'll be 
+    # We'll add all these items to the context below so they'll be
     # available in templates across the site.
     context = {
         'cart_items': cart_items,
@@ -46,4 +46,3 @@ def cart_contents(request):
     }
 
     return context
-    
