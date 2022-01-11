@@ -30,7 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'pfb6r1bkbv_b48#r%r(eu^%k!es_jn1wbvr2w
 # SECURITY WARNING: don't run with debug turned on in production!
 # Here, debug will be set to true only if there's a variable called
 # 'development' in the environment.
-DEBUG = True  # change DEBUG equals to this later: os.environ.get('DEVELOPMENT')
+DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = True  # change DEBUG equals to this later: os.environ.get('DEVELOPMENT')
 
 ALLOWED_HOSTS = ['localhost']
 
@@ -177,8 +178,13 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# Stripe
 FREE_DELIVERY_THRESHOLD = 100
 STANDARD_DELIVERY_PERCENTAGE = 10
+STRIPE_CURRENCY = 'eur'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
