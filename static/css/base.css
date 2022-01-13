@@ -137,12 +137,16 @@ span.cart-item-count {
 }  */
 
 .bg-white {
-    background: #000 !important;
+    background: #fff !important;
 } 
 
-.bg-white:hover {
+/* .bg-white {
+    background: #000 !important;
+}  */
+
+/* .bg-white:hover {
     background: #fff !important;
-}
+} */
 
 .bkg-white {
     background: #fff !important;
