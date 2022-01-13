@@ -7,9 +7,8 @@ from django.views.generic.edit import CreateView
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category, ProductReview, Comment
-# from products.models import Product 
-from .forms import CommentForm
+from .models import Category, Comment, Product, ProductReview
+from .forms import CommentForm, ProductForm
 
 # Create your views here.
 
@@ -99,6 +98,18 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+    # HANDLES STORE ADMIN FUNCTIONALITY
+def add_product(request):
+    """ Adds product to the store """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
 # Add Comment
 class AddCommentView(CreateView):
     """ A view to add comments to a product """
@@ -140,3 +151,5 @@ def add_to_wishlist(request, pk):
         messages.success(request, "Added " + product.name + " to your WishList")
 
     return HttpResponseRedirect(url)
+
+

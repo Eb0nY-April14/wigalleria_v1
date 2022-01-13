@@ -17,9 +17,12 @@ class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        fields = '__all__'
+        fields = ('category', 'sku', 'name', 'description',
+                  'price', 'rating', 'image_url', 'image',)
 
-    # This function below will make us see the friendly names  
+        # fields = '__all__'
+
+    # This function below will make us see the friendly names
     # in the form instead of the category ID or the name field.
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -28,4 +31,4 @@ class ProductForm(forms.ModelForm):
 
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0'        
+            field.widget.attrs['class'] = 'border-black rounded-0'
