@@ -6,8 +6,10 @@
 {% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
 
 
-{% block content %}
-<h1>{% trans "Confirm E-mail Address" %}</h1>
+{% block inner_content %}
+    <hr>
+    <h2 class="logo-font mb-4 sign-in"><em>{% trans "Confirm E-mail Address" %}</em></h2>
+    <hr>
 
 {% if confirmation %}
 
@@ -17,7 +19,7 @@
 
 <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
 {% csrf_token %}
-    <button type="submit">{% trans 'Confirm' %}</button>
+    <button class="primaryAction btn-success signIn-btn" type="submit">{% trans 'Confirm' %}</button>
 </form>
 
 {% else %}

@@ -5,9 +5,10 @@
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
-{% block content %}
-
-<h1 class="sign-in">{% trans "Sign In" %}</h1>
+{% block inner_content %}
+<hr>
+<h2 class="logo-font mb-4 sign-in"><em>{% trans "Sign In" %}</em></h2>
+<hr>
 
 {% get_providers as socialaccount_providers %}
 
@@ -29,18 +30,21 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 {% include "socialaccount/snippets/login_extra.html" %}
 
 {% else %}
-<p class="reg">{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+<p>{% blocktrans %}If you have not created an account yet, then please
+<a class="mb-4" href="{{ signup_url }}"><em>Sign Up</em></a> first.{% endblocktrans %}</p>
 {% endif %}
 
 <form class="login" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
-  {{ form.as_p }}
+  {{ form|crispy }}
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <a class="button secondaryAction passForget" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  <button class="primaryAction signIn-btn" type="submit">{% trans "Sign In" %}</button>
+  <a class="btn btn-dark rounded-0" href="{% url 'home' %}">Home</a>
+  <button class="primaryAction btn-success signIn-btn" type="submit">{% trans "Sign In" %}</button>
+  <p class="mt-2"> 
+    <a class="button text-muted secondaryAction passForget" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+  </p>    
 </form>
 
 {% endblock %}
