@@ -98,10 +98,21 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
-    # HANDLES STORE ADMIN FUNCTIONALITY
+# HANDLES STORE ADMIN FUNCTIONALITY
 def add_product(request):
     """ Adds product to the store """
-    form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added Product!')
+            # Redirects to the same view
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add Product. Please ensure the form is valid.')
+    else:
+        form = ProductForm()
+
     template = 'products/add_product.html'
     context = {
         'form': form,

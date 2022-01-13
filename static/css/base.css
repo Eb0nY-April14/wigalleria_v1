@@ -140,6 +140,10 @@ span.cart-item-count {
     background: #fff !important;
 } 
 
+.text-primary {
+    color: #ff0000 !important;
+}
+
 /* .bg-white {
     background: #000 !important;
 }  */
