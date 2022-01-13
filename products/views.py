@@ -98,7 +98,7 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
-# HANDLES STORE ADMIN FUNCTIONALITY
+# Add Product by Admin
 def add_product(request):
     """ Adds product to the store """
     if request.method == 'POST':
@@ -116,6 +116,31 @@ def add_product(request):
     template = 'products/add_product.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+# Edit Product by Admin
+def edit_product(request, product_id):
+    """ Edits a product in the store """
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product updated successfully!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'You are editing {product.name}')
+
+    template = 'products/edit_product.html'
+    context = {
+        'form': form,
+        'product': product,
     }
 
     return render(request, template, context)
@@ -162,5 +187,3 @@ def add_to_wishlist(request, pk):
         messages.success(request, "Added " + product.name + " to your WishList")
 
     return HttpResponseRedirect(url)
-
-
