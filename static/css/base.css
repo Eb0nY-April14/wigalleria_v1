@@ -41,6 +41,11 @@ body {
     color:  white;
 }
 
+.btn-black:hover {
+    background: white;
+    /* color:  black; */
+}
+
 .text-white {
     color: #fff !important;
 }

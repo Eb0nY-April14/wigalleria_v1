@@ -35,12 +35,12 @@
 
         <div class="row">  <!-- row div starts -->
             <div class="col-12 col-md-6">
-                <form method="POST" action="{% url '' %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="" class="form mb-2">
                     {% csrf_token %}
-                    <h1>Are you sure you want to delete this product "{{product.item.name}}"?</h1><br> 
+                    <h3>Are you sure you want to delete this product "{{product.name}}"?</h3><br> 
                     <div class="text-right">
-                        <a class="btn btn-dark rounded-0" href="{% url 'add_product' %}">Cancel</a>
-                        <button class="btn btn-danger rounded-0 signIn-btn" type="submit">Delete Product</button>
+                        <button class="btn btn-danger rounded-0 text-white" type="submit">Delete</button>
+                        <a href="{% url 'products' %}"><button class="btn btn-dark rounded-0" >Cancel</button></a> 
                     </div>
                 </form>
             </div>
