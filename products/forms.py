@@ -1,4 +1,5 @@
 from django import forms
+from .widgets import CustomClearableFileInput
 from .models import Comment, Product, Category
 
 
@@ -21,6 +22,8 @@ class ProductForm(forms.ModelForm):
                   'price', 'rating', 'image_url', 'image',)
 
         # fields = '__all__'
+
+    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 
     # This function below will make us see the friendly names
     # in the form instead of the category ID or the name field.
