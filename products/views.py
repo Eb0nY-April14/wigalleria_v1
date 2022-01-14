@@ -1,11 +1,11 @@
-from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect, render, reverse, get_object_or_404
 from django.contrib import messages
-from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import get_object_or_404, redirect, render
-from django.urls import reverse, reverse_lazy
-from django.views.generic.edit import CreateView
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse, reverse_lazy
+from django.views.generic.edit import CreateView
 
 from .models import Category, Comment, Product, ProductReview
 from .forms import CommentForm, ProductForm
@@ -100,8 +100,14 @@ def product_detail(request, product_id):
 
 
 # Add Product by Admin
+@login_required
 def add_product(request):
     """ Adds product to the store """
+    if not request.user.is_superuser:
+        messages.error(request,
+                       'Sorry, only store admin is authorised to do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -123,8 +129,14 @@ def add_product(request):
 
 
 # Edit Product by Admin
+@login_required
 def edit_product(request, product_id):
     """ Edits a product in the store """
+    if not request.user.is_superuser:
+        messages.error(request,
+                       'Sorry, only store admin is authorised to do that.')
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -148,15 +160,24 @@ def edit_product(request, product_id):
 
 
 # Delete Product by Admin
+@login_required
 def delete_product(request, product_id):
     """ Deletes a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request,
+                       'Sorry, only store admin is authorised to do that.')
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         product.delete()
         messages.success(request, 'Product deleted successfully!')
         return redirect('products')
-        
-    return render(request, 'products/delete_product.html')
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'products/delete_product.html', context)
 
 
 # Add Comment
