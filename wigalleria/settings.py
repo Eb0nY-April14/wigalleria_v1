@@ -34,7 +34,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'pfb6r1bkbv_b48#r%r(eu^%k!es_jn1wbvr2w
 DEBUG = 'DEVELOPMENT' in os.environ
 # DEBUG = True  # change DEBUG equals to this later: os.environ.get('DEVELOPMENT')
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['cyot14-wigalleria.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -128,14 +128,6 @@ WSGI_APPLICATION = 'wigalleria.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         # 'NAME': BASE_DIR / 'db.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
