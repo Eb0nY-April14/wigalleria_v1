@@ -10,6 +10,7 @@ from django.db.models.functions import Lower
 from .models import Category, Comment, Product, ProductReview
 from .forms import CommentForm, ProductForm
 
+
 # Create your views here.
 
 def LikeView(request, pk):
@@ -104,10 +105,10 @@ def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(request, 'Successfully added Product!')
             # Redirects to the same view
-            return redirect(reverse('add_product'))
+            return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to add Product. Please ensure the form is valid.')
     else:
@@ -144,6 +145,15 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
+
+# Delete Product by Admin
+def delete_product(request, product_id):
+    """ Deletes a product from the store """
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'Product deleted successfully!')
+    return redirect(reverse('products'))
 
 
 # Add Comment
