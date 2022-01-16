@@ -235,28 +235,28 @@ input[name='q']::placeholder {
 
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
-    border-bottom-color: #007bff !important
+    border-bottom-color: #007bff !important;
 }
 .arrow-secondary {
-    border-bottom-color: #6c757d !important
+    border-bottom-color: #6c757d !important;
 }
 .arrow-success {
-    border-bottom-color: #28a745 !important
+    border-bottom-color: #28a745 !important;
 }
 .arrow-danger {
-    border-bottom-color: #dc3545 !important
+    border-bottom-color: #dc3545 !important;
 }
 .arrow-warning {
-    border-bottom-color: #ffc107 !important
+    border-bottom-color: #ffc107 !important;
 }
 .arrow-info {
-    border-bottom-color: #17a2b8 !important
+    border-bottom-color: #17a2b8 !important;
 }
 .arrow-light {
-    border-bottom-color: #f8f9fa !important
+    border-bottom-color: #f8f9fa !important;
 }
 .arrow-dark {
-    border-bottom-color: #343a40 !important
+    border-bottom-color: #343a40 !important;
 }
 
 .cart-notification-wrapper {
@@ -336,7 +336,6 @@ h1.comment-heading {
 
 form.comment-heading {
     width: 50%;
-    /* margin-left: 230px; */
     margin: auto;
 }
 
@@ -387,10 +386,13 @@ a.subtitle {
     width: 100%;
 } */
 
-/* .content-rev {
-    width: 20%;
-    display: table-cell;
-} */
+a h2.my-0 {
+    color: #fff;
+}
+
+a h2.my-0:hover {
+    color: #2F4F4F;
+}
 
 .control {
     width: 30%;
@@ -477,7 +479,7 @@ p.cart-empty {
     .container {
       max-width: 80%;
     }
-  }
+}
 
   /*    Allauth form formatting    */
   /* Makes all inputs have black borders & a zero border-radius. */
@@ -540,7 +542,7 @@ since all other inputs will have placeholders. */
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
-/* @media (min-width: 991px) {
+/* @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
     }
@@ -549,5 +551,76 @@ since all other inputs will have placeholders. */
         height: calc(100vh - 116px);
     }
 } */
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .display-4.text-white {
+        font-size: 2rem;
+}
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    /* font awesome icons */
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    img.card-img-top {
+        margin-top: 85px;
+    }
+
+    .table th {
+        padding: 8px;
+    }
+
+    th h5 {
+        font-size: 10px;
+    }
+
+    h5.no-of-items {
+        margin-left: 0;
+    }
+
+    thead.text-black {
+        font-size: 8px;
+        padding: 6px;
+    }
+
+    p.my-0 {
+        font-size: 8px;
+    }
+
+    .p-3 {
+        padding: 0.5rem !important;
+    }
+
+    /* td.pt-5 {
+        font-size: 0px;
+    } */
+
+    td h6 {
+        font-size: 0.7rem;
+    }
+
+    h4.mt-4 {
+        font-size: 1rem;
+    }
+
+    /* a.btn {
+        font-size: 0px;
+    } */
+
+}
 
 

@@ -39,7 +39,7 @@
             {% if request.user.is_superuser %}
                 <a href="{% url 'add_product' %}" class="dropdown-item bg-color text-white">Store Management</a> 
             {% endif %}
-            <a href="" class="dropdown-item bg-color text-white">My Profile</a>
+            <a href="{% url 'profile' %}" class="dropdown-item bg-color text-white">My Profile</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item bg-color text-white">Logout</a>
             <a href="{% url 'wishlist' %}" class="text-white nav-link bg-color text-white">
                 <p class="my-0">
