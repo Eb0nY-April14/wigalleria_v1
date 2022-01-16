@@ -471,7 +471,6 @@ p.cart-empty {
     font-size: 25px;
 }
 
-
 /*          MEDIA QUERIES           */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
