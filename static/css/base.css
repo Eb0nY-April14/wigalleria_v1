@@ -29,7 +29,6 @@ body {
 .shop-now-button {
     background: black;
     color: white;
-    /* min-width: 240px; */
 }
 
 .border-black {
@@ -298,16 +297,6 @@ a.passForget {
     padding: 5px 20px;
 }
 
-/* .signIn-btn:hover {
-    color:#fff;
-    background: #000;
-} */
-
-/* p.reg {
-    font-weight: bold;
-    color: #fff;
-} */
-
 form.login, h1.sign-in, .logout, p.reg, h1.sign-out, .signout-quest {
     text-align: center;
 }
@@ -355,13 +344,11 @@ a.subtitle {
 }
 
 .notification {
-    /* margin-left: 45px; */
     font-weight: bold;
 }
 
 .reviews-wrapper {
     padding: 50px 20px;
-    /* text-align: center; */
     background: #f1f1f1;  
     margin-right: 20px;
     margin-left: 20px;
@@ -370,7 +357,6 @@ a.subtitle {
 
 .no-reviews-wrapper {
     padding: 50px 20px;
-    /* text-align: center; */
     background: #f1f1f1;  
     margin-right: 20px;
     margin-left: 20px;
@@ -381,16 +367,11 @@ a.subtitle {
     margin-left: 5px;
 }
 
-/* .field {
-    display: table;
-    width: 100%;
-} */
-
-a h2.my-0 {
+a h2.my-0, .no-underline {
     color: #fff;
 }
 
-a h2.my-0:hover {
+a h2.my-0, .no-underline:hover {
     color: #2F4F4F;
 }
 
@@ -454,6 +435,11 @@ p.cart-empty {
 
 .text-size {
     font-size: 25px;
+}
+
+/* FOOTER STYLING */
+a.no-underline {
+    text-decoration: none;
 }
 
 /*          MEDIA QUERIES           */
