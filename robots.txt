@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: Sitemap: https://cyot14-wigalleria.herokuapp.com/sitemap.xml
