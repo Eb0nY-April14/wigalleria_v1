@@ -1,9 +1,10 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404
+)
 from django.contrib import messages
 
 from products.models import Product
 
-# Create your views here.
 
 def view_cart(request):
     """
@@ -26,7 +27,8 @@ def add_to_cart(request, item_id):
     if item_id in list(cart.keys()):
         cart[item_id] += quantity
         messages.success(
-            request, f'The quantity of {product.name} has been updated to {cart[item_id]} in your cart!'
+            request,
+            f'The quantity of {product.name} has been updated to {cart[item_id]} in your cart!'
             )
     else:
         cart[item_id] = quantity
@@ -35,11 +37,9 @@ def add_to_cart(request, item_id):
             )
 
     request.session['cart'] = cart
-    # print(request.session['cart'])
     return redirect(redirect_url)
 
 
-# adjust_bag is the name of this function in Boutique Ado
 def update_cart(request, item_id):
     """
     Updates the quantity of the specified product to the specified amount
@@ -61,20 +61,16 @@ def update_cart(request, item_id):
             )
 
     request.session['cart'] = cart
-    # print(request.session['cart'])
     return redirect(reverse('view_cart'))
 
 
-# remove_from_bag is the name of this function in Boutique Ado
 def remove_from_cart(request, item_id):
     """Remove the item from the shopping bag"""
 
     try:
         product = get_object_or_404(Product, pk=item_id)
-        # quantity = int(request.POST.get('quantity', 1))
         cart = request.session.get('cart', {})
 
-        # if quantity > 0:
         del_item = (cart.pop(item_id))
         print("Quantity of the deleted Product is: ", del_item)
         messages.success(

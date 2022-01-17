@@ -3,9 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
-# This function below is known as a context processor & its
-# purpose is to make this dictionary available to all templates
-# across the entire application
+
 def cart_contents(request):
 
     cart_items = []
