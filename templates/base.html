@@ -144,8 +144,23 @@
                 </div>
             </div>
         </header> 
+        {% block page_header %}
+        {% endblock %}
 
-        
+        {% block content %}
+        {% endblock %}
+
+        <!-- Footer -->
+        <footer class="footer mt-auto py-3 dark-bg navbar-dark bg-dark">
+            <p class="m-0 text-center text-white footer-weight">
+                Developed by Christiana Temiola <br />
+                for wiGalleria&copy;<small><em>2022</em></small> All rights reserved.
+            </p>
+            <p class="m-0 text-center .text-dark"><span class="footer-weight text-white">Follow us:</span> 
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook-square ms-3"></i></a>
+            </p>
+        </footer>
+
         {% if messages %}
             <div class="message-container">
                 {% for message in messages %}
@@ -164,18 +179,13 @@
             </div>
         {% endif %}
 
-        {% block page_header %}
-        {% endblock %}
-
-        {% block content %}
-        {% endblock %}
+        
 
         {% block postloadjs %}
         <script type="text/javascript">
             $('.toast').toast('show');
         </script>
         {% endblock %}
-
-    
+ 
     </body>
 </html>
