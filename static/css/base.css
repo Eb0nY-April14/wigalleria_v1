@@ -367,11 +367,11 @@ a.subtitle {
     margin-left: 5px;
 }
 
-a h2.my-0, .no-underline {
+a h2.my-0  {
     color: #fff;
 }
 
-a h2.my-0, .no-underline:hover {
+a h2.my-0:hover {
     color: #2F4F4F;
 }
 
@@ -441,6 +441,22 @@ p.cart-empty {
 a.no-underline {
     text-decoration: none;
 }
+
+.right {
+    text-align: right;
+}
+
+.no-underline {
+    color: #fff;
+}
+
+.no-underline:hover {
+    color: #2F4F4F;
+}
+
+/* .center {
+    text-align: center;
+} */
 
 /*          MEDIA QUERIES           */
 /* Slightly larger container on xl screens */
