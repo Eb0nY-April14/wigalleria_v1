@@ -454,6 +454,44 @@ a.no-underline {
     color: #2F4F4F;
 }
 
+.text-center {
+    text-align: center;
+}
+
+/* Mailchimp */
+#mc_embed_signup {
+    background:#e75480;
+    color: #fff; 
+    clear:left; 
+    font:14px Helvetica, Arial, sans-serif; 
+}
+
+.btn-margin-top {
+    margin-top: 1px;
+}
+
+/* #subscribe-btn {
+    margin-left: 150px;
+} */
+
+/* span.asterisk {
+    color: #000;
+} */
+
+/* .content-container {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.container-wrapper {}
+
+.container-wrapper--pink {
+    background-color: #e75480;
+    color: white;
+} */
+
+
+
 /* .center {
     text-align: center;
 } */
@@ -522,15 +560,29 @@ since all other inputs will have placeholders. */
     }
 
     .header-container {
-        padding-top: 164px; /* 264px; */
+        padding-top: 164px;
+    }
+
+    #mc_embed_signup.foot {
+        align-items: left;
     }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 320px) {
+    .policy {
+        margin-left: 15px;
+    }
+
+    a > img {
+        margin-top: 1px;
+    }
+}
+
 @media (max-width: 991px) {
     .display-4.text-white {
         font-size: 2rem;
-}
+    }
 
     .nav-link {
         padding: 0.15rem;
@@ -590,11 +642,8 @@ since all other inputs will have placeholders. */
     h4.mt-4 {
         font-size: 1rem;
     }
-
-    /* a.btn {
-        font-size: 0px;
-    } */
-
 }
+
+
 
 
