@@ -21,7 +21,6 @@ class ProductForm(forms.ModelForm):
         fields = ('category', 'sku', 'name', 'description',
                   'price', 'rating', 'image_url', 'image',)
 
-        # fields = '__all__'
 
     image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 
