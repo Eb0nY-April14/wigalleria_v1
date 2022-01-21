@@ -67,13 +67,12 @@ body {
 
 ul li a span.cart-item-count {
     font-size: .6rem;
-    position: absolute;
-    top: -6px;
-    right: -5px;
+    position: relative;
+    top: -20px;
+    right: -16px;
     width: 15px;
     height: 15px;
-    /* color: #000; */
-    background-color: #fff;  /* #418deb; */
+    background-color: #fff;  
     color: #e75480;
     border-radius: 50%;
 }
@@ -177,6 +176,7 @@ a.category-badge > span.badge:hover {
     position: fixed;
     bottom: 10px;
     right: 10px;
+    z-index: 9999;
 } 
 
 .btt-link,
