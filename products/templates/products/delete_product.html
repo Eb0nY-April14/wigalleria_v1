@@ -40,9 +40,11 @@
                     <h3>Are you sure you want to delete this product "{{product.name}}"?</h3><br> 
                     <div class="text-right">
                         <button class="btn btn-danger rounded-0 text-white" type="submit">Delete</button>
-                        <a href="{% url 'products' %}"><button class="btn btn-dark rounded-0" >Cancel</button></a> 
                     </div>
                 </form>
+                <div class="text-right">
+                <a href="{% url 'products' %}" class="btn btn-dark rounded-0" >Cancel</a> 
+                </div>
             </div>
         </div>  <!-- row div ends -->
     </div> <!-- container div ends -->
