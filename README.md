@@ -32,6 +32,7 @@ order to be able to access some features of the app.
 * It has a feature that saves a user's delivery info in his profile if he opts in using the check box provided for a faster checkout any time he visits the store again. 
 * If a user is logged in while purchasing product(s) and his delivery details has been saved the first time he made an order, during checkout, the delivery details which has been saved already in the user's profile info will be pre-filled in the delivery details section in order to check out faster 
 * It will allow a non-registered or not logged in user to purchase products and checkout as a guest user
+* It allows a role-based authentication i.e only an admin user has all full permission including add, update and delete products from the back end (i.e database).
 
 ---
 
@@ -41,21 +42,26 @@ User Experience (UX)
 
 First Time User Goals
 
-a) As a First Time User, I want to easily understand the main purpose of the site and the app to be intuitive so I can navigate through the site easily without any ambiguity. 
+a) As a First Time User, I want to be able to easily understand the main purpose of the site and the app to be intuitive so I can navigate through the site easily without any ambiguity. 
 
-b) As a First Time User, I want to be able to register/sign up for an account in order to have a personal account that will allow me view my profile.  
+b) As a First Time User, I want to be able to register/sign up for an account in order to have a personal account that will allow me view my profile. 
 
-c) As a First Time User, I want to be able to access information through their social media links to see their followings on social media to determine how trusted and known the app is.
+c) As a First Time User, I want to be able to receive confirmation email after registration/signing up for an account
+
+d) As a First Time User, I want to be able to access information through their social media links to see their followings on social media to determine how trusted and known the app is.
 
 Registered User Goals
 
-a) As a Registered User who is logged in, I want to be able to save my shipping details so that I can check out faster anytime I shop again.
+a) As a Registered User, I want to be able to save my shipping details so that when I'm logged in, I can check out faster anytime I shop again.
 
-b) As a Registered User who is logged in, I want to be able to have a personalised user profile so that I can view my personalised order history, order confirmation and save my payment information. 
+b) As a Registered User, I want to be able to have a personalised user profile when I'm logged in so that I can view my personalised order history, order confirmation and save my payment information. 
 
 c) As a Registered User, I want to be able to log in to my account so that I can access my personal account information.
 
-d) As a Registered User who is logged in, I want to be able to log out of my account so that my account can be safe from unauthorised access.
+d) As a Registered User, I want to be able to log out of my account when I'm logged in so that my account can be safe from unauthorised access.
+
+e) As a Registered User, I want to be able to access information through their social media links to see their followings on social media to determine how trusted and known the app is.
+
 
 ---
 
@@ -89,7 +95,7 @@ a) As an Admin User, I want to be able to log into my account in order to have t
 
 b) As an Admin User, I want to be able to log out of my account in order to protect it from unauthorised access.
 
-c) As an Admin User, I want to be able to manage products within the store i.e create, read, update & delete products into/from the database so that users of the website can enjoy a good user experience when interacting with the site.
+c) As an Admin User, I want to be able to manage products within the store i.e create/add, read/view, update/edit & delete products into/from the database so that users of the website can enjoy a good user experience when interacting with the site.
 
 ---
 
@@ -270,11 +276,77 @@ Frameworks, Libraries and Programs Used
 
 ---
 
-## Testing
+# Web Marketing
+
+* Out of all the web marketing strategies available for marketing e-commerce sites, Facebook was chosen to market this wiGalleria website because it has a wider reach to target customers and is also a social media platform mostly used by ladies/women. Since wiGalleria is an online wig store, it feels appropriate to target our customers through this social media platform. The Facebook page called wiGalleria has been created with the necessary information such as link to deployed site on Heroku, physical address/location of the business, phone number and shop now button provided to customers. The link to wiGalleria Facebook page is provided below:
+
+[wiGalleria Facebook Page Link](https://www.facebook.com/wiGalleria-110791034831427/) 
+
+Also, the screenshots of my wiGalleria Facebook Page are below:
+
+![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page1.png)
+![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page2.png)
+![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page3.png)
+![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page4.png)
+![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page5.png)
+![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page6.png)
+![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page7.png)
+![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page8.png)
+
+---
+
+# Testing
 
 To view all testing documentation, click to view the [TESTING.md](TESTING.md) file.
 
+---
+
+
 # Deployment
+
+## Steps to setting up Amazon S3 Bucket
+
+    i) Navigate to aws.amazon.com and click on "create an aws account"
+
+    ii) Fill in your email and password details, then choose a username for your account and select "continue"
+
+    iii) It will request for your credit card details  and a couple more verification questions. Your account will then be created once all these are confirmed.
+
+    iv) Go back to aws.amazon.com and click on the "sign in to console" button locted at the top right corner of the page.
+
+    v) Click on the radio button that has "Root User" beside it to select it and click "Next"
+
+    vi) Type the characters displayed into the input text box provided for security check and click the submit button. You will then be signed in if correct and the dashboard displayed to you.
+
+    vii) Since you are a first time user, S3 will not be available in your "recently accessed services" but can be found by searching for it in the "Find Services" section of the AWS Management Console. Once found, click on it and another page will be displayed on which you will create your bucket.
+
+    viii) To create a bucket that is needed to store your files in, click on the "Create bucket" button.
+
+    ix) Give your bucket any name of your choice but to keep with constitency, it's advised to give it same name to match your Heroku app's name
+
+    x) For the region, select the one closest to your location
+
+    xi) Since this bucket needs to be public in order to allow public access to our static files,uncheck the "Block all public access" box and acknowledge that the bucket will be public by clicking the acknowledgement check box provided.
+
+    xii) Click on the "Create bucket" button to create the bucket.
+
+    xiii) On the left hand side of the page, click on "Buckets" and it will display all the buckets that have been created. If you are a new user, only one bucket will show up.
+
+    xiv) Look for your newly created bucket by name if there are many buckets available and click on it.
+
+    xv) St a few basic settings on your new bucket by clicking on the "Properties" tab and turn on "Static website hosting" by clicking on the 'edit' button beside it.
+
+    xvi) Click on the "Enable" radio button to select it.
+
+    xvii) Under the Hosting type section, the "Host a static website" option has been auto-selected already so leave it that way
+    
+    xviii) For the index and error document, fill in some default values e.g index.html and error.html since they won't be used for anything in this setup, then click on the "save changes" button.
+
+    xix) Click on the "Permissions" tab to make 3 changes. Firstly, under the 'CORS configuration' click on the 'edit' button and copy the code 
+
+    xx) 
+
+## Steps for  deployment to Heroku
 
 * Firstly, visit Heroku website to sign up for a free account at https://heroku.com/ 
 
@@ -302,15 +374,15 @@ This will ensure that Heroku installs all our apps requirements when it's deploy
 
 * Go back to your code and in the same directory as the "manage.py" file, create a file called "env.py" which will be used to store your secret environment variables" as these variables must be hidden and should not be publicly visible. Add your "env.py" file to the ".gitignore" file so that when you push your code to GitHub, the secret environment variables and secret keys will not be visible for everyone to see. 
 
-In the "env.py" file, import the os (operating system) library and use it to set a couple of environment variables which are:
+* In the "env.py" file, import the os (operating system) library and use it to set a couple of environment variables as follows:
 
-i. Set "DATABASE_URL" and then paste in the URL copied from Heroku earlier i.e
-os.environ["DATABASE_URL"] = "Paste in Heroku DATABASE_URL Link" 
+    i. Set "DATABASE_URL" and then paste in the URL copied from Heroku earlier i.e
+    os.environ["DATABASE_URL"] = "Paste in Heroku DATABASE_URL Link" 
 
-ii. Add your secret key as this should not be visible on GitHub too. It will be made up by you and can comprise of whatever you like or search for secret key generator tool online and use it to generate one. An example of how to add it is shown below:
-os.environ["SECRET_KEY"] = "Make up a randomSecretKey" 
+    ii. Add your secret key as this should not be visible on GitHub too. It will be made up by you and can comprise of whatever you like or search for secret key generator tool online and use it to generate one. An example of how to add it is shown below:
+    os.environ["SECRET_KEY"] = "Make up a randomSecretKey" 
 
-iii. Save the env file
+    iii. Save the env file
 
 * Copy the "SECRET_KEY" value above and add it to your "Config Vars" on Heroku so go back to Heroku dashboard, click on the "Settings" tab and under the "Config Vars" section, click on the "Reveal Config Vars" button once again. In the first pair of empty text box provided, type "SECRET_KEY" in one and its value copied earlier from "env.py" file into the other box i.e 
 SECRET_KEY, “randomSecretKey” and click the "Add" button next to it. Repeat same with all your stripe public and secret keys i.e PUBLIC_KEY, SECRET_KEY, STRIPE_SECRET_KEY and STRIPE_WH_SECRET
@@ -377,11 +449,11 @@ git push
 * Then use the command below to deploy to Heroku:
 git push heroku main and press the enter key
 
-NOTE: If an error occurs which says 'fatal', then you have to initialise your heroku git remote if the app was created on the Heroku website rather than the CLI as that's the cause of the error. To initialise your heroku git remote, use this command at the terminal:
+* NOTE: If an error occurs which says 'fatal', then you have to initialise your heroku git remote if the app was created on the Heroku website rather than the CLI as that's the cause of the error. To initialise your heroku git remote, use this command at the terminal:
 heroku git:remote -a <TYPE YOUR APP NAME HERE> and press the enter key. Then repeat the command below again to deploy to Heroku:
 git push heroku main and press the enter key
 
-If it throws an error again that says "Push rejected, source repository is a shallow one. Unshallow it with 'git fetch --all --unshallow'", then you have to do the deployment manually instead of automatic deployment by going to your Heroku app and click the 'Deploy' tab. Under the 'Deployment method', click on the 'GitHub ---> Connect to GitHub' option, then search in the text box provided for your repository name and click on the 'Search' button, then on the 'Connect' button beside it to connect your GitHub account to Heroku. 
+* If it throws an error again that says "Push rejected, source repository is a shallow one. Unshallow it with 'git fetch --all --unshallow'", then you have to do the deployment manually instead of automatic deployment by going to your Heroku app and click the 'Deploy' tab. Under the 'Deployment method', click on the 'GitHub ---> Connect to GitHub' option, then search in the text box provided for your repository name and click on the 'Search' button, then on the 'Connect' button beside it to connect your GitHub account to Heroku. 
 
 * In the 'Manual Deploy' section, click on the 'Deploy Branch' button and Heroku will start building your app. Go to the 'Activity' tab and click on the "View Build log" link in order to view logs of activity and be able to watch the deployment as it's happening in the build log. It will pop this out in a full view page for you to see. It will display 'Build finish' once it's successfully built and the URL of the deployed site too with a message that says 'deployed to Heroku'.
 
@@ -403,19 +475,4 @@ View the GitHub Repository [here](https://github.com/Eb0nY-April14/wigalleria_v1
 
 
 
-    # Web Marketing
-
-    * Out of all the web marketing strategies available for marketing e-commerce sites, Facebook was chosen to market this wiGalleria website because it has a wider reach to target customers and is also a social media platform mostly used by ladies/women. Since wiGalleria is an online wig store, it feels appropriate to target our customers through this social media platform. The Facebook page called wiGalleria has been created with the necessary information such as link to deployed site on Heroku, physical address/location of the business, phone number and shop now button provided to customers. The link to wiGalleria Facebook page is provided below:
-
-    [wiGalleria Facebook Page Link](https://www.facebook.com/wiGalleria-110791034831427/) 
-
-    Also, the screenshots of my wiGalleria Facebook Page are below:
-
-    ![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page1.png)
-    ![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page2.png)
-    ![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page3.png)
-    ![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page4.png)
-    ![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page5.png)
-    ![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page6.png)
-    ![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page7.png)
-    ![wiGalleria Facebook Page Screenshots](documentation/facebook_page_screenshots/wigalleria_facebook_page8.png)
+    
