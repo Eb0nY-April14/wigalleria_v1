@@ -14,7 +14,10 @@ from .forms import CommentForm, ProductForm
 # Create your views here.
 
 def LikeView(request, pk):
-    """ A view to add like button to each product on the product detail page """
+    """
+    A view to add like button to each
+    product on the product detail page
+    """
 
     product = get_object_or_404(Product, id=request.POST.get('prod_id'))
     if product.likes.filter(id=request.user.id).exists():
@@ -62,7 +65,7 @@ def all_products(request):
                     request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(description__icontains=query)  # noqa
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -88,7 +91,7 @@ def product_detail(request, product_id):
         stars = request.POST.get('stars', 3)
         content = request.POST.get('content', '')
 
-        review = ProductReview.objects.create(product=product, user=request.user, stars=stars, content=content)
+        review = ProductReview.objects.create(product=product, user=request.user, stars=stars, content=content)  # noqa
 
         return redirect('product_detail', product_id=product_id)
 
@@ -116,7 +119,7 @@ def add_product(request):
             # Redirects to the same view
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add Product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add Product. Please ensure the form is valid.')  # noqa
     else:
         form = ProductForm()
 
@@ -145,7 +148,7 @@ def edit_product(request, product_id):
             messages.success(request, 'Product updated successfully!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')  # noqa
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -201,7 +204,7 @@ def wishlist(request):
     """ A view to view all products in user's wishlist """
 
     products = Product.objects.filter(user_wishlist=request.user)
-    return render(request, 'products/user_wish_list.html', {'wishlist': products})
+    return render(request, 'products/user_wish_list.html', {'wishlist': products})  # noqa
 
 
 # Add to Wishlist
@@ -215,9 +218,9 @@ def add_to_wishlist(request, pk):
     print(url)
     if product.user_wishlist.filter(id=request.user.id).exists():
         product.user_wishlist.remove(request.user)
-        messages.success(request, product.name + " has been removed to your WishList")
+        messages.success(request, product.name + " has been removed to your WishList")  # noqa
     else:
         product.user_wishlist.add(request.user)
-        messages.success(request, "Added " + product.name + " to your WishList")
+        messages.success(request, "Added " + product.name + " to your WishList")  # noqa
 
     return HttpResponseRedirect(url)

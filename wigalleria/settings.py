@@ -32,7 +32,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # Here, debug will be set to true only if there's a variable called
 # 'development' in the environment.
 DEBUG = 'DEVELOPMENT' in os.environ
-# DEBUG = True  # change DEBUG equals to this later: os.environ.get('DEVELOPMENT')
 
 ALLOWED_HOSTS = ['cyot14-wigalleria.herokuapp.com', 'localhost']
 

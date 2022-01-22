@@ -21,8 +21,7 @@ class ProductForm(forms.ModelForm):
         fields = ('category', 'sku', 'name', 'description',
                   'price', 'rating', 'image_url', 'image',)
 
-
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)  # noqa
 
     # This function below will make us see the friendly names
     # in the form instead of the category ID or the name field.

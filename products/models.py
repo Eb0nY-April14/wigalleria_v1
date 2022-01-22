@@ -4,7 +4,8 @@ from django.contrib.auth.models import User
 
 class Category(models.Model):
     """
-    The Category table containing the category that each product in our store belongs to
+    The Category table containing the category
+    each product in our store belongs to.
     """
 
     class Meta:
@@ -25,16 +26,16 @@ class Product(models.Model):
     The Product table containing all products in our store
     """
 
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)  # noqa
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)  # noqa
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    likes = models.ManyToManyField(User, related_name='product_like', blank=True)
-    user_wishlist = models.ManyToManyField(User, related_name='user_wishlist', blank=True)
+    likes = models.ManyToManyField(User, related_name='product_like', blank=True)  # noqa
+    user_wishlist = models.ManyToManyField(User, related_name='user_wishlist', blank=True)  # noqa
 
     def __str__(self):
         return self.name

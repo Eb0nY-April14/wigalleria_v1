@@ -28,12 +28,12 @@ def add_to_cart(request, item_id):
         cart[item_id] += quantity
         messages.success(
             request,
-            f'The quantity of {product.name} has been updated to {cart[item_id]} in your cart!'
+            f'The quantity of {product.name} has been updated to {cart[item_id]} in your cart!'  # noqa
             )
     else:
         cart[item_id] = quantity
         messages.success(
-            request, f'{product.name} has been added to your cart successfully!'
+            request, f'{product.name} has been added to your cart successfully!'  # noqa
             )
 
     request.session['cart'] = cart
@@ -52,7 +52,7 @@ def update_cart(request, item_id):
     if quantity > 0:
         cart[item_id] = quantity
         messages.success(
-            request, f'The quantity of {product.name} has been updated to {cart[item_id]} in your cart!'
+            request, f'The quantity of {product.name} has been updated to {cart[item_id]} in your cart!'  # noqa
             )
     else:
         cart.pop(item_id)

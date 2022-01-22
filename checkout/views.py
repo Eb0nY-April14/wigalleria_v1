@@ -10,7 +10,7 @@ from .models import Order, OrderLineItem
 
 from products.models import Product
 from profiles.models import UserProfile
-from profiles.forms import UserProfileForm 
+from profiles.forms import UserProfileForm
 from cart.contexts import cart_contents
 
 import stripe
@@ -71,14 +71,14 @@ def checkout(request):
                         order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
+                        "One of the products in your bag wasn't found in our database. "  # noqa
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_cart'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success', args=[order.order_number]))  # noqa
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
@@ -98,7 +98,6 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)

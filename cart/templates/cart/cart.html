@@ -3,11 +3,7 @@
 {% load cart_tools %}
 
 {% block page_header %}
-    <!-- <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div> -->
+    
 {% endblock %}
 
 {% block content %}
@@ -17,7 +13,6 @@
             <div class="col">
                 <hr>
                 <h2 class="logo-font mb-4"><em>Shopping Cart</em></h2>
-                <!-- <hr> -->
             </div>
         </div>
     <!-- </div> -->
@@ -25,34 +20,30 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="box-element">  <!-- box element div starts -->
-                    <!-- <a class="shop-now-button btn btn-lg rounded-0 py-3 shopping-btn" href="{% url 'products' %}">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>Continue Shopping    
-                    </a> -->
                     <table class="table">
                         <tr>
-                            <th><h5 class="no-of-items font-weight-bold">Items:
-                                {% if cart_items %} 
-                                    <strong>
-                                        {{ product_count }}
-                                    </strong>
-                                {% else %}
-                                    0
-                                    <!-- <div>
-                                        <p class="lead mb-5 cart-empty text-center">Your Cart is empty.</p>
-                                    </div> -->
-                                {% endif %}
-                            </h5></th>
-                            <th><h5 class="font-weight-bold">Total: 
-                                {% if grand_total %}
-                                    <strong>
-                                        €{{ grand_total|floatformat:2 }}   
-                                    </strong>
-                                {% else %}
-                                    €0.00
-                                {% endif %}
-                            </h5></th>
+                            <th>
+                                <h5 class="no-of-items font-weight-bold">Items:
+                                    {% if cart_items %} 
+                                        <strong>
+                                            {{ product_count }}
+                                        </strong>
+                                    {% else %}
+                                        0
+                                    {% endif %}
+                                </h5>
+                            </th>
+                            <th>
+                                <h5 class="font-weight-bold">Total: 
+                                    {% if grand_total %}
+                                        <strong>
+                                            €{{ grand_total|floatformat:2 }}   
+                                        </strong>
+                                    {% else %}
+                                        €0.00
+                                    {% endif %}
+                                </h5>
+                            </th>
                             <th>
                                 <a class="btn btn-md btn-dark rounded-0 py-3 shop-now-button font-weight-bold" href="{% url 'products' %}">
                                     Continue Shopping <span class="icon">
@@ -141,9 +132,17 @@
                                     {% endfor %}
                                     <tr>
                                         <td colspan="5" class="pt-5 text-right">
-                                            <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
+                                            <h6>
+                                                <strong>
+                                                    Cart Total: €{{ total|floatformat:2 }}
+                                                </strong>
+                                            </h6>
                                             <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
-                                            <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+                                            <h4 class="mt-4">
+                                                <strong>
+                                                    Grand Total: €{{ grand_total|floatformat:2 }}
+                                                </strong>
+                                            </h4>
                                             {% if free_delivery_delta > 0 %}
                                                 <p class="mb-1 text-danger">
                                                     Great Savings! Get free delivery when you spend just <strong>€{{ free_delivery_delta }}</strong> more!
@@ -173,7 +172,7 @@
 {% block postloadjs %}
     {{ block.super }}
 
-    <script type="text/javascript">
+    <script>
         $('.btt-link').click(function(e) {
             window.scrollTo(0,0)
         })
@@ -181,7 +180,7 @@
 
 {% include 'products/includes/quantity_input_script.html' %} 
 
-<script type="text/javascript">
+<script>
     // Updates Quantity on click
     $('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');
@@ -192,7 +191,6 @@
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_from_cart')[1];
-        // var size = $(this).data('product_size');
         var url = `/cart/remove_from_cart/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken};
 
