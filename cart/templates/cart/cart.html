@@ -23,7 +23,7 @@
                     <table class="table">
                         <tr>
                             <th>
-                                <h5 class="no-of-items font-weight-bold">Items:
+                                <p class="no-of-items font-weight-bold">Items:
                                     {% if cart_items %} 
                                         <strong>
                                             {{ product_count }}
@@ -31,10 +31,10 @@
                                     {% else %}
                                         0
                                     {% endif %}
-                                </h5>
+                                    </p>
                             </th>
                             <th>
-                                <h5 class="font-weight-bold">Total: 
+                                <p class="font-weight-bold">Total: 
                                     {% if grand_total %}
                                         <strong>
                                             €{{ grand_total|floatformat:2 }}   
@@ -42,7 +42,7 @@
                                     {% else %}
                                         €0.00
                                     {% endif %}
-                                </h5>
+                                </p>
                             </th>
                             <th>
                                 <a class="btn btn-md btn-dark rounded-0 py-3 shop-now-button font-weight-bold" href="{% url 'products' %}">
