@@ -568,7 +568,7 @@ since all other inputs will have placeholders. */
     }
 
     #mc_embed_signup.foot {
-        align-items: left;
+        align-items: flex-start;
     }
 }
 

@@ -160,9 +160,10 @@ Agile Approach Used
 * The agile planning tool used for my Django app is the Kanban board. I used the board on GitHub for the planning of my wiGalleria e-commerce site project. Three boards are created to represent the 3 iteration phases used to plan this project. 
 Each project was created with issues and milestones set. I also used the MoSCoW labelling technique to prioritise my user stories into Must-Have, Should-Have, Could-Have and Won't-Have. At the start, all the user stories are put in the "To do" section of each board, then the Must-Haves are moved into the "In progress" section and once a functionality is completed and everything responds as expected, it's moved to the "Done" section.
 The links to these 3 boards are given below:
-![kanban board 1 on GitHub](https://github.com/Eb0nY-April14/wigalleria_v1/projects/1) 
-![kanban board 2 on GitHub](https://github.com/Eb0nY-April14/wigalleria_v1/projects/2)
-![kanban board 3 on GitHub](https://github.com/Eb0nY-April14/wigalleria_v1/projects/3)
+
+[kanban board 1 on GitHub](https://github.com/Eb0nY-April14/wigalleria_v1/projects/1) 
+[kanban board 2 on GitHub](https://github.com/Eb0nY-April14/wigalleria_v1/projects/2)
+[kanban board 3 on GitHub](https://github.com/Eb0nY-April14/wigalleria_v1/projects/3)
 
 ---
 
@@ -179,13 +180,13 @@ This e-commerce store is made up of different apps each with its own model and t
 # Issues Encountered and Resolved
 
 * There were some issues experienced with the products page after deployment to Heroku. 12 of the products were missing but visible on the development side. I went to the media folder of the aws bucket created for wiGalleria to check if the products names there corresponds to the ones in the media folder on gitpod workspace and discovered that I gave the wrong extension to some i.e .jpg instead of .png, some had name mismatch and as soon as I corrected those, most of the images showed up leaving 2 products missing. I then went to the database through Django admin and re-entered the names of those 2 products checking that they match the ones in aws bucket, then add, commit & push them to GitHub, refreshed the Heroku deployed site and all products images were displayed correctly. See screenshots below:
+
 ![Products missing](documentation/bugs/missing_products_screenshots_crop.jpg)
 
 * The stripe webhook failed when I sent a test event to a webhook endpoint. It gave an error message of "Test webhook error: 502" and after thorough checking, two causes were discovered which are:
 * The empty variables placeholders I left in the env.py file were preventing Stripe from seeing the stripe keys in there. They were left there in case more environment variables need to be added to my env.py file but I didn't realise quickly enough that this was the root cause that prevents Stripe from seeing the stripe keys in env.py files. 
 * Secondly, I placed the env.py in the wrong location i.e in the wigalleria app instead of the root directory. I fixed these issues by commenting the environment variables placeholders out and moving the env.py file to the root directory, then ran the webhook test again & received a successful message this time, it worked. See screenshots below:
 
-![Stripe webhook failed1](documentation/bugs/webhook_test_failed_terminal_error_msg.png)
 ![Stripe webhook failed2](documentation/bugs/webhooks_error_msg_from_stripe.png)
 ![Stripe webhook failed3](documentation/bugs/env_py_wigalleria_location.png)
 
@@ -213,16 +214,19 @@ The link to the solution on stackoverflow is below:
 * After creating the footer code in my base.html template and viewed it in the browser, I found out that it didn't display at the right location. It was joined together with the navbar section at the top of each page instead of the bottom. I tried playing around with the chunk of the footer code by moving it from one section to the other to see if that would resolve the issue but it didn't so I had to contact Code Institute tutor support for help. It was there that the tutor pointed my attention to where I placed the footer, immediately after the closing head tag and ignoring the block content code there. In the tutor's words: 
 "The main content and the header is actually below the footer, please look at line starting 181 - 185 in base.html, I believe that should be moved to line 147". I followed his instruction, viewed my code in the browser and found out that the footer has rightly moved to the bottom across all pages. See screenshots below:
 
-![Footer code placed at wrong Location](document/bugs/footer_code_placed_at_wrong_location.png)
-![Footer code placed at right Location](document/bugs/footer_code_placed_at_right_location.png)
-![Footer code placed at wrong Position](document/bugs/footer_code_placed_wrongly_in_base_template.png)
-![Template showing footer at wrong Location](document/bugs/footer_section_in_base_template_show_wrongly.png)
-![Template showing footer at right Location](document/bugs/footer_section_in_base_template_show_rightly.png)
+![Footer code placed at wrong Location](documentation/bugs/footer_code_placed_at_wrong_location.png)
+
+![Footer code placed at right Location](documentation/bugs/footer_code_placed_at_right_location.png)
+
+![Footer code placed at wrong Position](documentation/bugs/footer_code_placed_wrongly_in_base_template.png)
+
+![Template showing footer at wrong Location](documentation/bugs/footer_section_in_base_template_show_wrongly.png)
+![Template showing footer at right Location](documentation/bugs/footer_section_in_base_template_show_rightly.png)
 
 * Another issue was encountered during the implementation of Stripe payment for my project. I created the payment intent in my checkout views.py but when I opened it in the browser to check it out, it broke my checkout page giving an error that says "Authenticationerror at checkout. You did not provide an API key. You need to provide your API key in the Authorization header, using Bearer auth (e.g. 'Authorization: Bearer YOUR_SECRET_KEY')". I tried to solve this issue but was unable to so I contacted tutor support and after much troubleshooting, she noticed that 'env.py' file is not being read correctly in settings.py. On a closer look by the tutor and her colleague, it was discovered that the error was caused as a result of the empty variables set with no name and values in env.py file. Commenting out all these empty variables in env.py file solved the issue and the code ran successfully.
 See screenshots below:
+
 ![Authentication Error at Checkout](documentation/bugs/authentication_error_at_wigalleria_checkout.png)
-![Solution to Authentication Error at Checkout](documentation/bugs/webhook_test_failed_terminal_error_msg.png) 
 
 ---
 
@@ -242,35 +246,57 @@ Frameworks, Libraries and Programs Used
 
 * Git was used for version control by utilising the Gitpod terminal to commit to Git and push to GitHub.
 
+See Git link [here]()
+
 2. GitHub
 
 * GitHub was used to store the project's code after being pushed from Git.
+
+See GitHub link [here]()
 
 3. Bootstrap 4.1.3 & Custom CSS
 
 * Bootstrap 4 and custom made CSS files were used to assist with the responsiveness and styling of the website.
 
+See Bootstrap 4 link [here]()
+
 4. Django & Jinja templating Language
 
-* The entire project anchors on this framework as it was used to build this app
+* The entire project anchors on this framework as it was used to build this app.
+
+See Django link [here]()
 
 5. Amazon S3 Bucket
 
 * S3 Bucket was used to host static and media files that will be needed for storing products images, background image and CSS files. Since Heroku can't serve static and media files on its own but works seamlessly with amazon S3 bucket, an aws account has to be created and S3 bucket created within it so that all static and media files can be uploaded there and it can serve all the static files on Heroku as it works well with it.
 
-6. Roboto Google Fonts:
+See Amazon AWS S3 Bucket link [here]()
+
+6. Stripe Payment
+
+* Stripe is a Payment infrastructure for the Internet. Their software and APIs were used in this project to accept test payments for our wigalleria e-commerce site.
+
+See Stripe Payment link [here](https://stripe.com/en-ie)
+
+7. Roboto Google Font:
 
 * They were used on all pages throughout the project.
 
-7. Font Awesome:
+See Roboto Google Font link [here]()
 
-* Font Awesome was used to add social media, shopping cart and all other icons across all pages throughout the app for excellent UX.
+8. Font Awesome Icons:
 
-8. jQuery:
+* Font Awesome was used to add social media, shopping cart and all other icons across all pages throughout the app for excellent UX. 
+
+See Font Awesome link [here]()
+
+9. jQuery:
 
 * jQuery came with Bootstrap to make the navbar responsive.
 
-9. Windows 10 built-in Photo Editor:
+See JQuery link [here]()
+
+10. Windows 10 built-in Photo Editor:
 
 * This was used to resize the logo used on all page across the app.     
 
@@ -295,56 +321,230 @@ Also, the screenshots of my wiGalleria Facebook Page are below:
 
 ---
 
+## Steps to setting up Stripe Payment
+
+1) Visit Stripe's website at https://stripe.com/en-ie to sign up for an account and click on the start button to create one.
+
+2)  It'll ask for your email, name and password in order to register for an account so provide those details and click create your stripe account.
+
+3) Go back to your email inbox to confirm your email and once that's done, you will be taken to the stripe dashboard.
+
+4) First, you need to get the test API key so on the Dashboard page, click on 'Developers' button located at the top right side of the page and on the left hand side of the page, click on 'API keys'.
+
+5) Now that your stripe account is up and running, use their excellent UI elements called stripe elements to add a prebuilt credit card input to your form. To set up stripe elements, go to their documentation page on their website under 'Payments', click on 'Collect card details' and under 'Set up Stripe Elements' and 'HTML + JS', copy the javascript within the checkout.html file on Stripe's page, then paste it into the corejs block of your base template. Although the Javascript is only needed on the checkout page, Stripe recommends putting it in the base template so it'll be available on every page of the site which allows some of their more advanced fraud detection features to work.
+
+6) Next, go back to your checkout.html file, open up a new postloadjs block at the bottom and paste this code into it.
+```
+{% block postloadjs %}
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+{{ endblock }}
+```
+
+Since we can't render Django template variables in external javascript files.
+
+
+
+---
+
 # Testing
 
 To view all testing documentation, click to view the [TESTING.md](TESTING.md) file.
 
 ---
 
-
 # Deployment
+
+## Local Deployment
+
+* In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
+
+- `git clone https://github.com/Eb0nY-April14/wigalleria_v1.git`
+
+* Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Eb0nY-April14/wigalleria_v1)
 
 ## Steps to setting up Amazon S3 Bucket
 
-    i) Navigate to aws.amazon.com and click on "create an aws account"
+i) Navigate to aws.amazon.com and click on "create an aws account"
 
-    ii) Fill in your email and password details, then choose a username for your account and select "continue"
+ii) Fill in your email and password details, then choose a username for your account and select "continue"
 
-    iii) It will request for your credit card details  and a couple more verification questions. Your account will then be created once all these are confirmed.
+iii) It will request for your credit card details  and a couple more verification questions. Your account will then be created once all these are confirmed.
 
-    iv) Go back to aws.amazon.com and click on the "sign in to console" button locted at the top right corner of the page.
+iv) Go back to aws.amazon.com and click on the "sign in to console" button locted at the top right corner of the page.
 
-    v) Click on the radio button that has "Root User" beside it to select it and click "Next"
+v) Click on the radio button that has "Root User" beside it to select it and click "Next"
 
-    vi) Type the characters displayed into the input text box provided for security check and click the submit button. You will then be signed in if correct and the dashboard displayed to you.
+vi) Type the characters displayed into the input text box provided for security check and click the submit button. You will then be signed in if correct and the dashboard displayed to you.
 
-    vii) Since you are a first time user, S3 will not be available in your "recently accessed services" but can be found by searching for it in the "Find Services" section of the AWS Management Console. Once found, click on it and another page will be displayed on which you will create your bucket.
+vii) Since you are a first time user, S3 will not be available in your "recently accessed services" but can be found by searching for it in the "Find Services" section of the AWS Management Console. Once found, click on it and another page will be displayed on which you will create your bucket.
 
-    viii) To create a bucket that is needed to store your files in, click on the "Create bucket" button.
+viii) To create a bucket that is needed to store your files in, click on the "Create bucket" button.
 
-    ix) Give your bucket any name of your choice but to keep with constitency, it's advised to give it same name to match your Heroku app's name
+ix) Give your bucket any name of your choice but to keep with constitency, it's advised to give it same name to match your Heroku app's name
 
-    x) For the region, select the one closest to your location
+x) For the region, select the one closest to your location
 
-    xi) Since this bucket needs to be public in order to allow public access to our static files,uncheck the "Block all public access" box and acknowledge that the bucket will be public by clicking the acknowledgement check box provided.
+xi) Since this bucket needs to be public in order to allow public access to our static files,uncheck the "Block all public access" box and acknowledge that the bucket will be public by clicking the acknowledgement check box provided.
 
-    xii) Click on the "Create bucket" button to create the bucket.
+xii) Click on the "Create bucket" button to create the bucket.
 
-    xiii) On the left hand side of the page, click on "Buckets" and it will display all the buckets that have been created. If you are a new user, only one bucket will show up.
+xiii) On the left hand side of the page, click on "Buckets" and it will display all the buckets that have been created. If you are a new user, only one bucket will show up.
 
-    xiv) Look for your newly created bucket by name if there are many buckets available and click on it.
+xiv) Look for your newly created bucket by name if there are many buckets available and click on it.
 
-    xv) St a few basic settings on your new bucket by clicking on the "Properties" tab and turn on "Static website hosting" by clicking on the 'edit' button beside it.
+xv) St a few basic settings on your new bucket by clicking on the "Properties" tab and turn on "Static website hosting" by clicking on the 'edit' button beside it.
 
-    xvi) Click on the "Enable" radio button to select it.
+xvi) Click on the "Enable" radio button to select it.
 
-    xvii) Under the Hosting type section, the "Host a static website" option has been auto-selected already so leave it that way
-    
-    xviii) For the index and error document, fill in some default values e.g index.html and error.html since they won't be used for anything in this setup, then click on the "save changes" button.
+xvii) Under the Hosting type section, the "Host a static website" option has been auto-selected already so leave it that way
 
-    xix) Click on the "Permissions" tab to make 3 changes. Firstly, under the 'CORS configuration' click on the 'edit' button and copy the code 
+xviii) For the index and error document, fill in some default values e.g index.html and error.html since they won't be used for anything in this setup, then click on the "save changes" button.
 
-    xx) 
+xix) Click on the "Permissions" tab to make 3 changes. Firstly, under the 'CORS configuration' click on the 'edit' button, copy this code below and paste it into the textarea input provided:
+
+```
+[
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": []
+    }
+]
+``` 
+Then click on the 'Save changes' button. This CORS configuration is going to set up the required access between your Heroku app and S3 bucket
+
+xx) Scroll down the page to the 'Bucket policy' section, click on the 'Edit' button and then on 'Policy generator' button in order to create a security policy for this bucket. The type of policy is 'S3 Bucket Policy'. Allow all Principal by using a * i.e type * into the input box beside Principal and under the 'Actions' heading, select 'GetObject'
+
+xxi) Copy the ARN (stands for Amazon resource name) from the 'Bucket Policy' section in the previous tab and paste it into the ARN box at the bottom.
+
+xxii) Click on the 'Add statement' and 'Generate Policy' buttons respectively.
+
+xxiii) Copy the displayed policy (i.e JSON document) into the bucket policy editor in the other tab.
+
+xxiv) Before clicking on save, since all resources will be allowed access to this bucket, add a 
+/* (i.e slash asterisk) onto the end of the 'Resource' key and click on save. Then the bucket policy and and CORS configuration will allow full access to all resources in this bucket.
+
+xxv) Lastly, under the 'Permissions' tab, scroll down to locate the 'Access Control List' (ACL) and click on the 'Edit' button beside it. Under the 'Everyone (public access), click beside the List to check that box, then click the checkbox beside the consent terms and click on 'Save changes' button. The purpose of setting this list objects permission for Everyone is so that everyone can access the objects in this bucket.
+
+## Steps to setting up Identity Access Management (IAM)
+
+xxvi) After creating S3 bucket, you will need to create a user to access it.This will be done through another service called IAM. In the management console, close the amazon S3 tab and type 'IAM' in the 'service' textbox provided, once it's displayed, click on it.
+
+xxvii) Here is to briefly summarise what this process of creating the IAM service entails before breaking it further into steps. First, create a group for your user to live in, then create an access policy giving the group access to the S3 bucket we created earlier and finally, assign the user to the group so that it can use the policy to access all your files. The detailed steps to carry out in order to create IAM are as follows:
+
+a) On the IAM dashboard located at the left hand side of the page, under 'Access management', click on 'User groups' and then on the 'Create group' button located at the top right side of the page.
+
+b) Give your group a meaningful name of your choosing but for consistency, you can use 'manage-<followed by the name of your app>' e.g manage-wigalleria.
+
+c) Create the policy used to access your bucket by clicking on 'Policies' at the left side of the page and then click on 'Create Policy' button at the top right side of the page.
+
+d) Click on the JSON tab and then select 'import managed policy' located on the right hand side of the page. This will allow you import the policy that AWS has pre-built for full access to S3. Type S3 into the search bar to search for it and then import the 'AmazonS3FullAccess' policy and click on the 'Import' button at the bottom of the page.
+
+e) Get the bucket ARN from the bucket policy page in S3. Click on 'Services', select S3 and then 'Buckets' and click on your bucket's name. Click on the 'Permissions' tab, then scroll down to 'Bucket Policy' section. Click on 'Edit' button  and copy the 'ARN', then go back to the IAM service. Under the 'Dashboard' and under the 'Access Management' heading, click on 
+'Policies ---> Create Policy ---> JSON' tab and under the 'Resource', put an opening and closing square brackets to denote that a list is going to be put in it and then paste in the ARN copied from S3 bucket with a quotation mark on each item in the list e.g
+"Resource": [
+    "arn:aws:s3::::type-your-project-name-here",
+    "arn:aws:s3::::type-your-project-name-here/*"
+]
+The first item in the list above is the bucket itself while the other one that has /* at its end adds another rule for all files/folders in the bucket.
+
+f) Click on 'Next:Tags' and then on 'Next:Review' buttons one after the other.
+
+g) On the 'Create Policy' page, give it a name and description under their respective headings. The name you give should match you app name and have a '-policy' attached at the end of it for consistency but not mandatory for example:
+Name: cyot14-wigalleria-policy
+Description: Access to S3 bucket for wigalleria static files
+Then click on 'Create Policy' button and this takes you back to the policy page where you can see that your policy has been created.
+
+h) Attach the policy to the groupcreated earlier by clicking on 'User groups' and then on your policy name i.e manage-wigalleria. Go to 'permissions' tab and then click on the drop down button beside the 'Add Permissions' button and select 'Attach policies'. In the search box provided, type in your policy name and once it shows up, click on the checkbox beside it to select it, then scroll down and click on the 'Add permissions' button.
+
+i) Create a user to put in the group by going to the left hand side of the page, click on 'Users' and at the top right hand side of the page, click on the 'Add users' button. Give it a user name of '<Type the name of your app here>-staticfiles-user' in the space provided to keep up with naming consistency and give the user 'Programmatic access' by clicking on the checkbox beside it, then select the 'Next:Permissions' button.
+
+j) Put the user in the group you created earlier which as you can see, has the policy attached to it already. Just click in the checkbox provided beside it to select it and then click on 'Next:Tags' first and then 'Next:Review' buttons and lastly, click on 'Create User' button.
+
+k) Download the csv file named 'Download.csv' which contains this user's access key and secret access key which will be used to authenticate them from the Django app. Please note that it's very important to download and save this csv file because it can't be downloaded again once you've gone through this process.
+
+## Steps to connect Django to S3
+
+l) Install 2 new packages using the folloeing commands one after the other:
+pip3 install boto3 and press the enter key
+pip3 install django-storages and press the enter key
+
+m) Freeze them into your requirements.txt file using this command below so they get installed on Heroku when you deploy:
+pip3 freeze > requirements.txt and press the enter key
+
+n) Add 'storages' to the already INSTALLED APPS in settings.py file since Django will need to know about it and save it.
+
+o) To connect Django to S3, you have to add some more settings to your settings.py file to tell it which bucket it should be communicating with. this will be done only on Heroku and not on local development side so add an if statement to check if there's an environment variable called 'USE_AWS' in the environment as shown below:
+```
+if 'USE_AWS' in os.environ:
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'cyot14-wigalleria'
+    AWS_S3_REGION_NAME = 'eu-west-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+```
+* Note that it is very vital to keep these 2 keys above i.e AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY secret or else could be used by someone else if it ends up in version control and you'll be billed for it.
+
+p) Go to Heroku settings and add your AWS keys to the config variables by doing the following:
+Click on 'Settings tab ---> Reveal Config Vars button and in the input textbox provided with a placeholder of 'KEY', type 'AWS_ACCESS_KEY_ID' into it and in another input textbox provided with a placeholder of 'VALUE', go to the 'Download.csv' file downloaded earlier to get its value, copy and paste it into the input textbox provided and then click on the 'Add' button beside it. 
+Repeat this steps for the 'AWS_SECRET_ACCESS_KEY' by copying its value from the downloaded csv file and pasting it into the input textbox provided with a placeholder of 'VALUE', then click the 'Add' button beside it. Also, add the 'USE_AWS' into the input textbox provided with a placeholder of 'KEY' and in the 'VALUE' placeholder input textbox, set it to 'True' so that your settings.py file knows it has to use the AWS configuration when it's deployed to Heroku.
+
+q) Remove the 'DISABLE_COLLECTSTATIC' variable since Django will now collect static files automatically and upload them to S3 once you deploy to Heroku this time around.
+
+r) Back in your settings.py file, tell Django where the static files are coming from in production. This will be from a combination of your bucket name and some amazon names i.e bucketname.s3.amazonaws.com and will be formatted as an f string so that your bucket name will be interpreted and added to generate the appropriate URL as shown in this example below:
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+s) Next is to tell Django that whenever someone runs collectstatic in production, it should use S3 to store static files and that any uploaded product images should go there too. To do that, create a new file called 'custom_storages.py in your project's root directory.
+
+t) Go to settings.py and under the if statement you created earlier for USE_AWS, tell it that for static file storage, it should use the storage class just created and the location it should save static files to is a folder called 'static'. Do same for media files by using the default file storage and media files location settings. Also, override and explicitly set the URLs for static and media files using your custom domain and the new locations. Save your file.
+
+u) Go to S3 on amazon website and you'll see that there is now a static folder in your bucket will all your static files in it.
+All these steps above take care of your static files to get it working so you now have to handle your media files as well.
+
+* To get your media files working, take the following steps:
+
+a) In settings.py file, add an optional setting called 'AWS_S3_OBJECT_PARAMETERS'. This tells the browser that it's ok to cache static files for a long time since they don't change very often, this will improve performance for your users. This should be added on the next line after the 'MEDIA_ROOT' part and save it.
+
+b) Commit these changes by doing the normal git add, commit and push in order to push your code to GitHub so it can be deployed to Heroku.
+
+c) Add media files to S3. There are 2 ways to do this i.e via the command line  but it's easier to do it via S3 itself so go to S3 and create a new folder called 'media'. In amazon S3, click on 'Buckets'. Under Objects(1) heading & to its right, click on the 'Create folder' button and give it the name 'media' as said earlier.
+
+d) Click on the 'media' folder to go inside it, then click on the 'Upload' button at the right hand side of the page, then on 'Add files' button. This displays a screen where you can select all your product images from where you stored them on your PC. Then scroll down and under 'Permissions' heading, click on the drop-down button beside it and under 'Predefined ACLs' sub-heading, select the radio button beside the 'Grant public-read access' and also select the checkbox beside the consent message that reads 'I understand the risk of granting .....' to give your consent and then click the 'Upload' button.
+
+e) Since the email address for your superuser has not been confirmed on Postgres DB yet, this can be done either through the Django admin or by attempting to log in and get the email confirmation link from Heroku app logs but the choice is to do it through admin using your superuser details. Without these details, the user won't be able to log into the store since we made it mandatory for them to verify their email address in the allauth settings.
+
+f) On the site administration page, under 'Accounts', click on 'Email addresses and you should see your email address details displayed on that page. If you don't see your email address, then go back to gitpod and run the server to open your code in the browser, then append '/admin' to the end of the URL there already to take you to django admin login page. Attempt to log in there first to force allauth to create your email. Go back to the admin page again and check again to see if your email address is now there. Once it's now created there, simply mark it as verified and primary in the admin by clicking on that email address  and it will take you to another page. On that page, click in the checkbox provided beside both the 'Verified' and 'Primary' and then click on the save button.
+
+g) While still on the Django Admin page, click on 'Accounts' that is in between 'Home > Accounts > Email addresses > your email address will be here' to take you back to accounts. Then in your browser's URL, delete the /admin/account to go back to your website's home page and you'll notice that the background image is now showing on the home page which means that all our static and media files setup are now working.
+
+h) Add your Stripe keys to the Heroku config variables. To get these keys, log into your stripe account, click on Dashboard ---> Developers ---> API keys ---> then copy the Publishable key.
+
+i) Go back to Heroku, click on the 'Settings' tab and then on the 'Reveal Config Vars'button. In the input textbox with the 'KEY' placeholder, type STRIPE_PUBLIC_KEY into it and in the input textbox beside it with the 'VALUE' placeholder, paste in the Publishable key copied from Stripe earlier and click on the 'Add' button beside it.
+
+j) Go back to your stripe account and to the same page where you copied the Publishable key. Beside the 'Secret key', click on the 'Reveal test key' button, it will request for your stripe account password so enter that and the secret key will be revealed to you if correct. Copy that and go back to Settings tab in the Heroku app and under the 'Config Vars' section, type 'STRIPE_SECRET_KEY' into the 'KEY' placeholder input textbox and the secret key value you copied earlier into the 'VALUE' placeholder input textbox. Then click on the 'Add' button also.
+
+k) Create a new webhook endpoint since the current one is sending webhooks to your Gitpod workspace. To do that, go back to your Stripe account and under the 'Developers' menu, click on webhooks located on the left side of the page. Click on '+Add endpoint' button located at the top right side of the page. In the input textbox provided for 'Endpoint URL' heading, add the URL for your Heroku app followed by /checkout/wh/. Under the 'Select events to listen to', click on the '+Select events' button and then click in the checkbox beside 'Select all events' and then click on 'Add events', then click on the 'Add endpoint' button.
+
+l) A new page will be displayed to you and you'll see the 'signing secret' heading which is the 4th one from the left. Reveal it (i.e it's your webhook signing secret) by clicking on the 'Reveal' under it and add that to your Heroku config variables, then click the 'Add' button. Keep in mind that the values of all these variables must match the ones you've got in your settings.py file so if you've used different names, ensure you update them accordingly. This means that the 'STRIPE_PUBLIC_KEY', 'STRIPE_SECRET_KEY' and 'STRIPE_WH_SECRET' in the config vars section of your Heroku app must match the ones located towards the bottom section of your settings.py file.
+
+m) To test that the listener is working, send a test webhook from Stripe so on Stripe's page, under Developers ---> Webhooks, click on the 'Send a test event' button and select from the 'Event type' drop-down menu the 'account.external_account.created' and then click on 'Send test webhook' button. If successful, you'll get a 'Response' of 
+'Test webhook sent successfully
+'Unhandled webhook received:account.external_account.created'
+Then, click on the 'Cancel' button. This completes the deployment process.
+
+---
 
 ## Steps for  deployment to Heroku
 
@@ -464,6 +664,7 @@ git push heroku main and press the enter key
 * To test if your automatic deployment works, make a minor change to your code in your Gitpod workspace and push to GitHub. Then go to your Heroku app and select on your app, click on the 'Activity' tab and you'll see that there's a build in progress whuch shows that your automatic deployment is working. 
 
 View the live project [here](https://cyot14-wigalleria.herokuapp.com/)
+
 View the GitHub Repository [here](https://github.com/Eb0nY-April14/wigalleria_v1)
 
 ---
