@@ -2,11 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-    <!-- <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div> -->
+    
 {% endblock %}
 
 {% block content %}
@@ -19,14 +15,6 @@
                 <h5 class="text-muted"><em>Delete a Product</em></h5>
                 <div class="row float-right">
                     <div class="col-lg-12">
-                        <!--<div class="box-element">
-                            <a class="btn btn-md rounded-0 py-3 mb-2 btn-dark shop-now-button font-weight-bold" href="{% url 'products' %}">
-                             <a class="shop-now-button btn btn-lg rounded-0 py-3 shopping-btn" href="{% url 'products' %}"> 
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>Continue Shopping    
-                            </a>
-                        </div> box element class ends -->
                     </div> <!-- col div ends -->
                 </div>  <!-- row div ends -->
                 <hr>
@@ -61,13 +49,11 @@
 {% block postloadjs %}
     {{ block.super }}
 
-    <script type="text/javascript">
+    <script>
         $('.btt-link').click(function(e) {
             window.scrollTo(0,0)
         })
     </script>
-
-    <!-- <script src="{% static 'checkout/js/stripe_elements.js' %}"></script> -->
 {% endblock %}
 
 
