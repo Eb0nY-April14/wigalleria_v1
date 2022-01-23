@@ -6,47 +6,131 @@
 
 This tool was used to validate my .py files to ensure there are no syntax errors or improper code indentation. They passed the test as seen in the screenshots below:
 
-* urls.py:
-![PEP8 Validator Testing](documentation/validation/pep8_validation/urls.py_pep8_validator.png)
+* cart/apps.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/cart-apps.py.png)
 
-* models.py:
-![PEP8 Validator Testing](documentation/validation/pep8_validation/models.py_pep8_validator.png)
+* cart/contexts.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/cart-contexts.py.png)
 
-* views.py:
-![PEP8 Validator Testing](documentation/validation/pep8_validation/views.py_pep8_validator.png)
+* cart/templatetags/cart_tools.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/cart-templatetags-cart_tools.py.png)
 
-* apps.py:
-![PEP8 Validator Testing](documentation/validation/pep8_validation/apps.py_pep8_validator.png)
+* cart/urls.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/cart-urls.py.png)
 
-* forms.py:
-![PEP8 Validator Testing](documentation/validation/pep8_validation/forms.py_pep8_validator.png)
+* cart/views.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/cart-views.py.png)
 
-* tests.py:
-![PEP8 Validator Testing](documentation/validation/pep8_validation/tests.py_pep8_validator.png)
+* checkout/admin.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/checkout-admin.py.png)
+
+* checkout/apps.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/checkout-apps.py.png)
+
+* checkout/forms.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/checkout-forms.py.png)
+
+* checkout/models.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/checkout-models.py.png)
+
+* checkout/signals.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/checkout-signals.py.png)
+
+* checkout/urls.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/checkout-urls.py.png)
+
+* checkout/views.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/checkout-views.py.png)
+
+* checkout/webhook_handler.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/checkout-webhook_handler.py.png)
+
+* checkout/webhooks.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/checkout-webhooks.py.png)
+
+* home/apps.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/home-apps.py.png)
+
+* home/urls.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/home-urls.py.png)
+
+* home/views.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/home-views.py.png)
+
+* products/admin.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/products-admin.py.png)
+
+* products/apps.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/products-apps.py.png)
+
+* products/forms.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/products-forms.py.png)
+
+* products/models.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/products-models.py.png)
+
+* products/urls.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/products-urls.py.png)
+
+* products/views.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/products-views.py.png)
+
+* products/widgets.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/products-widgets.py.png)
+
+* profiles/apps.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/profiles-apps.py.png)
+
+* profiles/forms.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/profiles-forms.py.png)
+
+* profiles/models.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/profiles-models.py.png)
+
+* profiles/urls.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/profiles-urls.py.png)
+
+* profiles/views.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/profiles-views.py.png)
+
+* wigalleria/asgi.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/wigalleria-asgi.py.png)
+
+* wigalleria/custom_storages.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/wigalleria-custom_storages.py.png)
+
+* wigalleria/settings.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/wigalleria-settings.py.png)
+
+* wigalleria/urls.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/wigalleria-urls.py.png)
+
+* wigalleria/wsgi.py:
+![PEP8 Validator Testing](documentation/validation/pep8_validation/wigalleria-wsgi.py.png)
 
 [w3html validator](https://validator.w3.org) 
 
-This tool was used to validate all my html templates and I got warning on 6 pages while the 7th page showed a warning & 3 errors. The html validator showed errors regarding the sign up page in which I used the Django built in form i.e {{ form.as_p }}. Here below are the screenshots of the 6 error free templates and the last one with errors:
+This tool was used to validate all my html templates and I got just two warnings on the checkout page about type attribute not necessary on javascript resource while the rest of the pages are free of errors and warnings. as_p }}. Here below are the screenshots of the validations:
 
-* Add item Page:
+* cart/templates/cart/cart.html Page:
 
-![add item page](documentation/validation/w3html_validation/html_validator_add_item_page.png)
+![shopping cart page](documentation/validation/w3html_validation/cart-templates-cart-cart.html.png)
 
-* Home/View list Page:
+* checkout/templates/checkout/checkout_success.html Page:
 
-![home/view page](documentation/validation/w3html_validation/html_validator_home-view_page.png)
+![checkout success page](documentation/validation/w3html_validation/      .png)
 
-* Edit item Page:
+* checkout/templates/checkout/checkout.html Page:
 
-![edit item page](documentation/validation/w3html_validation/html_validator_edit_item_page.png)
+![checkout page](documentation/validation/w3html_validation/       .png)
 
-* Delete item Page:
+* home/templates/home/index.html Page:
 
-![delete item page](documentation/validation/w3html_validation/html_validator_delete_item_page.png)
+![home page](documentation/validation/w3html_validation/       .png)
 
-* Login Page:
+* products/templates/products/add_comment.html Page:
 
-![login page](documentation/validation/w3html_validation/html_validator_login_page.png)
+![add comment page](documentation/validation/w3html_validation/      .png)
 
 * Logout Page:
 
