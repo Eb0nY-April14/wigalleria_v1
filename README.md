@@ -23,7 +23,7 @@ The wiGalleria app will provide the following features to its users:
 
 * Create: It will allow a registered or guest user to add product(s) into the shopping cart 
 * Read: It will allow a registered or guest user to view the items in their shopping cart
-* Update: It will allow a registered or guest user to edit items in their shopping cart 
+* Update: It will allow a registered or guest user to update the quantity of product(s) in their shopping cart 
 * Delete: It will allow a registered or guest user to either remove one or all products from their shopping cart
 * Sign Up: It will allow a guest user to register for an account if he doesn't have one yet before he can access some features of the app
 * Login: It will allow a user to authenticate i.e log in if he already has an account in 
@@ -44,48 +44,72 @@ First Time User Goals
 
 a) As a First Time User, I want to be able to easily understand the main purpose of the site and the app to be intuitive so I can navigate through the site easily without any ambiguity. 
 
-b) As a First Time User, I want to be able to register/sign up for an account in order to have a personal account that will allow me view my profile. 
+First Time or Guest User Goals
 
-c) As a First Time User, I want to be able to receive confirmation email after registration/signing up for an account
+a) As a First Time or Guest User, I want to be able to register/sign up for an account in order to have a personal account that will allow me view my profile.  
 
-d) As a First Time User, I want to be able to access information through their social media links to see their followings on social media to determine how trusted and known the app is.
+b) As a First Time or Guest User, I want to be able to receive confirmation email after registration/signing up for an account
 
 Registered User Goals
 
-a) As a Registered User, I want to be able to save my shipping details so that when I'm logged in, I can check out faster anytime I shop again.
+a) As a Registered User who is logged in, I want to be able to save my shipping details so that when I'm logged in, I can check out faster anytime I shop again.
 
-b) As a Registered User, I want to be able to have a personalised user profile when I'm logged in so that I can view my personalised order history, order confirmation and save my payment information. 
+b) As a Registered User who is logged in, I want to be able to have a personalised user profile when I'm logged in so that I can view my personalised order history, order confirmation and save my payment information. 
 
-c) As a Registered User, I want to be able to log in to my account so that I can access my personal account information.
+c) As a Registered User who is logged in, I want to be able to add general/specific comments relating to a product so that I can convey any general or specific issue I have with the ordering of the product to the seller
 
-d) As a Registered User, I want to be able to log out of my account when I'm logged in so that my account can be safe from unauthorised access.
+d) As a Registered User who is logged in, I want to be able to review a product so that I can give feedback to the seller on his product
 
-e) As a Registered User, I want to be able to access information through their social media links to see their followings on social media to determine how trusted and known the app is.
+e) As a registered user who is logged in I want to be able to like/unlike a product so that I can spot it easily when I want to buy it later/again or mark it down if it wasn't as described by the seller after purchase
 
+f) As a Registered User who is logged in, I want to be able to log out of my account so that my account can be safe from unauthorised access.
+
+g) As a Registered User, I want to be able to log in to my account so that I can access my personal account information.
+
+h) As a Registered User, I want to be able to access information through their social media links to see their followings on social media to determine how trusted and known the app is.
 
 ---
 
-Registered & Guest User Goals
+First Time, Registered or Guest User Goals
 
-a) As a Registered, First time or Returning Guest User, I want to be able to easily see the image, name, price, rating & category of the product I want to buy in order to know that I'm buying the right product at the price I can afford.
+a) As a First Time, Registered or Guest User, I want to be able to easily see the image, name, price, rating & category of the product I want to buy in order to know that I'm buying the right product at the price I can afford.
 
-b) As a Registered, First time or Returning Guest User, I want to be able to quickly identify deals, clearance items and special offers in order to take advantage of special savings on products I'd like to purchase.
+b) As a First Time, Registered or Guest User, I want to be able to quickly identify deals, clearance items and special offers in order to take advantage of special savings on products I'd like to purchase.
 
-c) As a Registered, First time or Returning Guest User, I want to be able to easily view the total of my purchase at any time so that I can avoid spending too much.
+c) As a First Time, Registered or Guest User, I want to be able to easily view the total of my purchase at any time so that I can avoid spending too much.
 
-d) As a Registered, First time or Returning Guest User, I want to be able to view all available products in order to select some for purchase.
+d) As a Registered, First time or Guest User, I want to be able to view all available products in order to select some for purchase.
 
-e) As a Registered, First time or Returning Guest User, I want to be able to easily check out in order to purchase products without logging in or setting up an account.
+e) As a First time, Registered or Guest User, I want to be able to easily check out anonymously in order to purchase products without logging in or setting up an account.
 
-f) As a Registered, First time or Returning Guest User, I want to be able to easily delete product(s) in the cart in order to have the choice to remove it if not needed anymore.
+f) As a First time, Registered or Guest User, I want to be able to easily delete product(s) in the cart in order to have the choice to remove it if not needed anymore.
 
-g) As a Registered, First time or Returning Guest User, I want to be able to edit products in the cart in order to adjust it any time if I change my mind.
+g) As a First time, Registered or Guest User, I want to be able to update products in the cart in order to adjust it any time if I change my mind.
 
-h) As a Registered, First time or Returning Guest User, I want to be able to view products in the cart in order to know what I'm purchasing.
+h) As a First time, Registered or Guest User, I want to be able to view products in the cart in order to know what I'm purchasing.
 
-i) As a Registered, First time or Returning Guest User, I want to be able to add product/products to the cart in order to purchase a single one or check out multiple items in one click.
+i) As a First time, Registered or Guest User, I want to be able to add product/products to the cart in order to purchase a single one or check out multiple items in one click.
 
-j) As a Registered, First time or Returning Guest User, I want to be able to access information through their social media links to see their followings on social media to determine how trusted and known the app is.
+j) As a First time, Registered or Guest User, I want to be able to access information through their social media links to see their followings on social media to determine how trusted and known the app is. 
+
+k) As a First time, Registered or Guest User, I want to be able to view a list of products so that I can select some to purchase
+
+l) As a First time, Registered or Guest User, I want to be able to receive an email confirmation after checking out so that I can keep the confirmation of what I've purchased for my records.
+
+m) As a First time, Registered or Guest User, I want to be able to view my order confirmation after checkout so that I can verify that I haven't made any mistakes while placing the order.
+
+n) As a First time, Registered or Guest User, I want to be able to easily enter my payment information so that I can check out quickly with no hassles.
+
+o) As a First time, Registered or Guest User, I want to be able to update the quantity of individual item in my cart so that I can easily make changes to my purchase before checkout.
+Answer in TESTING.md: A user can update the quantity of products already selected in her shopping bag before checking out by selecting the right quantity using quantity selector box and click on the update link provided underneath.
+
+p) As a First time, Registered or Guest User, I want to be able to easily select a product's quantity during purchase so that I can guard against accidentally selecting the wrong quantity.
+Answer in TESTING.md: Each product detail page has its own quantity selector box to avoid selecting the wrong quantity
+
+q) As a First time, Registered or Guest User, I want to be able to view a specific category of products so that I can quickly find products I'm interested in without having to search through all products.
+Answer in TESTING.md: A user can use the search input box provided at the main nav section of the page to display the products with the category she's interested in and filter out other categories.
+
+r) As a First time, Registered or Guest User, I want to be able to view individual product detail so that I can see detailed information about its description, like, review or leave a comment.
 
 ---
 
@@ -161,8 +185,10 @@ Agile Approach Used
 Each project was created with issues and milestones set. I also used the MoSCoW labelling technique to prioritise my user stories into Must-Have, Should-Have, Could-Have and Won't-Have. At the start, all the user stories are put in the "To do" section of each board, then the Must-Haves are moved into the "In progress" section and once a functionality is completed and everything responds as expected, it's moved to the "Done" section.
 The links to these 3 boards are given below:
 
-[kanban board 1 on GitHub](https://github.com/Eb0nY-April14/wigalleria_v1/projects/1) 
+[kanban board 1 on GitHub](https://github.com/Eb0nY-April14/wigalleria_v1/projects/1)
+
 [kanban board 2 on GitHub](https://github.com/Eb0nY-April14/wigalleria_v1/projects/2)
+
 [kanban board 3 on GitHub](https://github.com/Eb0nY-April14/wigalleria_v1/projects/3)
 
 ---
@@ -174,59 +200,6 @@ This e-commerce store is made up of different apps each with its own model and t
 * View the database Schema below: 
 
 ![Database Schema](documentation/database_schema_wigalleria.jpg)
-
----
-
-# Issues Encountered and Resolved
-
-* There were some issues experienced with the products page after deployment to Heroku. 12 of the products were missing but visible on the development side. I went to the media folder of the aws bucket created for wiGalleria to check if the products names there corresponds to the ones in the media folder on gitpod workspace and discovered that I gave the wrong extension to some i.e .jpg instead of .png, some had name mismatch and as soon as I corrected those, most of the images showed up leaving 2 products missing. I then went to the database through Django admin and re-entered the names of those 2 products checking that they match the ones in aws bucket, then add, commit & push them to GitHub, refreshed the Heroku deployed site and all products images were displayed correctly. See screenshots below:
-
-![Products missing](documentation/bugs/missing_products_screenshots_crop.jpg)
-
-* The stripe webhook failed when I sent a test event to a webhook endpoint. It gave an error message of "Test webhook error: 502" and after thorough checking, two causes were discovered which are:
-* The empty variables placeholders I left in the env.py file were preventing Stripe from seeing the stripe keys in there. They were left there in case more environment variables need to be added to my env.py file but I didn't realise quickly enough that this was the root cause that prevents Stripe from seeing the stripe keys in env.py files. 
-* Secondly, I placed the env.py in the wrong location i.e in the wigalleria app instead of the root directory. I fixed these issues by commenting the environment variables placeholders out and moving the env.py file to the root directory, then ran the webhook test again & received a successful message this time, it worked. See screenshots below:
-
-![Stripe webhook failed2](documentation/bugs/webhooks_error_msg_from_stripe.png)
-![Stripe webhook failed3](documentation/bugs/env_py_wigalleria_location.png)
-
-* When an admin user wants to carry out a delete product opertion, there is a confirmation message displayed to him to confirm if he actually wants to delete that product or cancel the delete and return to home. It should specifically mention the name of that product to be deleted so the user can make a choice if to go ahead with the deletion or cancel it but when I tested this feature on completion, it displayed the message quite alright but didn't render the product's name but left it blank. It was discovered that the issue with this was that in my delete_product function view views.py, I didn't render the product got by the get_object() function in a context so the context had no name of product to render so it displayed an empty quotes (i.e "") but onec I added the product variable name into the context, the issue was solved. See screenshots of before and after below:
-
-![Missing Product name](documentation/bugs/delete_product_missing_var_msg.png)
-![Missing Product name](documentation/bugs/delete_product_name_var_missing_out_dev_tools.png)
-![Rendered Product name](documentation/bugs/delete_product_complete_var_msg.png)
-
-* Also, I had an issue with the products delete view for an admin user. I included a message that allows an admin user to confirm deletion or cancel before the actual deletion takes place. This was put in place to avoid deletion by mistake but when it was run in the browser, it threw an error with the message "delete view template does not exist". This was due to the fact that I omitted "products/" that should precede the delete_product.html template name in my path name when I was rendering it. According to my file path, the delete_product.html template resides inside the products folder so that should be specifed as "products ---> templates ---> products" directory but as soon as that was corrected, the template rendered appropriately. See screenshot of error message and its solution below:
-
-![Delete template not exist](documentation/bugs/template_not_exist_product_error.png)
-![Delete template location](documentation/bugs/delete_button_error_fix.png)
-![Delete view not correct](documentation/bugs/delete_product_view_not_correct.png)
-![Delete view correct](documentation/bugs/delete_product_view_correct.png)
-
-* An issue erupted during the Heroku deployment. Since the rule is that after connecting to Postgres, we must run migrations again using the commands "showmigrations" & "migrate" afterwards. I ran the showmigrations successfully but when I put in the terminal the "migrate" command, it threw an error that says "AssertionError: database connection isn't set to UTC". I then googled for this issue to find the cause & possible solutions to this sort of error and found a very helpful resource on stackoverflow which explained that this issue was caused as a result of a recent update to version 2.9 of psycopg2 as explained in this GitHub issue: 
-[GitHub Link to resolve database UTC Issue](https://github.com/psycopg/psycopg2/issues/1293#issuecomment-862835147)
-
-* The solution given to this problem on stackoverflow is to downgrade psycopg2 (or psycopg2-binary if you are using the stand-alone package) below 2.9 (e.g. psycopg2>=2.8,<2.9) in your requirements file e.g downgrade to 2.8.6 using: pip3 install psycopg2==2.8.6
-I did that and the issue was resolved. 
-The link to the solution on stackoverflow is below:
-[stackoverflow Link to resolve database UTC Issue](https://stackoverflow.com/questions/68024060/assertionerror-database-connection-isnt-set-to-utc)
-
-* After creating the footer code in my base.html template and viewed it in the browser, I found out that it didn't display at the right location. It was joined together with the navbar section at the top of each page instead of the bottom. I tried playing around with the chunk of the footer code by moving it from one section to the other to see if that would resolve the issue but it didn't so I had to contact Code Institute tutor support for help. It was there that the tutor pointed my attention to where I placed the footer, immediately after the closing head tag and ignoring the block content code there. In the tutor's words: 
-"The main content and the header is actually below the footer, please look at line starting 181 - 185 in base.html, I believe that should be moved to line 147". I followed his instruction, viewed my code in the browser and found out that the footer has rightly moved to the bottom across all pages. See screenshots below:
-
-![Footer code placed at wrong Location](documentation/bugs/footer_code_placed_at_wrong_location.png)
-
-![Footer code placed at right Location](documentation/bugs/footer_code_placed_at_right_location.png)
-
-![Footer code placed at wrong Position](documentation/bugs/footer_code_placed_wrongly_in_base_template.png)
-
-![Template showing footer at wrong Location](documentation/bugs/footer_section_in_base_template_show_wrongly.png)
-![Template showing footer at right Location](documentation/bugs/footer_section_in_base_template_show_rightly.png)
-
-* Another issue was encountered during the implementation of Stripe payment for my project. I created the payment intent in my checkout views.py but when I opened it in the browser to check it out, it broke my checkout page giving an error that says "Authenticationerror at checkout. You did not provide an API key. You need to provide your API key in the Authorization header, using Bearer auth (e.g. 'Authorization: Bearer YOUR_SECRET_KEY')". I tried to solve this issue but was unable to so I contacted tutor support and after much troubleshooting, she noticed that 'env.py' file is not being read correctly in settings.py. On a closer look by the tutor and her colleague, it was discovered that the error was caused as a result of the empty variables set with no name and values in env.py file. Commenting out all these empty variables in env.py file solved the issue and the code ran successfully.
-See screenshots below:
-
-![Authentication Error at Checkout](documentation/bugs/authentication_error_at_wigalleria_checkout.png)
 
 ---
 
@@ -246,31 +219,31 @@ Frameworks, Libraries and Programs Used
 
 * Git was used for version control by utilising the Gitpod terminal to commit to Git and push to GitHub.
 
-See Git link [here]()
+See Git link [here](https://git-scm.com/)
 
 2. GitHub
 
 * GitHub was used to store the project's code after being pushed from Git.
 
-See GitHub link [here]()
+See GitHub link [here](https://github.com/)
 
-3. Bootstrap 4.1.3 & Custom CSS
+3. Bootstrap 4.1 & Custom CSS
 
-* Bootstrap 4 and custom made CSS files were used to assist with the responsiveness and styling of the website.
+* Bootstrap 4.1 and custom made CSS files were used to assist with the responsiveness and styling of the website.
 
-See Bootstrap 4 link [here]()
+See Bootstrap 4 link [here](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 
 4. Django & Jinja templating Language
 
 * The entire project anchors on this framework as it was used to build this app.
 
-See Django link [here]()
+See Django link [here](https://www.djangoproject.com/)
 
 5. Amazon S3 Bucket
 
 * S3 Bucket was used to host static and media files that will be needed for storing products images, background image and CSS files. Since Heroku can't serve static and media files on its own but works seamlessly with amazon S3 bucket, an aws account has to be created and S3 bucket created within it so that all static and media files can be uploaded there and it can serve all the static files on Heroku as it works well with it.
 
-See Amazon AWS S3 Bucket link [here]()
+See Amazon AWS link [here](https://aws.amazon.com/)
 
 6. Stripe Payment
 
@@ -282,19 +255,19 @@ See Stripe Payment link [here](https://stripe.com/en-ie)
 
 * They were used on all pages throughout the project.
 
-See Roboto Google Font link [here]()
+See Roboto Google Font link [here](https://fonts.google.com/specimen/Roboto)
 
 8. Font Awesome Icons:
 
 * Font Awesome was used to add social media, shopping cart and all other icons across all pages throughout the app for excellent UX. 
 
-See Font Awesome link [here]()
+See Font Awesome link [here](https://fontawesome.com/)
 
 9. jQuery:
 
 * jQuery came with Bootstrap to make the navbar responsive.
 
-See JQuery link [here]()
+See JQuery link [here](https://jquery.com/)
 
 10. Windows 10 built-in Photo Editor:
 
