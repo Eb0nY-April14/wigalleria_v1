@@ -275,6 +275,74 @@ See JQuery link [here](https://jquery.com/)
 
 ---
 
+# Issues Encountered and Resolved
+
+* There were some issues experienced with the products page after deployment to Heroku. 12 of the products were missing but visible on the development side. I went to the media folder of the aws bucket created for wiGalleria to check if the products names there corresponds to the ones in the media folder on gitpod workspace and discovered that I gave the wrong extension to some i.e .jpg instead of .png, some had name mismatch and as soon as I corrected those, most of the images showed up leaving 2 products missing. I then went to the database through Django admin and re-entered the names of those 2 products checking that they match the ones in aws bucket, then add, commit & push them to GitHub, refreshed the Heroku deployed site and all products images were displayed correctly. See screenshots below:
+
+![Products missing](documentation/bugs/missing_products_screenshots_crop.jpg)
+
+* The stripe webhook failed when I sent a test event to a webhook endpoint. It gave an error message of "Test webhook error: 502" and after thorough checking, two causes were discovered which are:
+* The empty variables placeholders I left in the env.py file were preventing Stripe from seeing the stripe keys in there. They were left there in case more environment variables need to be added to my env.py file but I didn't realise quickly enough that this was the root cause that prevents Stripe from seeing the stripe keys in env.py files. 
+* Secondly, I placed the env.py in the wrong location i.e in the wigalleria app instead of the root directory. I fixed these issues by commenting the environment variables placeholders out and moving the env.py file to the root directory, then ran the webhook test again & received a successful message this time, it worked. See screenshots below:
+
+![Stripe webhook failed2](documentation/bugs/webhooks_error_msg_from_stripe.png)
+
+![Stripe webhook failed3](documentation/bugs/env_py_wigalleria_location.png)
+
+* When an admin user wants to carry out a delete product opertion, there is a confirmation message displayed to him to confirm if he actually wants to delete that product or cancel the delete and return to home. It should specifically mention the name of that product to be deleted so the user can make a choice if to go ahead with the deletion or cancel it but when I tested this feature on completion, it displayed the message quite alright but didn't render the product's name but left it blank. It was discovered that the issue with this was that in my delete_product function view views.py, I didn't render the product got by the get_object() function in a context so the context had no name of product to render so it displayed an empty quotes (i.e "") but onec I added the product variable name into the context, the issue was solved. See screenshots of before and after below:
+
+![Missing Product name](documentation/bugs/delete_product_missing_var_msg.png)
+
+![Missing Product name](documentation/bugs/delete_product_name_var_missing_out_dev_tools.png)
+
+![Rendered Product name](documentation/bugs/delete_product_complete_var_msg.png)
+
+* Also, I had an issue with the products delete view for an admin user. I included a message that allows an admin user to confirm deletion or cancel before the actual deletion takes place. This was put in place to avoid deletion by mistake but when it was run in the browser, it threw an error with the message "delete view template does not exist". This was due to the fact that I omitted "products/" that should precede the delete_product.html template name in my path name when I was rendering it. According to my file path, the delete_product.html template resides inside the products folder so that should be specifed as "products ---> templates ---> products" directory but as soon as that was corrected, the template rendered appropriately. See screenshot of error message and its solution below:
+
+![Delete template not exist](documentation/bugs/template_not_exist_product_error.png)
+![Delete template location](documentation/bugs/delete_button_error_fix.png)
+![Delete view not correct](documentation/bugs/delete_product_view_not_correct.png)
+![Delete view correct](documentation/bugs/delete_product_view_correct.png)
+
+* An issue erupted during the Heroku deployment. Since the rule is that after connecting to Postgres, we must run migrations again using the commands "showmigrations" & "migrate" afterwards. I ran the showmigrations successfully but when I put in the terminal the "migrate" command, it threw an error that says "AssertionError: database connection isn't set to UTC". I then googled for this issue to find the cause & possible solutions to this sort of error and found a very helpful resource on stackoverflow which explained that this issue was caused as a result of a recent update to version 2.9 of psycopg2 as explained in this GitHub issue: 
+[GitHub Link to resolve database UTC Issue](https://github.com/psycopg/psycopg2/issues/1293#issuecomment-862835147)
+
+* The solution given to this problem on stackoverflow is to downgrade psycopg2 (or psycopg2-binary if you are using the stand-alone package) below 2.9 (e.g. psycopg2>=2.8,<2.9) in your requirements file e.g downgrade to 2.8.6 using: pip3 install psycopg2==2.8.6
+I did that and the issue was resolved. 
+The link to the solution on stackoverflow is below:
+[stackoverflow Link to resolve database UTC Issue](https://stackoverflow.com/questions/68024060/assertionerror-database-connection-isnt-set-to-utc)
+
+* After creating the footer code in my base.html template and viewed it in the browser, I found out that it didn't display at the right location. It was joined together with the navbar section at the top of each page instead of the bottom. I tried playing around with the chunk of the footer code by moving it from one section to the other to see if that would resolve the issue but it didn't so I had to contact Code Institute tutor support for help. It was there that the tutor pointed my attention to where I placed the footer, immediately after the closing head tag and ignoring the block content code there. In the tutor's words: 
+"The main content and the header is actually below the footer, please look at line starting 181 - 185 in base.html, I believe that should be moved to line 147". I followed his instruction, viewed my code in the browser and found out that the footer has rightly moved to the bottom across all pages. See screenshots below:
+
+![Footer code placed at wrong Location](documentation/bugs/footer_code_placed_at_wrong_location.png)
+
+![Footer code placed at right Location](documentation/bugs/footer_code_placed_at_right_location.png)
+
+![Footer code placed at wrong Position](documentation/bugs/footer_code_placed_wrongly_in_base_template.png)
+
+![Template showing footer at wrong Location](documentation/bugs/footer_section_in_base_template_show_wrongly.png)
+![Template showing footer at right Location](documentation/bugs/footer_section_in_base_template_show_rightly.png)
+
+* Another issue was encountered during the implementation of Stripe payment for my project. I created the payment intent in my checkout views.py but when I opened it in the browser to check it out, it broke my checkout page giving an error that says "Authenticationerror at checkout. You did not provide an API key. You need to provide your API key in the Authorization header, using Bearer auth (e.g. 'Authorization: Bearer YOUR_SECRET_KEY')". I tried to solve this issue but was unable to so I contacted tutor support and after much troubleshooting, she noticed that 'env.py' file is not being read correctly in settings.py. On a closer look by the tutor and her colleague, it was discovered that the error was caused as a result of the empty variables set with no name and values in env.py file. Commenting out all these empty variables in env.py file solved the issue and the code ran successfully.
+See screenshots below:
+
+![Authentication Error at Checkout](documentation/bugs/authentication_error_at_wigalleria_checkout.png)
+
+* An issue was encountered on the profile page. Instead of the footer being displayed at the bottom of the page, it showed up at the order history section to the right of the default delivery information while the order history was pushed underneath it. Initially, I used the dev tools to inspect to see if I could resolve it but couldn't so I went to tutor support but no one was available until tomorrow so I went back to take a proper look again and discovered that there were some unclosed tags on the page. One table and div tags were unclosed so I closed them, refreshed the page in the browser and everything took the right shape again. See screenshots below:
+
+Profile Page Issue:
+
+![Footer issue on Profile Page](documentation/bugs/profile_page_issue.png)
+
+Profile Page Issue Fixed:
+
+![Footer issue fixed on Profile Page](documentation/bugs/profile_page_issue_fixed1.png)
+
+![Footer issue fixed on Profile Page](documentation/bugs/profile_page_issue_fixed2.png)
+
+---
+
 # Web Marketing
 
 * Out of all the web marketing strategies available for marketing e-commerce sites, Facebook was chosen to market this wiGalleria website because it has a wider reach to target customers and is also a social media platform mostly used by ladies/women. Since wiGalleria is an online wig store, it feels appropriate to target our customers through this social media platform. The Facebook page called wiGalleria has been created with the necessary information such as link to deployed site on Heroku, physical address/location of the business, phone number and shop now button provided to customers. The link to wiGalleria Facebook page is provided below:
@@ -314,11 +382,33 @@ Also, the screenshots of my wiGalleria Facebook Page are below:
 {{ client_secret|json_script:"id_client_secret" }}
 {{ endblock }}
 ```
+Since we can't render Django template variables in external javascript files, render one called stripe_public_key and one called client_secret.
 
-Since we can't render Django template variables in external javascript files.
+7) Go to stripe and copy the public key, then to the checkout apps views and add it to the context. Also add a test value for the client secret.
 
+8) To set up stripe, create a variable using our stripe public key and use it to create an instance of stripe elements, then use that to create a card element and finally, mount the card element to the div.
 
+9) Create a Payment intent as Stripe works with it. The checkout view will call out to stripe and create a payment intent.
 
+10) When stripe creates it, it'll also have a secret that identifies it which will be returned back and then it will be sent to the template as the client secret variable.
+
+11) The confirm card payment method from stripe js will be called using the client secret which will verify the card number.
+
+12) Go to settings.py file and add a setting called STRIPE_CURRENCY with a currency value of your choice (eur). Also, set the STRIPE_PUBLIC_KEY which we'll get from the environment giving it an empty default value and do same for STRIPE_SECRET_KEY.
+
+13) With those variables set and settings file saved, go back to the checkout views and create the payment intent.
+
+14) Then set the secret key on stripe and then create the payment intent with stripe.payment.intent.create giving it the amount and the currency.
+
+15) Add a listener to the payment forms submit event which will be copied from the stripe documentation. After getting the form element, the listener prevents its default action which is to post and execute this code instead. 
+
+16) It will then use the stripe.confirm card payment method to send the card information
+securely to stripe but before calling out to stripe, disable both the card element and the submit button to prevent multiple submissions.
+
+17) Next, call the confirm card payment method, provide the card to stripe and then execute this function on the result. If an error occurs, put the error right into the card error div and otherwise if the status of the payment intent comes back as successful, submit the form.
+
+18) If there's an error, re-enable the card element and the submit button to allow the user to fix it. The basic functionality is now in place so it's ready and you can test the basic functionality which should work at this stage when a user makes payment using Stripe's test card details.
+  
 ---
 
 # Testing
@@ -369,7 +459,7 @@ xiii) On the left hand side of the page, click on "Buckets" and it will display 
 
 xiv) Look for your newly created bucket by name if there are many buckets available and click on it.
 
-xv) St a few basic settings on your new bucket by clicking on the "Properties" tab and turn on "Static website hosting" by clicking on the 'edit' button beside it.
+xv) Set a few basic settings on your new bucket by clicking on the "Properties" tab and turn on "Static website hosting" by clicking on the 'edit' button beside it.
 
 xvi) Click on the "Enable" radio button to select it.
 
