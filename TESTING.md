@@ -142,7 +142,7 @@ This tool was used to validate all my html templates and I got just two warnings
 
 * products/templates/products/edit_product.html
 
-![edit product page](documentation/validation/w3html_validation/products-templates-products-edit_product.html.png)
+![edit product page](documentation/validation/w3html_validation/products-templates-products-edit_products.html.png)
 
 * products/templates/products/product_detail.html
 
