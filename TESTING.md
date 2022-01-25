@@ -542,3 +542,40 @@ The 2nd way to delete a product is this: while on the products page, click on th
 ![Admin-User Delete Products Page](documentation/user_stories_testing/admin_user_delete_prod_confirm.png)
 
 ![Admin-User Delete Products Page](documentation/user_stories_testing/admin_user_delete_success.png)
+
+---
+
+# Browser Compatibility Testing
+
+* I carried out compatibility test across three different browsers below and the site rendered correctly and were responsive across these browsers. See screenshots below:
+
+i. Google Chrome
+
+![Google Chrome](documentation/browser_compatibility_test/chrome_all_products.png)
+
+![Google Chrome](documentation/browser_compatibility_test/chrome_home_page.png)
+
+![Google Chrome](documentation/browser_compatibility_test/chrome_prod_detail.png)
+
+![Google Chrome](documentation/browser_compatibility_test/chrome_shopping_cart.png)
+
+ii. Microsoft Edge
+
+![Microsoft Edge](documentation/browser_compatibility_test/ms_edge_all_products.png)
+
+![Microsoft Edge](documentation/browser_compatibility_test/ms_edge_home_page.png)
+
+![Microsoft Edge](documentation/browser_compatibility_test/ms_edge_prod_detail.png)
+
+![Microsoft Edge](documentation/browser_compatibility_test/ms_edge_shopping_cart.png)
+
+iii. Opera
+
+![Opera](documentation/browser_compatibility_test/opera_all_products.png)
+
+![Opera](documentation/browser_compatibility_test/opera_home_page.png)
+
+![Opera](documentation/browser_compatibility_test/opera_prod_detail.png)
+
+![Opera](documentation/browser_compatibility_test/opera_shopping_cart.png)
+
