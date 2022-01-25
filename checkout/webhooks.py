@@ -17,7 +17,7 @@ def webhook(request):
     wh_secret = settings.STRIPE_WH_SECRET
     stripe.api_key = settings.STRIPE_SECRET_KEY
 
-    # Get the webhook data and verify its signature
+    # Gets the webhook data and verify its signature
     payload = request.body
     sig_header = request.META['HTTP_STRIPE_SIGNATURE']
     event = None
@@ -35,7 +35,7 @@ def webhook(request):
     except Exception as e:
         return HttpResponse(content=e, status=400)
 
-    # Set up a webhook handler.
+    # webhook handler setup
     handler = StripeWH_Handler(request)
 
     # Map webhook events to relevant handler functions.
@@ -51,12 +51,7 @@ def webhook(request):
     # use the generic one by default.
     event_handler = event_map.get(event_type, handler.handle_event)
 
-    # Call the event handler with the event
+    # Calls the event handler with the event & 
+    # return the response to stripe
     response = event_handler(event)
-    # Return the response to stripe.
     return response
-
-    # This print & return statements below are used to test that
-    # our webhooks is set up & works properly.
-    # print('Success!')
-    # return HttpResponse(status=200)

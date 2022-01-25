@@ -14,7 +14,6 @@ def cart_contents(request):
     for item_id, quantity in cart.items():
         product = get_object_or_404(Product, pk=item_id)
         total += quantity * product.price
-        # print("The total price of products in the cart is: " + total)
         product_count += quantity
         cart_items.append({
             'item_id': item_id,
@@ -31,8 +30,8 @@ def cart_contents(request):
 
     grand_total = delivery + total
 
-    # We'll add all these items to the context below so they'll be
-    # available in templates across the site.
+    # All these items below are added to the context below 
+    # so they'll be available in templates across the site.
     context = {
         'cart_items': cart_items,
         'total': total,

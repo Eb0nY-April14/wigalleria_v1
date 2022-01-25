@@ -42,7 +42,6 @@ body {
 
 .btn-black:hover {
     background: white;
-    /* color:  black; */
 }
 
 .text-white {
@@ -53,7 +52,7 @@ body {
     color: #000 !important;
 }
 
-/* This overlay class styling will hide the background image on all  
+/* This overlay class styling will hide the background image on  
    products page & all other pages we don't want it to appear. */
 .overlay {
     height: 100%;
@@ -80,7 +79,7 @@ ul li a span.cart-item-count {
 span.cart-item-count {
     width: 15px;
     height: 15px;
-    background-color: #e75480;    /* #418deb; */
+    background-color: #e75480;  
     color: #fff;
     border-radius: 50%;
 }
@@ -99,13 +98,8 @@ span.cart-item-count {
 }
 
 .shop-btn-bold {
-    /* color: #2F4F4F; */
     font-weight: bold;
 }
-
-/* #delivery-banner {
-    margin-bottom: 5em;
-} */
 
 .shop-now-button:hover,
 .shop-now-button:active,
@@ -118,26 +112,10 @@ span.cart-item-count {
 }
 
 /* ALL PRODUCTS PAGE STYLING */
-
 .cart-btn {
     margin-top: 15px;
     margin-bottom: 15px;
 }
-
-/* .cart-btn:hover {
-    background: #fff !important;
-    color: green !important;
-} */
-
- /* .view-btn { 
-    background-color: #e75480 !important;
-}  */
-
-/* .bg-dark:hover {
-    background: #fff !important;
-    color: #e75480 !important;
-    border: 2px solid #e75480;
-}  */
 
 .bg-white {
     background: #fff !important;
@@ -146,14 +124,6 @@ span.cart-item-count {
 .text-primary {
     color: #ff0000 !important;
 }
-
-/* .bg-white {
-    background: #000 !important;
-}  */
-
-/* .bg-white:hover {
-    background: #fff !important;
-} */
 
 .bkg-white {
     background: #fff !important;
@@ -204,7 +174,6 @@ input[name='q']::placeholder {
 }
 
 /* bootstrap toasts */
-
 .message-container {
     position: fixed;
     top: 72px;
@@ -226,7 +195,7 @@ input[name='q']::placeholder {
     height: 0; 
     border-left: 4px solid transparent;
     border-right: 4px solid transparent; 
-    border-bottom: 10px solid #e75480;  /* black */
+    border-bottom: 10px solid #e75480;  
     position: absolute;
     top: -10px;
     right: 36px;
@@ -266,10 +235,8 @@ input[name='q']::placeholder {
 
 
 /* AUTHENTICATION PAGES BUTTONS STYLING */
-
 .logout {
     margin-top: 250px;
-    /* margin-left: 100px; */
 }
 
 h1.sign-in, h1.sign-out {
@@ -313,7 +280,6 @@ form.login, h1.sign-in, .logout, p.reg, h1.sign-out, .signout-quest {
 
 /* PRODUCT-DETAIL PAGE STYLING */
 h2.subtitle {
-    /* text-align: center; */
     font-weight: bold;
     margin-left: 20px;
     color: #000;
@@ -412,10 +378,6 @@ a.checkout {
     border: solid 2px black;
 }
 
-/* h5.no-of-items {
-    margin-left: 150px;
-} */
-
 p.cart-empty {
     margin-top: 150px;
 }
@@ -473,32 +435,6 @@ a.no-underline {
 .mc-field-group.asterisk {
     color: #fff;
 }
-
-/* #subscribe-btn {
-    margin-left: 150px;
-} */
-
-/* span.asterisk {
-    color: #000;
-} */
-
-/* .content-container {
-    padding-top: 75px;
-    padding-bottom: 75px;
-}
-
-.container-wrapper {}
-
-.container-wrapper--pink {
-    background-color: #e75480;
-    color: white;
-} */
-
-
-
-/* .center {
-    text-align: center;
-} */
 
 /*          MEDIA QUERIES           */
 /* Slightly larger container on xl screens */
@@ -592,7 +528,6 @@ since all other inputs will have placeholders. */
         padding: 0.15rem;
     }
 
-    /* font awesome icons */
     .nav-link i.fa-lg {
         font-size: 1rem;
     }
@@ -618,10 +553,6 @@ since all other inputs will have placeholders. */
         font-size: 10px;
     }
 
-    /* h5.no-of-items {
-        margin-left: 0;
-    } */
-
     thead.text-black {
         font-size: 8px;
         padding: 6px;
@@ -634,10 +565,6 @@ since all other inputs will have placeholders. */
     .p-3 {
         padding: 0.5rem !important;
     }
-
-    /* td.pt-5 {
-        font-size: 0px;
-    } */
 
     td h6 {
         font-size: 0.7rem;

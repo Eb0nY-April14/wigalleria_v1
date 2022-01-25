@@ -19,7 +19,6 @@ if os.path.exists("env.py"):
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-# BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -28,16 +27,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
+
 # SECURITY WARNING: don't run with debug turned on in production!
-# Here, debug will be set to true only if there's a variable called
+# Here, debug is set to true only if there's a variable called
 # 'development' in the environment.
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['cyot14-wigalleria.herokuapp.com', 'localhost']
 
-
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -134,7 +132,6 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            # 'NAME': BASE_DIR / 'db.sqlite3',
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
@@ -219,7 +216,7 @@ if 'DEVELOPMENT' in os.environ:
     DEFAULT_FROM_EMAIL = 'wigalleria@example.com'
 else:
     # The else part takes care of the production side by setting up
-    # these several variables below.
+    # these variables below.
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587

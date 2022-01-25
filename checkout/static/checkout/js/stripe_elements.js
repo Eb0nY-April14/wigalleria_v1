@@ -45,7 +45,7 @@ card.addEventListener('change', function (event) {
     }
 });
 
-// Handle form submit
+// Handles form submit
 var form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
