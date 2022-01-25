@@ -64,9 +64,15 @@ e) As a registered user who is logged in I want to be able to like/unlike a prod
 
 f) As a Registered User who is logged in, I want to be able to log out of my account so that my account can be safe from unauthorised access.
 
-g) As a Registered User, I want to be able to log in to my account so that I can access my personal account information.
+g) As a Registered User who is logged in, I want to be able to add product to my wishlist so that I can easily find them for purchase later.
 
-h) As a Registered User, I want to be able to access information through their social media links to see their followings on social media to determine how trusted and known the app is.
+h) As a Registered User who is logged in, I want to be able to remove product from my wishlist so that I can free up space to add more products.
+
+i) As a Registered User who is logged in, I want to be able to view products in my wishlist so that I can be reminded of the product I want to buy later.
+
+j) As a Registered User, I want to be able to log in to my account so that I can access my personal account information.
+
+k) As a Registered User, I want to be able to access information through their social media links to see their followings on social media to determine how trusted and known the app is.
 
 ---
 
@@ -362,55 +368,6 @@ Also, the screenshots of my wiGalleria Facebook Page are below:
 
 ---
 
-## Steps to setting up Stripe Payment
-
-1) Visit Stripe's website at https://stripe.com/en-ie to sign up for an account and click on the start button to create one.
-
-2)  It'll ask for your email, name and password in order to register for an account so provide those details and click create your stripe account.
-
-3) Go back to your email inbox to confirm your email and once that's done, you will be taken to the stripe dashboard.
-
-4) First, you need to get the test API key so on the Dashboard page, click on 'Developers' button located at the top right side of the page and on the left hand side of the page, click on 'API keys'.
-
-5) Now that your stripe account is up and running, use their excellent UI elements called stripe elements to add a prebuilt credit card input to your form. To set up stripe elements, go to their documentation page on their website under 'Payments', click on 'Collect card details' and under 'Set up Stripe Elements' and 'HTML + JS', copy the javascript within the checkout.html file on Stripe's page, then paste it into the corejs block of your base template. Although the Javascript is only needed on the checkout page, Stripe recommends putting it in the base template so it'll be available on every page of the site which allows some of their more advanced fraud detection features to work.
-
-6) Next, go back to your checkout.html file, open up a new postloadjs block at the bottom and paste this code into it.
-```
-{% block postloadjs %}
-{{ block.super }}
-{{ stripe_public_key|json_script:"id_stripe_public_key" }}
-{{ client_secret|json_script:"id_client_secret" }}
-{{ endblock }}
-```
-Since we can't render Django template variables in external javascript files, render one called stripe_public_key and one called client_secret.
-
-7) Go to stripe and copy the public key, then to the checkout apps views and add it to the context. Also add a test value for the client secret.
-
-8) To set up stripe, create a variable using our stripe public key and use it to create an instance of stripe elements, then use that to create a card element and finally, mount the card element to the div.
-
-9) Create a Payment intent as Stripe works with it. The checkout view will call out to stripe and create a payment intent.
-
-10) When stripe creates it, it'll also have a secret that identifies it which will be returned back and then it will be sent to the template as the client secret variable.
-
-11) The confirm card payment method from stripe js will be called using the client secret which will verify the card number.
-
-12) Go to settings.py file and add a setting called STRIPE_CURRENCY with a currency value of your choice (eur). Also, set the STRIPE_PUBLIC_KEY which we'll get from the environment giving it an empty default value and do same for STRIPE_SECRET_KEY.
-
-13) With those variables set and settings file saved, go back to the checkout views and create the payment intent.
-
-14) Then set the secret key on stripe and then create the payment intent with stripe.payment.intent.create giving it the amount and the currency.
-
-15) Add a listener to the payment forms submit event which will be copied from the stripe documentation. After getting the form element, the listener prevents its default action which is to post and execute this code instead. 
-
-16) It will then use the stripe.confirm card payment method to send the card information
-securely to stripe but before calling out to stripe, disable both the card element and the submit button to prevent multiple submissions.
-
-17) Next, call the confirm card payment method, provide the card to stripe and then execute this function on the result. If an error occurs, put the error right into the card error div and otherwise if the status of the payment intent comes back as successful, submit the form.
-
-18) If there's an error, re-enable the card element and the submit button to allow the user to fix it. The basic functionality is now in place so it's ready and you can test the basic functionality which should work at this stage when a user makes payment using Stripe's test card details.
-  
----
-
 # Testing
 
 To view all testing documentation, click to view the [TESTING.md](TESTING.md) file.
@@ -609,6 +566,55 @@ Then, click on the 'Cancel' button. This completes the deployment process.
 
 ---
 
+## Steps to setting up Stripe Payment
+
+1) Visit Stripe's website at https://stripe.com/en-ie to sign up for an account and click on the start button to create one.
+
+2)  It'll ask for your email, name and password in order to register for an account so provide those details and click create your stripe account.
+
+3) Go back to your email inbox to confirm your email and once that's done, you will be taken to the stripe dashboard.
+
+4) First, you need to get the test API key so on the Dashboard page, click on 'Developers' button located at the top right side of the page and on the left hand side of the page, click on 'API keys'.
+
+5) Now that your stripe account is up and running, use their excellent UI elements called stripe elements to add a prebuilt credit card input to your form. To set up stripe elements, go to their documentation page on their website under 'Payments', click on 'Collect card details' and under 'Set up Stripe Elements' and 'HTML + JS', copy the javascript within the checkout.html file on Stripe's page, then paste it into the corejs block of your base template. Although the Javascript is only needed on the checkout page, Stripe recommends putting it in the base template so it'll be available on every page of the site which allows some of their more advanced fraud detection features to work.
+
+6) Next, go back to your checkout.html file, open up a new postloadjs block at the bottom and paste this code into it.
+```
+{% block postloadjs %}
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+{{ endblock }}
+```
+Since we can't render Django template variables in external javascript files, render one called stripe_public_key and one called client_secret.
+
+7) Go to stripe and copy the public key, then to the checkout apps views and add it to the context. Also add a test value for the client secret.
+
+8) To set up stripe, create a variable using our stripe public key and use it to create an instance of stripe elements, then use that to create a card element and finally, mount the card element to the div.
+
+9) Create a Payment intent as Stripe works with it. The checkout view will call out to stripe and create a payment intent.
+
+10) When stripe creates it, it'll also have a secret that identifies it which will be returned back and then it will be sent to the template as the client secret variable.
+
+11) The confirm card payment method from stripe js will be called using the client secret which will verify the card number.
+
+12) Go to settings.py file and add a setting called STRIPE_CURRENCY with a currency value of your choice (eur). Also, set the STRIPE_PUBLIC_KEY which we'll get from the environment giving it an empty default value and do same for STRIPE_SECRET_KEY.
+
+13) With those variables set and settings file saved, go back to the checkout views and create the payment intent.
+
+14) Then set the secret key on stripe and then create the payment intent with stripe.payment.intent.create giving it the amount and the currency.
+
+15) Add a listener to the payment forms submit event which will be copied from the stripe documentation. After getting the form element, the listener prevents its default action which is to post and execute this code instead. 
+
+16) It will then use the stripe.confirm card payment method to send the card information
+securely to stripe but before calling out to stripe, disable both the card element and the submit button to prevent multiple submissions.
+
+17) Next, call the confirm card payment method, provide the card to stripe and then execute this function on the result. If an error occurs, put the error right into the card error div and otherwise if the status of the payment intent comes back as successful, submit the form.
+
+18) If there's an error, re-enable the card element and the submit button to allow the user to fix it. The basic functionality is now in place so it's ready and you can test the basic functionality which should work at this stage when a user makes payment using Stripe's test card details.
+
+---
+
 ## Steps for  deployment to Heroku
 
 * Firstly, visit Heroku website to sign up for a free account at https://heroku.com/ 
@@ -729,14 +735,3 @@ git push heroku main and press the enter key
 View the live project [here](https://cyot14-wigalleria.herokuapp.com/)
 
 View the GitHub Repository [here](https://github.com/Eb0nY-April14/wigalleria_v1)
-
----
-
-
-
-
-
-
-
-
-    
