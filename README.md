@@ -732,7 +732,7 @@ git push heroku main and press the enter key
 
 * To test if your automatic deployment works, make a minor change to your code in your Gitpod workspace and push to GitHub. Then go to your Heroku app and select on your app, click on the 'Activity' tab and you'll see that there's a build in progress whuch shows that your automatic deployment is working. 
 
-View the live project [here](https://cyot14-wigalleria.herokuapp.com/)
+View the live project [here](https://cyot14-wigalleria.herokuapp.com/) (https://wigalleria-dmty.onrender.com/)
 
 View the GitHub Repository [here](https://github.com/Eb0nY-April14/wigalleria_v1)
 
